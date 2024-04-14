@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>初始设定</title>
+        <link>https://Riddddder.github.io</link>
+        <description></description>
+        <language>cn</language>
+        <pubDate>Sat, 13 Apr 2024 19:21:44 +0800</pubDate>
+        <lastBuildDate>Sat, 13 Apr 2024 19:21:44 +0800</lastBuildDate>
+        <category>hexo入坑</category>
+        <item>
+            <guid isPermalink="true">https://riddddder.github.io/2024/04/13/hello-hexo/</guid>
+            <title>Hello Hexo</title>
+            <link>https://riddddder.github.io/2024/04/13/hello-hexo/</link>
+            <category>hexo入坑</category>
+            <pubDate>Sat, 13 Apr 2024 19:21:44 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;hexo介绍&#34;&gt;&lt;a href=&#34;#hexo介绍&#34; class=&#34;headerlink&#34; title=&#34;hexo介绍&#34;&gt;&lt;/a&gt;hexo介绍&lt;/h2&gt;&lt;p&gt;Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他标记语言）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。&lt;/p&gt;
+&lt;h2 id=&#34;安装前准备&#34;&gt;&lt;a href=&#34;#安装前准备&#34; class=&#34;headerlink&#34; title=&#34;安装前准备&#34;&gt;&lt;/a&gt;安装前准备&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Node.js 12.0以上版本，&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ub2RlanMuY24v&#34;&gt;下载&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;git &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXQtc2NtLmNvbS9kb3dubG9hZC93aW4=&#34;&gt;下载&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果工作需要装了node可以安装&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9udm0udWlodG0uY29tLw==&#34;&gt;nvm&lt;/span&gt;管理多版本node。&lt;/p&gt;
+&lt;h2 id=&#34;安装&#34;&gt;&lt;a href=&#34;#安装&#34; class=&#34;headerlink&#34; title=&#34;安装&#34;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;p&gt;安装好node后，执行下列命令就可以完成blog文件夹初始化（blog为任意空文件夹名称）&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ npm install -g hexo-cli&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;$ hexo init blog&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;$ cd blog&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;$ npm install&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;然后再执行&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo s&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;就可以看到控制台输出localhost:4000就可以在本地浏览器访问啦&lt;/p&gt;
+&lt;h2 id=&#34;主题&#34;&gt;&lt;a href=&#34;#主题&#34; class=&#34;headerlink&#34; title=&#34;主题&#34;&gt;&lt;/a&gt;主题&lt;/h2&gt;&lt;p&gt;主题选择的是 shoka 就好这口&lt;br&gt;在blog文件夹&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ git clone https://github.com/amehime/hexo-theme-shoka.git ./themes/shoka&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;在_config.yml中设置&lt;/p&gt;
+&lt;figure class=&#34;highlight yml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;theme:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;shoka&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;文章&#34;&gt;&lt;a href=&#34;#文章&#34; class=&#34;headerlink&#34; title=&#34;文章&#34;&gt;&lt;/a&gt;文章&lt;/h2&gt;&lt;h3 id=&#34;新建文章&#34;&gt;&lt;a href=&#34;#新建文章&#34; class=&#34;headerlink&#34; title=&#34;新建文章&#34;&gt;&lt;/a&gt;新建文章&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;-p, –path:自定义新文章的路径&lt;/li&gt;
+&lt;li&gt;-r, –replace:如果存在同名文章，将其替换&lt;/li&gt;
+&lt;li&gt;-s, –slug:文章的 Slug，作为新文章的文件名和发布后的 URL&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo new 文章标题&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;清除文章缓存&#34;&gt;&lt;a href=&#34;#清除文章缓存&#34; class=&#34;headerlink&#34; title=&#34;清除文章缓存&#34;&gt;&lt;/a&gt;清除文章缓存&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;清除存在的缓存db.json和public文件夹下的静态文件。&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo clean&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;生成静态文件&#34;&gt;&lt;a href=&#34;#生成静态文件&#34; class=&#34;headerlink&#34; title=&#34;生成静态文件&#34;&gt;&lt;/a&gt;生成静态文件&lt;/h3&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo g&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;部署&#34;&gt;&lt;a href=&#34;#部署&#34; class=&#34;headerlink&#34; title=&#34;部署&#34;&gt;&lt;/a&gt;部署&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;部署到git上，需要先配置git&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo d&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;参考资料&#34;&gt;&lt;a href=&#34;#参考资料&#34; class=&#34;headerlink&#34; title=&#34;参考资料&#34;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;[hexo官网] &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL3poLWNuL2RvY3Mv&#34;&gt;https://hexo.io/zh-cn/docs/&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;[front-matter] &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL3poLWNuL2RvY3MvZnJvbnQtbWF0dGVyLmh0bWw=&#34;&gt;https://hexo.io/zh-cn/docs/front-matter.html&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;[shoka源码] &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYT90YWI9cmVhZG1lLW92LWZpbGU=&#34;&gt;https://github.com/amehime/hexo-theme-shoka?tab=readme-ov-file&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;[shoka中文文档] &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWUvY29tcHV0ZXItc2NpZW5jZS9ub3RlL3RoZW1lLXNob2thLWRvYy8=&#34;&gt;https://shoka.lostyu.me/computer-science/note/theme-shoka-doc/&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>
