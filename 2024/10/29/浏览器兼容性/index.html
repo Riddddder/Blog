@@ -19,15 +19,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"riddddder.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="# 面试官：说说你在工作中是怎么处理浏览器兼容性  这个问题，是面试官想知道你的学习广度，你的知识体系是否全面。其实在平时的开发过程中，谁会注意这些呀（业务都写不完，还考虑兼容性，吃饱了撑了嘛） 其实针对前端三部分（HTML、CSS、JavaScript），考虑浏览器兼容性只有 CSS 和 JavaScript；因为针对 HTML，在开发中就常用的几个标签，浏览器从头到脚都认识，还需要兼容吗？ 针">
+    <meta name="description" content="1面试官：说说你在工作中是怎么处理浏览器兼容性  这个问题，是面试官想知道你的学习广度，你的知识体系是否全面。其实在平时的开发过程中，谁会注意这些呀 其实针对前端三部分（HTML、CSS、JavaScript），考虑浏览器兼容性只有 CSS 和 JavaScript；因为针对 HTML，在开发中就常用的几个标签，浏览器从头到脚都认识，还需要兼容吗？ 针对 CSS 的兼容性，你只需要有添加浏览器前缀">
 <meta property="og:type" content="article">
 <meta property="og:title" content="怎么处理浏览器兼容性">
 <meta property="og:url" content="https://riddddder.github.io/2024/10/29/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E6%80%A7/index.html">
 <meta property="og:site_name" content="初始设定">
-<meta property="og:description" content="# 面试官：说说你在工作中是怎么处理浏览器兼容性  这个问题，是面试官想知道你的学习广度，你的知识体系是否全面。其实在平时的开发过程中，谁会注意这些呀（业务都写不完，还考虑兼容性，吃饱了撑了嘛） 其实针对前端三部分（HTML、CSS、JavaScript），考虑浏览器兼容性只有 CSS 和 JavaScript；因为针对 HTML，在开发中就常用的几个标签，浏览器从头到脚都认识，还需要兼容吗？ 针">
+<meta property="og:description" content="1面试官：说说你在工作中是怎么处理浏览器兼容性  这个问题，是面试官想知道你的学习广度，你的知识体系是否全面。其实在平时的开发过程中，谁会注意这些呀 其实针对前端三部分（HTML、CSS、JavaScript），考虑浏览器兼容性只有 CSS 和 JavaScript；因为针对 HTML，在开发中就常用的几个标签，浏览器从头到脚都认识，还需要兼容吗？ 针对 CSS 的兼容性，你只需要有添加浏览器前缀">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-10-29T02:54:42.000Z">
-<meta property="article:modified_time" content="2024-10-29T03:37:25.880Z">
+<meta property="article:modified_time" content="2024-10-29T10:29:40.526Z">
 <meta property="article:author" content="Ridder">
 <meta property="article:tag" content="web">
 <meta property="article:tag" content="浏览器">
@@ -114,7 +114,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%A2%E8%AF%95%E5%AE%98%E8%AF%B4%E8%AF%B4%E4%BD%A0%E5%9C%A8%E5%B7%A5%E4%BD%9C%E4%B8%AD%E6%98%AF%E6%80%8E%E4%B9%88%E5%A4%84%E7%90%86%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E6%80%A7"><span class="nav-number">1.</span> <span class="nav-text"> 面试官：说说你在工作中是怎么处理浏览器兼容性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#css-%E5%85%BC%E5%AE%B9%E6%80%A7"><span class="nav-number">1.1.</span> <span class="nav-text"> CSS 兼容性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E5%89%8D%E7%BC%80"><span class="nav-number">1.1.1.</span> <span class="nav-text"> 浏览器前缀</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E8%BD%AC%E6%8D%A2"><span class="nav-number">1.1.2.</span> <span class="nav-text"> 变量转换</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#javascript-%E7%9A%84%E5%85%BC%E5%AE%B9%E6%80%A7"><span class="nav-number">1.2.</span> <span class="nav-text"> JavaScript 的兼容性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#babel"><span class="nav-number">1.2.1.</span> <span class="nav-text"> babel</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#polyfill"><span class="nav-number">1.2.2.</span> <span class="nav-text"> polyfill</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%AB%A0"><span class="nav-number">1.3.</span> <span class="nav-text"> 参考文章</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#css-%E5%85%BC%E5%AE%B9%E6%80%A7"><span class="nav-number">1.</span> <span class="nav-text"> CSS 兼容性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E5%89%8D%E7%BC%80"><span class="nav-number">1.1.</span> <span class="nav-text"> 浏览器前缀</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E8%BD%AC%E6%8D%A2"><span class="nav-number">1.2.</span> <span class="nav-text"> 变量转换</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#javascript-%E7%9A%84%E5%85%BC%E5%AE%B9%E6%80%A7"><span class="nav-number">2.</span> <span class="nav-text"> JavaScript 的兼容性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#babel"><span class="nav-number">2.1.</span> <span class="nav-text"> babel</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#polyfill"><span class="nav-number">2.2.</span> <span class="nav-text"> polyfill</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%AB%A0"><span class="nav-number">3.</span> <span class="nav-text"> 参考文章</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -136,7 +136,7 @@
         <span class="site-state-item-name">分类</span>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">标签</span>
       </div>
   </nav>
@@ -193,7 +193,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2024-10-29 10:54:42 / 修改时间：11:37:25" itemprop="dateCreated datePublished" datetime="2024-10-29T10:54:42+08:00">2024-10-29</time>
+      <time title="创建时间：2024-10-29 10:54:42 / 修改时间：18:29:40" itemprop="dateCreated datePublished" datetime="2024-10-29T10:54:42+08:00">2024-10-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -212,14 +212,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.6k</span>
+      <span>1.7k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -229,59 +229,51 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h2 id="面试官说说你在工作中是怎么处理浏览器兼容性"><a class="markdownIt-Anchor" href="#面试官说说你在工作中是怎么处理浏览器兼容性">#</a> 面试官：说说你在工作中是怎么处理浏览器兼容性</h2>
+    <div class="post-body" itemprop="articleBody"><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">面试官：说说你在工作中是怎么处理浏览器兼容性</span><br></pre></td></tr></table></figure>
 <ul>
-<li>这个问题，是面试官想知道你的学习广度，你的知识体系是否全面。其实在平时的开发过程中，谁会注意这些呀（业务都写不完，还考虑兼容性，吃饱了撑了嘛）</li>
+<li>这个问题，是面试官想知道你的学习广度，你的知识体系是否全面。其实在平时的开发过程中，谁会注意这些呀</li>
 <li>其实针对前端三部分（HTML、CSS、JavaScript），考虑浏览器兼容性只有 CSS 和 JavaScript；因为针对 HTML，在开发中就常用的几个标签，浏览器从头到脚都认识，还需要兼容吗？</li>
-<li>针对 CSS 的兼容性，你只需要有添加前缀，变量转换等意识即可</li>
+<li>针对 CSS 的兼容性，你只需要有添加<strong>浏览器前缀</strong>，<strong>变量转换</strong>等意识即可</li>
 <li>针对 JavaScript 的兼容性，你只需要有语法降级等意识即可。</li>
 <li>只需要有这两个意识就行，实现就不需要你从头到尾的写，而是借助工具即可</li>
 </ul>
 <h3 id="css-兼容性"><a class="markdownIt-Anchor" href="#css-兼容性">#</a> CSS 兼容性</h3>
 <h4 id="浏览器前缀"><a class="markdownIt-Anchor" href="#浏览器前缀">#</a> 浏览器前缀</h4>
 <ul>
-<li>
-<p>浏览器前缀是浏览器厂商为了实验性 CSS 属性而添加的标识符，它们通常用于 CSS 规则的前面。以下是一些常见的浏览器前缀：</p>
-</li>
-<li>
-<p>webkit-：用于 Chrome、Safari（WebKit 内核）</p>
-</li>
-<li>
-<p>moz-：用于 Firefox（Gecko 内核）</p>
-</li>
-<li>
-<p>o-：用于 Opera（Presto 内核，已逐渐淘汰）</p>
-</li>
-<li>
-<p>ms-：用于 Internet Explorer（Trident 内核）</p>
-</li>
+<li>浏览器前缀是浏览器厂商为了实验性 CSS 属性而添加的标识符，它们通常用于 CSS 规则的前面。以下是一些常见的浏览器前缀：</li>
+</ul>
+<ol>
+<li>webkit-：用于 Chrome、Safari（WebKit 内核）</li>
+<li>moz-：用于 Firefox（Gecko 内核）</li>
+<li>o-：用于 Opera（Presto 内核，已逐渐淘汰）</li>
+<li>ms-：用于 Internet Explorer（Trident 内核）</li>
+</ol>
+<ul>
+<li>例如，如果你想要使用 CSS 的 transform 属性，可能需要添加所有浏览器的前缀：</li>
 </ul>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.element</span> &#123;</span><br><span class="line">  -webkit-<span class="attribute">transform</span>: <span class="built_in">rotate</span>(<span class="number">45deg</span>); <span class="comment">/* Chrome, Safari */</span></span><br><span class="line">  -moz-<span class="attribute">transform</span>: <span class="built_in">rotate</span>(<span class="number">45deg</span>);    <span class="comment">/* Firefox */</span></span><br><span class="line">  -ms-<span class="attribute">transform</span>: <span class="built_in">rotate</span>(<span class="number">45deg</span>);     <span class="comment">/* IE */</span></span><br><span class="line">  -o-<span class="attribute">transform</span>: <span class="built_in">rotate</span>(<span class="number">45deg</span>);      <span class="comment">/* Opera */</span></span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">rotate</span>(<span class="number">45deg</span>);         <span class="comment">/* 标准语法 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
-<li>
-<p>为了简化这个过程，可以使用一些工具自动添加浏览器前缀：</p>
-</li>
-<li>
-<p>Autoprefixer：一个后处理工具，可以根据 Can I Use 的数据自动添加所需的浏览器前缀。</p>
-</li>
-<li>
-<p>PostCSS：一个使用 JavaScript 的插件系统，可以处理 CSS 的转换，包括添加前缀。</p>
-</li>
+<li>为了简化这个过程，可以使用一些工具自动添加浏览器前缀：</li>
 </ul>
+<ol>
+<li>Autoprefixer：一个后处理工具，可以根据 Can I Use 的数据自动添加所需的浏览器前缀。</li>
+<li>PostCSS：一个使用 JavaScript 的插件系统，可以处理 CSS 的转换，包括添加前缀。</li>
+</ol>
 <h4 id="变量转换"><a class="markdownIt-Anchor" href="#变量转换">#</a> 变量转换</h4>
-<p>CSS 变量的兼容性问题较少，因为它们已经成为 CSS 的一个标准部分。但是，为了确保在不支持 CSS 变量的旧浏览器中也能正常显示，可以使用以下方法：</p>
 <ul>
+<li>CSS 变量的兼容性问题较少，因为它们已经成为 CSS 的一个标准部分。但是，为了确保在不支持 CSS 变量的旧浏览器中也能正常显示，可以使用以下方法：</li>
+</ul>
+<ol>
 <li>回退值：在 var () 函数中提供回退值。</li>
 <li>PostCSS：使用 PostCSS 插件将 CSS 变量转换为静态值。</li>
-</ul>
+</ol>
 <h3 id="javascript-的兼容性"><a class="markdownIt-Anchor" href="#javascript-的兼容性">#</a> JavaScript 的兼容性</h3>
 <ul>
-<li>新语法兼容作转换</li>
-<li>新函数兼容加补丁</li>
+<li>再来说说 JavaScript 的兼容性吧，大概就两个部分<strong>新就语法兼容</strong>和<strong>新旧函数兼容</strong>，</li>
+<li>其实在开发过程中，最常见的就是跟 JavaScript 打交道，也会真实感受到 JavaScript 存在新的语法，那么这些新的语法就需要转化，才能被浏览器认识。那么这时候就可以借助一个工具 babel。用于专门来降低 JavaScript 语法的。</li>
 </ul>
 <h4 id="babel"><a class="markdownIt-Anchor" href="#babel">#</a> babel</h4>
 <ul>
-<li>再来说说 JavaScript 的兼容性吧，其实在开发过程中，最常见的就是跟 JavaScript 打交道，也会真实感受到 JavaScript 存在新的语法，那么这些新的语法就需要转化，才能被浏览器认识。那么这时候就可以借助一个工具 babel。用于专门来降低 JavaScript 语法的。</li>
 <li>babel 就是一个编译器，把一段源代码转化成另外一段新代码，新代码就能被浏览器识别。对了，既然 babel 是工具（postcss 也是一样），能单独使用，也能够配合使用。而我们在项目开发过程中，都会使用构建工具（比如说 webpack），但是又想使用 babel 工具，那么这时候就需要一个桥梁，而 webpack 中的桥梁就是 babel-loader，具体怎么操作你回去研究一下。</li>
 </ul>
 <h4 id="polyfill"><a class="markdownIt-Anchor" href="#polyfill">#</a> polyfill</h4>
@@ -304,7 +296,7 @@
 </li>
 </ul>
 <h3 id="参考文章"><a class="markdownIt-Anchor" href="#参考文章">#</a> 参考文章</h3>
-<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7237022892055281724">掘金文章 - 面试官：说说你在工作中是怎么处理浏览器兼容性</a></p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7237022892055281724">掘金 - 面试官：说说你在工作中是怎么处理浏览器兼容性</a></p>
 
     </div>
 
@@ -323,8 +315,8 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2024/10/24/node%E5%86%85%E5%AD%98%E9%97%AE%E9%A2%98/" rel="prev" title="（已解决）Node打包报错 FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed">
-                  <i class="fa fa-angle-left"></i> （已解决）Node打包报错 FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed
+                <a href="/2024/10/24/node%E5%86%85%E5%AD%98%E9%97%AE%E9%A2%98/" rel="prev" title="（已解决）vue-element-plus-admin打包报错">
+                  <i class="fa fa-angle-left"></i> （已解决）vue-element-plus-admin打包报错
                 </a>
             </div>
             <div class="post-nav-item">

@@ -9,23 +9,26 @@
         <lastBuildDate>Thu, 24 Oct 2024 11:51:00 +0800</lastBuildDate>
         <category>hexo</category>
         <category>node</category>
+        <category>报错</category>
         <category>面试</category>
         <category>web</category>
         <category>浏览器</category>
         <category>兼容性</category>
         <item>
             <guid isPermalink="true">https://riddddder.github.io/2024/10/24/node%E5%86%85%E5%AD%98%E9%97%AE%E9%A2%98/</guid>
-            <title>（已解决）Node打包报错 FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed</title>
+            <title>（已解决）vue-element-plus-admin打包报错</title>
             <link>https://riddddder.github.io/2024/10/24/node%E5%86%85%E5%AD%98%E9%97%AE%E9%A2%98/</link>
             <category>node</category>
+            <category>报错</category>
             <pubDate>Thu, 24 Oct 2024 11:51:00 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;问题描述&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#问题描述&#34;&gt;#&lt;/a&gt; 问题描述&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;在一次使用 vue-element-plus-admin 打包时，出现如下报错: FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaScript&lt;/li&gt;
+&lt;li&gt;在一次使用&lt;em&gt; vue-element-plus-admin&lt;/em&gt; 打包时，出现如下报错:&lt;/li&gt;
 &lt;/ul&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;FATAL ERROR: Ineffective mark-compacts near heap &lt;span class=&#34;built_in&#34;&gt;limit&lt;/span&gt; Allocation failed - JavaScript&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h3 id=&#34;解决方法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#解决方法&#34;&gt;#&lt;/a&gt; 解决方法&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;本项目中使用 [选择自己的方式]&lt;/li&gt;
+&lt;li&gt;安装依赖工具&lt;/li&gt;
 &lt;/ul&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm install increase-memory-limit --save&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm install  cross-env --save&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;

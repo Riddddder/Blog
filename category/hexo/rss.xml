@@ -5,20 +5,21 @@
         <link>https://Riddddder.github.io</link>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Sat, 13 Apr 2024 19:21:44 +0800</pubDate>
-        <lastBuildDate>Sat, 13 Apr 2024 19:21:44 +0800</lastBuildDate>
+        <pubDate>Thu, 13 Oct 2022 19:21:44 +0800</pubDate>
+        <lastBuildDate>Thu, 13 Oct 2022 19:21:44 +0800</lastBuildDate>
         <category>hexo</category>
         <category>node</category>
+        <category>报错</category>
         <category>面试</category>
         <category>web</category>
         <category>浏览器</category>
         <category>兼容性</category>
         <item>
-            <guid isPermalink="true">https://riddddder.github.io/2024/04/13/hello-hexo/</guid>
+            <guid isPermalink="true">https://riddddder.github.io/2022/10/13/hello-hexo/</guid>
             <title>Hello Hexo</title>
-            <link>https://riddddder.github.io/2024/04/13/hello-hexo/</link>
+            <link>https://riddddder.github.io/2022/10/13/hello-hexo/</link>
             <category>hexo</category>
-            <pubDate>Sat, 13 Apr 2024 19:21:44 +0800</pubDate>
+            <pubDate>Thu, 13 Oct 2022 19:21:44 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;hexo介绍&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#hexo介绍&#34;&gt;#&lt;/a&gt; hexo 介绍&lt;/h2&gt;
 &lt;p&gt;Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他标记语言）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。&lt;/p&gt;
 &lt;h2 id=&#34;安装前准备&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装前准备&#34;&gt;#&lt;/a&gt; 安装前准备&lt;/h2&gt;
@@ -54,16 +55,17 @@
 &lt;li&gt;-s, --slug: 文章的 Slug，作为新文章的文件名和发布后的 URL&lt;/li&gt;
 &lt;/ul&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;hexo new 文章标题&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;发布&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#发布&#34;&gt;#&lt;/a&gt; 发布&lt;/h2&gt;
 &lt;h3 id=&#34;清除文章缓存&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#清除文章缓存&#34;&gt;#&lt;/a&gt; 清除文章缓存&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;清除存在的缓存 db.json 和 public 文件夹下的静态文件。&lt;/li&gt;
+&lt;li&gt;发布前需要清除存在的缓存 db.json 和 public 文件夹下的静态文件。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;hexo clean&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h3 id=&#34;生成静态文件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#生成静态文件&#34;&gt;#&lt;/a&gt; 生成静态文件&lt;/h3&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;hexo g&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h3 id=&#34;部署&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#部署&#34;&gt;#&lt;/a&gt; 部署&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;部署到 git 上，需要先配置 git&lt;/li&gt;
+&lt;li&gt;部署到 git 上，需要先&lt;strong&gt;配置 git&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;hexo d&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h2 id=&#34;参考资料&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#参考资料&#34;&gt;#&lt;/a&gt; 参考资料&lt;/h2&gt;
