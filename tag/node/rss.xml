@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>初始设定 • Posts by &#34;node&#34; tag</title>
+        <link>https://Riddddder.github.io</link>
+        <description></description>
+        <language>zh-CN</language>
+        <pubDate>Sun, 27 Oct 2024 11:51:00 +0800</pubDate>
+        <lastBuildDate>Sun, 27 Oct 2024 11:51:00 +0800</lastBuildDate>
+        <category>hexo</category>
+        <category>node</category>
+        <category>web</category>
+        <category>浏览器</category>
+        <category>兼容性</category>
+        <item>
+            <guid isPermalink="true">https://riddddder.github.io/2024/10/27/node%E5%86%85%E5%AD%98%E9%97%AE%E9%A2%98/</guid>
+            <title>node打包报错 FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed</title>
+            <link>https://riddddder.github.io/2024/10/27/node%E5%86%85%E5%AD%98%E9%97%AE%E9%A2%98/</link>
+            <category>node</category>
+            <pubDate>Sun, 27 Oct 2024 11:51:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;node内存耗尽报错-fatal-error-ineffective-mark-compacts-near-heap-limit-allocation-failed-javascript&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#node内存耗尽报错-fatal-error-ineffective-mark-compacts-near-heap-limit-allocation-failed-javascript&#34;&gt;#&lt;/a&gt; node 内存耗尽报错： FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaScript&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;npm install increase-memory-limit #本项目中使用 [选择自己的方式]   # npm install -g increase-memory-limit 全局使用&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;npm install --save cross-env&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;修改 package.json 如下:[LIMIT 大小自己设置]&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+ &lt;figure class=&#34;highlight json&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;&amp;quot;scripts&amp;quot;&lt;/span&gt;&lt;span class=&#34;punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attr&#34;&gt;&amp;quot;fix-memory-limit&amp;quot;&lt;/span&gt;&lt;span class=&#34;punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;quot;cross-env LIMIT=2048 increase-memory-limit&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;punctuation&#34;&gt;,&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;npm run fix-memory-limit（只需执行一次即可）&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>
