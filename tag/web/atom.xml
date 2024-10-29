@@ -6,6 +6,7 @@
     <updated>2024-10-29T02:54:42.000Z</updated>
     <category term="hexo" />
     <category term="node" />
+    <category term="面试" />
     <category term="web" />
     <category term="浏览器" />
     <category term="兼容性" />
@@ -87,12 +88,27 @@
 &lt;p&gt;那么这里也就需要兼容一下，因为新版本的浏览器是认识的，老版本的浏览器是不认识的，那么这里就需要为了兼容了老版浏览器，新部署一个 JS 文件（类似补丁），里面存放了各个函数（promise, fetch）体的实现代码。然后浏览器就能够正常的识别了。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&#34;参考文章&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#参考文章&#34;&gt;#&lt;/a&gt; 参考文章&lt;/h1&gt;
+&lt;h3 id=&#34;参考文章&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#参考文章&#34;&gt;#&lt;/a&gt; 参考文章&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://juejin.cn/post/7237022892055281724&#34;&gt;掘金文章 - 面试官：说说你在工作中是怎么处理浏览器兼容性&lt;/a&gt;&lt;/p&gt;
 </content>
         <category term="web" />
         <category term="浏览器" />
         <category term="兼容性" />
         <updated>2024-10-29T02:54:42.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://riddddder.github.io/2024/07/10/web%E5%AD%A6%E4%B9%A01/</id>
+        <title>web学习（一）</title>
+        <link rel="alternate" href="https://riddddder.github.io/2024/07/10/web%E5%AD%A6%E4%B9%A01/"/>
+        <content type="html">&lt;h1 id=&#34;前端面试整理一&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#前端面试整理一&#34;&gt;#&lt;/a&gt; 前端面试整理 (一)&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;js 的数据类型&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="面试" />
+        <category term="web" />
+        <updated>2024-07-10T09:51:56.000Z</updated>
     </entry>
 </feed>

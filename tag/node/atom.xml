@@ -3,34 +3,37 @@
     <id>https://Riddddder.github.io</id>
     <title>初始设定 • Posts by &#34;node&#34; tag</title>
     <link href="https://Riddddder.github.io" />
-    <updated>2024-10-27T03:51:00.000Z</updated>
+    <updated>2024-10-24T03:51:00.000Z</updated>
     <category term="hexo" />
     <category term="node" />
+    <category term="面试" />
     <category term="web" />
     <category term="浏览器" />
     <category term="兼容性" />
     <entry>
-        <id>https://riddddder.github.io/2024/10/27/node%E5%86%85%E5%AD%98%E9%97%AE%E9%A2%98/</id>
-        <title>node打包报错 FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed</title>
-        <link rel="alternate" href="https://riddddder.github.io/2024/10/27/node%E5%86%85%E5%AD%98%E9%97%AE%E9%A2%98/"/>
-        <content type="html">&lt;h1 id=&#34;node内存耗尽报错-fatal-error-ineffective-mark-compacts-near-heap-limit-allocation-failed-javascript&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#node内存耗尽报错-fatal-error-ineffective-mark-compacts-near-heap-limit-allocation-failed-javascript&#34;&gt;#&lt;/a&gt; node 内存耗尽报错： FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaScript&lt;/h1&gt;
+        <id>https://riddddder.github.io/2024/10/24/node%E5%86%85%E5%AD%98%E9%97%AE%E9%A2%98/</id>
+        <title>（已解决）Node打包报错 FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed</title>
+        <link rel="alternate" href="https://riddddder.github.io/2024/10/24/node%E5%86%85%E5%AD%98%E9%97%AE%E9%A2%98/"/>
+        <content type="html">&lt;h2 id=&#34;问题描述&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#问题描述&#34;&gt;#&lt;/a&gt; 问题描述&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;npm install increase-memory-limit #本项目中使用 [选择自己的方式]   # npm install -g increase-memory-limit 全局使用&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;npm install --save cross-env&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;修改 package.json 如下:[LIMIT 大小自己设置]&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;在一次使用 vue-element-plus-admin 打包时，出现如下报错: FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;解决方法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#解决方法&#34;&gt;#&lt;/a&gt; 解决方法&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;本项目中使用 [选择自己的方式]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm install increase-memory-limit --save&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm install  cross-env --save&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;修改 package.json 如下:[LIMIT 大小自己设置]&lt;/li&gt;
 &lt;/ul&gt;
  &lt;figure class=&#34;highlight json&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;&amp;quot;scripts&amp;quot;&lt;/span&gt;&lt;span class=&#34;punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attr&#34;&gt;&amp;quot;fix-memory-limit&amp;quot;&lt;/span&gt;&lt;span class=&#34;punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;quot;cross-env LIMIT=2048 increase-memory-limit&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;punctuation&#34;&gt;,&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;ul&gt;
-&lt;li&gt;npm run fix-memory-limit（只需执行一次即可）&lt;/li&gt;
+&lt;li&gt;最后执行就可以打包啦&lt;/li&gt;
 &lt;/ul&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm run fix-memory-limit&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 </content>
         <category term="node" />
-        <updated>2024-10-27T03:51:00.000Z</updated>
+        <updated>2024-10-24T03:51:00.000Z</updated>
     </entry>
 </feed>

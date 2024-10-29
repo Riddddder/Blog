@@ -1,0 +1,19 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "初始设定 • All posts by \"面试\" category",
+    "description": "",
+    "home_page_url": "https://Riddddder.github.io",
+    "items": [
+        {
+            "id": "https://riddddder.github.io/2024/07/10/web%E5%AD%A6%E4%B9%A01/",
+            "url": "https://riddddder.github.io/2024/07/10/web%E5%AD%A6%E4%B9%A01/",
+            "title": "web学习（一）",
+            "date_published": "2024-07-10T09:51:56.000Z",
+            "content_html": "<h1 id=\"前端面试整理一\"><a class=\"markdownIt-Anchor\" href=\"#前端面试整理一\">#</a> 前端面试整理 (一)</h1>\n<ul>\n<li>js 的数据类型</li>\n<li></li>\n<li></li>\n</ul>\n",
+            "tags": [
+                "面试",
+                "web"
+            ]
+        }
+    ]
+}
