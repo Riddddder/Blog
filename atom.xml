@@ -15,23 +15,21 @@
         <id>https://riddddder.github.io/2024/10/24/node%E5%86%85%E5%AD%98%E9%97%AE%E9%A2%98/</id>
         <title>（已解决）vue-element-plus-admin打包报错</title>
         <link rel="alternate" href="https://riddddder.github.io/2024/10/24/node%E5%86%85%E5%AD%98%E9%97%AE%E9%A2%98/"/>
-        <content type="html">&lt;h2 id=&#34;问题描述&#34;&gt;&lt;a href=&#34;#问题描述&#34; class=&#34;headerlink&#34; title=&#34;问题描述&#34;&gt;&lt;/a&gt;问题描述&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;在一次使用&lt;em&gt;vue-element-plus-admin&lt;/em&gt;打包时，出现如下报错:&lt;/li&gt;
+        <content type="html">&lt;h2 id=&#34;问题描述&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#问题描述&#34;&gt;#&lt;/a&gt; 问题描述&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;在一次使用&lt;em&gt; vue-element-plus-admin&lt;/em&gt; 打包时，出现如下报错:&lt;/li&gt;
 &lt;/ul&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;FATAL ERROR: Ineffective mark-compacts near heap &lt;span class=&#34;built_in&#34;&gt;limit&lt;/span&gt; Allocation failed - JavaScript&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h3 id=&#34;解决方法&#34;&gt;&lt;a href=&#34;#解决方法&#34; class=&#34;headerlink&#34; title=&#34;解决方法&#34;&gt;&lt;/a&gt;解决方法&lt;/h3&gt;&lt;ul&gt;
+&lt;h3 id=&#34;解决方法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#解决方法&#34;&gt;#&lt;/a&gt; 解决方法&lt;/h3&gt;
+&lt;ul&gt;
 &lt;li&gt;安装依赖工具&lt;/li&gt;
 &lt;/ul&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm install increase-memory-limit --save&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm install  cross-env --save&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
 &lt;ul&gt;
-&lt;li&gt;修改 package.json 如下:[ LIMIT大小自己设置 ]&lt;/li&gt;
+&lt;li&gt;修改 package.json 如下:[LIMIT 大小自己设置]&lt;/li&gt;
 &lt;/ul&gt;
  &lt;figure class=&#34;highlight json&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;&amp;quot;scripts&amp;quot;&lt;/span&gt;&lt;span class=&#34;punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attr&#34;&gt;&amp;quot;fix-memory-limit&amp;quot;&lt;/span&gt;&lt;span class=&#34;punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;quot;cross-env LIMIT=2048 increase-memory-limit&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;punctuation&#34;&gt;,&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
 &lt;ul&gt;
 &lt;li&gt;最后执行就可以打包啦&lt;/li&gt;
 &lt;/ul&gt;
@@ -45,8 +43,9 @@
         <id>https://riddddder.github.io/2024/01/10/web%E5%AD%A6%E4%B9%A01/</id>
         <title>web学习（一）</title>
         <link rel="alternate" href="https://riddddder.github.io/2024/01/10/web%E5%AD%A6%E4%B9%A01/"/>
-        <content type="html">&lt;h1 id=&#34;前端面试整理-一&#34;&gt;&lt;a href=&#34;#前端面试整理-一&#34; class=&#34;headerlink&#34; title=&#34;前端面试整理(一)&#34;&gt;&lt;/a&gt;前端面试整理(一)&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;js的数据类型&lt;/li&gt;
+        <content type="html">&lt;h1 id=&#34;前端面试整理一&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#前端面试整理一&#34;&gt;#&lt;/a&gt; 前端面试整理 (一)&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;js 的数据类型&lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -60,7 +59,6 @@
         <title>怎么处理浏览器兼容性</title>
         <link rel="alternate" href="https://riddddder.github.io/2023/01/29/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E6%80%A7/"/>
         <content type="html">&lt;figure class=&#34;highlight text&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;面试官：说说你在工作中是怎么处理浏览器兼容性&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
 &lt;ul&gt;
 &lt;li&gt;这个问题，是面试官想知道你的学习广度，你的知识体系是否全面。&lt;/li&gt;
 &lt;li&gt;其实针对前端三部分（HTML、CSS、JavaScript），考虑浏览器兼容性只有 CSS 和 JavaScript；因为针对 HTML，在开发中就常用的几个标签，浏览器从头到脚都认识，还需要兼容吗？&lt;/li&gt;
@@ -68,55 +66,67 @@
 &lt;li&gt;针对 JavaScript 的兼容性，你只需要有&lt;strong&gt;新旧语法兼容&lt;/strong&gt;和&lt;strong&gt;新旧函数兼容&lt;/strong&gt;意识即可。&lt;/li&gt;
 &lt;li&gt;只需要有这两个意识就行，实现也已经不需要从头到尾的写，而是借助工具即可&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;CSS-兼容性&#34;&gt;&lt;a href=&#34;#CSS-兼容性&#34; class=&#34;headerlink&#34; title=&#34;CSS 兼容性&#34;&gt;&lt;/a&gt;CSS 兼容性&lt;/h3&gt;&lt;h4 id=&#34;浏览器前缀&#34;&gt;&lt;a href=&#34;#浏览器前缀&#34; class=&#34;headerlink&#34; title=&#34;浏览器前缀&#34;&gt;&lt;/a&gt;浏览器前缀&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;浏览器前缀是浏览器厂商为了实验性CSS属性而添加的标识符，它们通常用于CSS规则的前面。以下是一些常见的浏览器前缀：&lt;/li&gt;
+&lt;h3 id=&#34;css-兼容性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#css-兼容性&#34;&gt;#&lt;/a&gt; CSS 兼容性&lt;/h3&gt;
+&lt;h4 id=&#34;浏览器前缀&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#浏览器前缀&#34;&gt;#&lt;/a&gt; 浏览器前缀&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;浏览器前缀是浏览器厂商为了实验性 CSS 属性而添加的标识符，它们通常用于 CSS 规则的前面。以下是一些常见的浏览器前缀：&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ol&gt;
-&lt;li&gt;webkit-：用于Chrome、Safari（WebKit内核）&lt;/li&gt;
-&lt;li&gt;moz-：用于Firefox（Gecko内核）&lt;/li&gt;
-&lt;li&gt;o-：用于Opera（Presto内核，已逐渐淘汰）&lt;/li&gt;
-&lt;li&gt;ms-：用于Internet Explorer（Trident内核）&lt;/li&gt;
+&lt;li&gt;webkit-：用于 Chrome、Safari（WebKit 内核）&lt;/li&gt;
+&lt;li&gt;moz-：用于 Firefox（Gecko 内核）&lt;/li&gt;
+&lt;li&gt;o-：用于 Opera（Presto 内核，已逐渐淘汰）&lt;/li&gt;
+&lt;li&gt;ms-：用于 Internet Explorer（Trident 内核）&lt;/li&gt;
 &lt;/ol&gt;
 &lt;ul&gt;
-&lt;li&gt;例如，如果你想要使用CSS的transform属性，可能需要添加所有浏览器的前缀：&lt;/li&gt;
+&lt;li&gt;例如，如果你想要使用 CSS 的 transform 属性，可能需要添加所有浏览器的前缀：&lt;/li&gt;
 &lt;/ul&gt;
 &lt;figure class=&#34;highlight css&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;selector-class&#34;&gt;.element&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  -webkit-&lt;span class=&#34;attribute&#34;&gt;transform&lt;/span&gt;: &lt;span class=&#34;built_in&#34;&gt;rotate&lt;/span&gt;(&lt;span class=&#34;number&#34;&gt;45deg&lt;/span&gt;); &lt;span class=&#34;comment&#34;&gt;/* Chrome, Safari */&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  -moz-&lt;span class=&#34;attribute&#34;&gt;transform&lt;/span&gt;: &lt;span class=&#34;built_in&#34;&gt;rotate&lt;/span&gt;(&lt;span class=&#34;number&#34;&gt;45deg&lt;/span&gt;);    &lt;span class=&#34;comment&#34;&gt;/* Firefox */&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  -ms-&lt;span class=&#34;attribute&#34;&gt;transform&lt;/span&gt;: &lt;span class=&#34;built_in&#34;&gt;rotate&lt;/span&gt;(&lt;span class=&#34;number&#34;&gt;45deg&lt;/span&gt;);     &lt;span class=&#34;comment&#34;&gt;/* IE */&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  -o-&lt;span class=&#34;attribute&#34;&gt;transform&lt;/span&gt;: &lt;span class=&#34;built_in&#34;&gt;rotate&lt;/span&gt;(&lt;span class=&#34;number&#34;&gt;45deg&lt;/span&gt;);      &lt;span class=&#34;comment&#34;&gt;/* Opera */&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;attribute&#34;&gt;transform&lt;/span&gt;: &lt;span class=&#34;built_in&#34;&gt;rotate&lt;/span&gt;(&lt;span class=&#34;number&#34;&gt;45deg&lt;/span&gt;);         &lt;span class=&#34;comment&#34;&gt;/* 标准语法 */&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
 &lt;ul&gt;
 &lt;li&gt;为了简化这个过程，可以使用一些工具自动添加浏览器前缀：&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ol&gt;
-&lt;li&gt;Autoprefixer：一个后处理工具，可以根据Can I Use的数据自动添加所需的浏览器前缀。&lt;/li&gt;
-&lt;li&gt;PostCSS：一个使用JavaScript的插件系统，可以处理CSS的转换，包括添加前缀。&lt;/li&gt;
+&lt;li&gt;Autoprefixer：一个后处理工具，可以根据 Can I Use 的数据自动添加所需的浏览器前缀。&lt;/li&gt;
+&lt;li&gt;PostCSS：一个使用 JavaScript 的插件系统，可以处理 CSS 的转换，包括添加前缀。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h4 id=&#34;变量转换&#34;&gt;&lt;a href=&#34;#变量转换&#34; class=&#34;headerlink&#34; title=&#34;变量转换&#34;&gt;&lt;/a&gt;变量转换&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;CSS变量的兼容性问题较少，因为它们已经成为CSS的一个标准部分。&lt;/li&gt;
-&lt;li&gt;但是，为了确保在不支持CSS变量的旧浏览器中也能正常显示，可以使用以下方法：&lt;/li&gt;
+&lt;h4 id=&#34;变量转换&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#变量转换&#34;&gt;#&lt;/a&gt; 变量转换&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;CSS 变量的兼容性问题较少，因为它们已经成为 CSS 的一个标准部分。&lt;/li&gt;
+&lt;li&gt;但是，为了确保在不支持 CSS 变量的旧浏览器中也能正常显示，可以使用以下方法：&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ol&gt;
-&lt;li&gt;回退值：在var()函数中提供回退值。&lt;/li&gt;
-&lt;li&gt;PostCSS：使用PostCSS插件将CSS变量转换为静态值。&lt;/li&gt;
+&lt;li&gt;回退值：在 var () 函数中提供回退值。&lt;/li&gt;
+&lt;li&gt;PostCSS：使用 PostCSS 插件将 CSS 变量转换为静态值。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;JavaScript-的兼容性&#34;&gt;&lt;a href=&#34;#JavaScript-的兼容性&#34; class=&#34;headerlink&#34; title=&#34;JavaScript 的兼容性&#34;&gt;&lt;/a&gt;JavaScript 的兼容性&lt;/h3&gt;&lt;ul&gt;
+&lt;h3 id=&#34;javascript-的兼容性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#javascript-的兼容性&#34;&gt;#&lt;/a&gt; JavaScript 的兼容性&lt;/h3&gt;
+&lt;ul&gt;
 &lt;li&gt;再来说说 JavaScript 的兼容性吧，针对新旧语法的兼容可以作转换，而针对新旧函数的兼容就需要加补丁。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;babel&#34;&gt;&lt;a href=&#34;#babel&#34; class=&#34;headerlink&#34; title=&#34;babel&#34;&gt;&lt;/a&gt;babel&lt;/h4&gt;&lt;ul&gt;
+&lt;h4 id=&#34;babel&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#babel&#34;&gt;#&lt;/a&gt; babel&lt;/h4&gt;
+&lt;ul&gt;
 &lt;li&gt;其实在开发过程中，最常见的就是跟 JavaScript 打交道，也会真实感受到 JavaScript 存在新的语法，那么这些新的语法就需要转化，才能被浏览器认识。那么这时候就可以借助一个工具 babel。用于专门来降低 JavaScript 语法的。&lt;/li&gt;
 &lt;li&gt;babel 就是一个编译器，把一段源代码转化成另外一段新代码，新代码就能被浏览器识别。对了，既然 babel 是工具（postcss 也是一样），能单独使用，也能够配合使用。而我们在项目开发过程中，都会使用构建工具（比如说 webpack），但是又想使用 babel 工具，那么这时候就需要一个桥梁，而 webpack 中的桥梁就是 babel-loader，具体怎么操作你回去研究一下。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;polyfill&#34;&gt;&lt;a href=&#34;#polyfill&#34; class=&#34;headerlink&#34; title=&#34;polyfill&#34;&gt;&lt;/a&gt;polyfill&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;手动打补丁&lt;/p&gt;
+&lt;h4 id=&#34;polyfill&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#polyfill&#34;&gt;#&lt;/a&gt; polyfill&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;手动打补丁&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;根据覆盖率自动打补丁&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;根据覆盖率自动打补丁&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;根据浏览器特性，动态打补丁&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;根据浏览器特性，动态打补丁&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;JS 代码能够被转化减低，适配了市场占比的浏览器，是不是就已经完成了呢？当然没有。&lt;br&gt;在 ES6 中出现了 Promise，fetch，以及数组和字符串新的方法，babel 会进行转化吗？会转化成什么呢？肯定不会被转化撒，因为它们都是函数调用，对于 babel 来说就是一个普通的函数调用，只是找不到函数的实现体而已，只是会报错而已。&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;JS 代码能够被转化减低，适配了市场占比的浏览器，是不是就已经完成了呢？当然没有。&lt;br&gt;
+在 ES6 中出现了 Promise，fetch，以及数组和字符串新的方法，babel 会进行转化吗？会转化成什么呢？肯定不会被转化撒，因为它们都是函数调用，对于 babel 来说就是一个普通的函数调用，只是找不到函数的实现体而已，只是会报错而已。&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;那么这里也就需要兼容一下，因为新版本的浏览器是认识的，老版本的浏览器是不认识的，那么这里就需要为了兼容了老版浏览器，新部署一个 JS 文件（类似补丁），里面存放了各个函数（promise, fetch）体的实现代码。然后浏览器就能够正常的识别了。&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;那么这里也就需要兼容一下，因为新版本的浏览器是认识的，老版本的浏览器是不认识的，那么这里就需要为了兼容了老版浏览器，新部署一个 JS 文件（类似补丁），里面存放了各个函数（promise, fetch）体的实现代码。然后浏览器就能够正常的识别了。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;参考文章&#34;&gt;&lt;a href=&#34;#参考文章&#34; class=&#34;headerlink&#34; title=&#34;参考文章&#34;&gt;&lt;/a&gt;参考文章&lt;/h3&gt;&lt;p&gt;&lt;a href=&#34;https://juejin.cn/post/7237022892055281724&#34;&gt;掘金-面试官：说说你在工作中是怎么处理浏览器兼容性&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;参考文章&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#参考文章&#34;&gt;#&lt;/a&gt; 参考文章&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://juejin.cn/post/7237022892055281724&#34;&gt;掘金 - 面试官：说说你在工作中是怎么处理浏览器兼容性&lt;/a&gt;&lt;/p&gt;
 </content>
         <category term="web" />
         <category term="浏览器" />
@@ -127,66 +137,68 @@
         <id>https://riddddder.github.io/2022/10/13/hello-hexo/</id>
         <title>Hello Hexo</title>
         <link rel="alternate" href="https://riddddder.github.io/2022/10/13/hello-hexo/"/>
-        <content type="html">&lt;h2 id=&#34;hexo介绍&#34;&gt;&lt;a href=&#34;#hexo介绍&#34; class=&#34;headerlink&#34; title=&#34;hexo介绍&#34;&gt;&lt;/a&gt;hexo介绍&lt;/h2&gt;&lt;p&gt;Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他标记语言）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。&lt;/p&gt;
-&lt;h2 id=&#34;安装前准备&#34;&gt;&lt;a href=&#34;#安装前准备&#34; class=&#34;headerlink&#34; title=&#34;安装前准备&#34;&gt;&lt;/a&gt;安装前准备&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Node.js 12.0以上版本，&lt;a href=&#34;https://nodejs.cn/&#34;&gt;下载&lt;/a&gt;&lt;/li&gt;
+        <content type="html">&lt;h2 id=&#34;hexo介绍&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#hexo介绍&#34;&gt;#&lt;/a&gt; hexo 介绍&lt;/h2&gt;
+&lt;p&gt;Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他标记语言）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。&lt;/p&gt;
+&lt;h2 id=&#34;安装前准备&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装前准备&#34;&gt;#&lt;/a&gt; 安装前准备&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Node.js 12.0 以上版本，&lt;a href=&#34;https://nodejs.cn&#34;&gt;下载&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;git &lt;a href=&#34;https://git-scm.com/download/win&#34;&gt;下载&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;如果工作需要装了node可以安装&lt;a href=&#34;https://nvm.uihtm.com/&#34;&gt;nvm&lt;/a&gt;管理多版本node。&lt;/p&gt;
-&lt;h2 id=&#34;安装&#34;&gt;&lt;a href=&#34;#安装&#34; class=&#34;headerlink&#34; title=&#34;安装&#34;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;p&gt;安装好node后，执行下列命令就可以完成blog文件夹初始化（blog为任意空文件夹名称）&lt;/p&gt;
+&lt;p&gt;如果工作需要装了 node 可以安装&lt;a href=&#34;https://nvm.uihtm.com/&#34;&gt; nvm&lt;/a&gt; 管理多版本 node。&lt;/p&gt;
+&lt;h2 id=&#34;安装&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装&#34;&gt;#&lt;/a&gt; 安装&lt;/h2&gt;
+&lt;p&gt;安装好 node 后，执行下列命令就可以完成 blog 文件夹初始化（blog 为任意空文件夹名称）&lt;/p&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm install -g hexo-cli&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;hexo init blog&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; blog&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;npm install&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
 &lt;p&gt;然后再执行&lt;/p&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;hexo s&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;就可以看到控制台输出localhost:4000就可以在本地浏览器访问啦&lt;/p&gt;
-&lt;h2 id=&#34;主题shoka&#34;&gt;&lt;a href=&#34;#主题shoka&#34; class=&#34;headerlink&#34; title=&#34;主题shoka&#34;&gt;&lt;/a&gt;主题shoka&lt;/h2&gt;&lt;p&gt;在blog文件夹&lt;/p&gt;
+&lt;p&gt;就可以看到控制台输出 localhost:4000 就可以在本地浏览器访问啦&lt;/p&gt;
+&lt;h2 id=&#34;主题shoka&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#主题shoka&#34;&gt;#&lt;/a&gt; 主题 shoka&lt;/h2&gt;
+&lt;p&gt;在 blog 文件夹&lt;/p&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git &lt;span class=&#34;built_in&#34;&gt;clone&lt;/span&gt; https://github.com/amehime/hexo-theme-shoka.git ./themes/shoka&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;在_config.yml中设置&lt;/p&gt;
+&lt;p&gt;在_config.yml 中设置&lt;/p&gt;
 &lt;figure class=&#34;highlight yml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;theme:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;shoka&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h2 id=&#34;主题next&#34;&gt;&lt;a href=&#34;#主题next&#34; class=&#34;headerlink&#34; title=&#34;主题next&#34;&gt;&lt;/a&gt;主题next&lt;/h2&gt;&lt;p&gt;在blog文件夹&lt;/p&gt;
+&lt;h2 id=&#34;主题next&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#主题next&#34;&gt;#&lt;/a&gt; 主题 next&lt;/h2&gt;
+&lt;p&gt;在 blog 文件夹&lt;/p&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git &lt;span class=&#34;built_in&#34;&gt;clone&lt;/span&gt; https://github.com/next-theme/hexo-theme-next ./themes/next&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;在_config.yml中设置&lt;/p&gt;
+&lt;p&gt;在_config.yml 中设置&lt;/p&gt;
 &lt;figure class=&#34;highlight yml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;theme:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;next&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h2 id=&#34;插件hexo-admin&#34;&gt;&lt;a href=&#34;#插件hexo-admin&#34; class=&#34;headerlink&#34; title=&#34;插件hexo-admin&#34;&gt;&lt;/a&gt;插件hexo-admin&lt;/h2&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;variable&#34;&gt;$npm&lt;/span&gt; install hexo-admin -s&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;安装好后 locahost:4000&amp;#x2F;admin 访问&lt;/p&gt;
-&lt;h2 id=&#34;文章&#34;&gt;&lt;a href=&#34;#文章&#34; class=&#34;headerlink&#34; title=&#34;文章&#34;&gt;&lt;/a&gt;文章&lt;/h2&gt;&lt;h3 id=&#34;新建草稿&#34;&gt;&lt;a href=&#34;#新建草稿&#34; class=&#34;headerlink&#34; title=&#34;新建草稿&#34;&gt;&lt;/a&gt;新建草稿&lt;/h3&gt;&lt;ul&gt;
+&lt;h2 id=&#34;插件hexo-admin&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#插件hexo-admin&#34;&gt;#&lt;/a&gt; 插件 hexo-admin&lt;/h2&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;variable&#34;&gt;$npm&lt;/span&gt; install hexo-admin -s&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;安装好后 locahost:4000/admin 访问&lt;/p&gt;
+&lt;h2 id=&#34;文章&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#文章&#34;&gt;#&lt;/a&gt; 文章&lt;/h2&gt;
+&lt;h3 id=&#34;新建草稿&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#新建草稿&#34;&gt;#&lt;/a&gt; 新建草稿&lt;/h3&gt;
+&lt;ul&gt;
 &lt;li&gt;草稿是没发布是不会显示的&lt;/li&gt;
 &lt;/ul&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;hexo new draft 草稿文件名&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h3 id=&#34;新建文章&#34;&gt;&lt;a href=&#34;#新建文章&#34; class=&#34;headerlink&#34; title=&#34;新建文章&#34;&gt;&lt;/a&gt;新建文章&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;-p, –path:自定义新文章的路径&lt;/li&gt;
-&lt;li&gt;-r, –replace:如果存在同名文章，将其替换&lt;/li&gt;
-&lt;li&gt;-s, –slug:文章的 Slug，作为新文章的文件名和发布后的 URL&lt;/li&gt;
+&lt;h3 id=&#34;新建文章&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#新建文章&#34;&gt;#&lt;/a&gt; 新建文章&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;-p, --path: 自定义新文章的路径&lt;/li&gt;
+&lt;li&gt;-r, --replace: 如果存在同名文章，将其替换&lt;/li&gt;
+&lt;li&gt;-s, --slug: 文章的 Slug，作为新文章的文件名和发布后的 URL&lt;/li&gt;
 &lt;/ul&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;hexo new 文章标题&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h2 id=&#34;发布&#34;&gt;&lt;a href=&#34;#发布&#34; class=&#34;headerlink&#34; title=&#34;发布&#34;&gt;&lt;/a&gt;发布&lt;/h2&gt;&lt;h3 id=&#34;发布草稿&#34;&gt;&lt;a href=&#34;#发布草稿&#34; class=&#34;headerlink&#34; title=&#34;发布草稿&#34;&gt;&lt;/a&gt;发布草稿&lt;/h3&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;hexo publish 文章文件名&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h3 id=&#34;清除文章缓存&#34;&gt;&lt;a href=&#34;#清除文章缓存&#34; class=&#34;headerlink&#34; title=&#34;清除文章缓存&#34;&gt;&lt;/a&gt;清除文章缓存&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;发布前需要清除存在的缓存db.json和public文件夹下的静态文件。&lt;/li&gt;
+&lt;h2 id=&#34;发布&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#发布&#34;&gt;#&lt;/a&gt; 发布&lt;/h2&gt;
+&lt;h3 id=&#34;发布草稿&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#发布草稿&#34;&gt;#&lt;/a&gt; 发布草稿&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;hexo publish 文章文件名&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;清除文章缓存&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#清除文章缓存&#34;&gt;#&lt;/a&gt; 清除文章缓存&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;发布前需要清除存在的缓存 db.json 和 public 文件夹下的静态文件。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;hexo clean&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h3 id=&#34;生成静态文件&#34;&gt;&lt;a href=&#34;#生成静态文件&#34; class=&#34;headerlink&#34; title=&#34;生成静态文件&#34;&gt;&lt;/a&gt;生成静态文件&lt;/h3&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;hexo g&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h3 id=&#34;部署&#34;&gt;&lt;a href=&#34;#部署&#34; class=&#34;headerlink&#34; title=&#34;部署&#34;&gt;&lt;/a&gt;部署&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;部署到git上，需要先&lt;strong&gt;配置git&lt;/strong&gt;&lt;/li&gt;
+&lt;h3 id=&#34;生成静态文件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#生成静态文件&#34;&gt;#&lt;/a&gt; 生成静态文件&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;hexo g&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;部署&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#部署&#34;&gt;#&lt;/a&gt; 部署&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;部署到 git 上，需要先&lt;strong&gt;配置 git&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;hexo d&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h2 id=&#34;参考资料&#34;&gt;&lt;a href=&#34;#参考资料&#34; class=&#34;headerlink&#34; title=&#34;参考资料&#34;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;[hexo官网] &lt;a href=&#34;https://hexo.io/zh-cn/docs/&#34;&gt;https://hexo.io/zh-cn/docs/&lt;/a&gt;&lt;/li&gt;
+&lt;h2 id=&#34;参考资料&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#参考资料&#34;&gt;#&lt;/a&gt; 参考资料&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;[hexo 官网] &lt;a href=&#34;https://hexo.io/zh-cn/docs/&#34;&gt;https://hexo.io/zh-cn/docs/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;[front-matter] &lt;a href=&#34;https://hexo.io/zh-cn/docs/front-matter.html&#34;&gt;https://hexo.io/zh-cn/docs/front-matter.html&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;[shoka-github] &lt;a href=&#34;https://github.com/amehime/hexo-theme-shoka?tab=readme-ov-file&#34;&gt;https://github.com/amehime/hexo-theme-shoka?tab=readme-ov-file&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;[shoka文档] &lt;a href=&#34;https://shoka.lostyu.me/computer-science/note/theme-shoka-doc/&#34;&gt;https://shoka.lostyu.me/computer-science/note/theme-shoka-doc/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;[next官网] &lt;a href=&#34;https://theme-next.iissnan.com/&#34;&gt;https://theme-next.iissnan.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[shoka 文档] &lt;a href=&#34;https://shoka.lostyu.me/computer-science/note/theme-shoka-doc/&#34;&gt;https://shoka.lostyu.me/computer-science/note/theme-shoka-doc/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[next 官网] &lt;a href=&#34;https://theme-next.iissnan.com/&#34;&gt;https://theme-next.iissnan.com/&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </content>
         <category term="hexo" />

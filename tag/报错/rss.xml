@@ -21,23 +21,21 @@
             <category>node</category>
             <category>报错</category>
             <pubDate>Thu, 24 Oct 2024 11:51:00 +0800</pubDate>
-            <description><![CDATA[ &lt;h2 id=&#34;问题描述&#34;&gt;&lt;a href=&#34;#问题描述&#34; class=&#34;headerlink&#34; title=&#34;问题描述&#34;&gt;&lt;/a&gt;问题描述&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;在一次使用&lt;em&gt;vue-element-plus-admin&lt;/em&gt;打包时，出现如下报错:&lt;/li&gt;
+            <description><![CDATA[ &lt;h2 id=&#34;问题描述&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#问题描述&#34;&gt;#&lt;/a&gt; 问题描述&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;在一次使用&lt;em&gt; vue-element-plus-admin&lt;/em&gt; 打包时，出现如下报错:&lt;/li&gt;
 &lt;/ul&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;FATAL ERROR: Ineffective mark-compacts near heap &lt;span class=&#34;built_in&#34;&gt;limit&lt;/span&gt; Allocation failed - JavaScript&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h3 id=&#34;解决方法&#34;&gt;&lt;a href=&#34;#解决方法&#34; class=&#34;headerlink&#34; title=&#34;解决方法&#34;&gt;&lt;/a&gt;解决方法&lt;/h3&gt;&lt;ul&gt;
+&lt;h3 id=&#34;解决方法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#解决方法&#34;&gt;#&lt;/a&gt; 解决方法&lt;/h3&gt;
+&lt;ul&gt;
 &lt;li&gt;安装依赖工具&lt;/li&gt;
 &lt;/ul&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm install increase-memory-limit --save&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm install  cross-env --save&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
 &lt;ul&gt;
-&lt;li&gt;修改 package.json 如下:[ LIMIT大小自己设置 ]&lt;/li&gt;
+&lt;li&gt;修改 package.json 如下:[LIMIT 大小自己设置]&lt;/li&gt;
 &lt;/ul&gt;
  &lt;figure class=&#34;highlight json&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;&amp;quot;scripts&amp;quot;&lt;/span&gt;&lt;span class=&#34;punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attr&#34;&gt;&amp;quot;fix-memory-limit&amp;quot;&lt;/span&gt;&lt;span class=&#34;punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;quot;cross-env LIMIT=2048 increase-memory-limit&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;punctuation&#34;&gt;,&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
 &lt;ul&gt;
 &lt;li&gt;最后执行就可以打包啦&lt;/li&gt;
 &lt;/ul&gt;

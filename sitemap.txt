@@ -1,13 +1,12 @@
+https://riddddder.github.io/schedule/index.html
+https://riddddder.github.io/categories/index.html
+https://riddddder.github.io/about/index.html
+https://riddddder.github.io/tags/index.html
 https://riddddder.github.io/2022/10/13/hello-hexo/
 https://riddddder.github.io/2023/01/29/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E6%80%A7/
 https://riddddder.github.io/2024/01/10/web%E5%AD%A6%E4%B9%A01/
 https://riddddder.github.io/2024/10/24/node%E5%86%85%E5%AD%98%E9%97%AE%E9%A2%98/
 https://riddddder.github.io/404.html
-https://riddddder.github.io/friends/index.html
-https://riddddder.github.io/contact/index.html
-https://riddddder.github.io/categories/index.html
-https://riddddder.github.io/tags/index.html
-https://riddddder.github.io/about/index.html
 https://riddddder.github.io/
 https://riddddder.github.io/tags/hexo/
 https://riddddder.github.io/tags/node/
