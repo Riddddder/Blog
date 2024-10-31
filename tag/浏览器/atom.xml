@@ -4,10 +4,12 @@
     <title>初始设定 • Posts by &#34;浏览器&#34; tag</title>
     <link href="https://Riddddder.github.io" />
     <updated>2023-01-29T02:54:42.000Z</updated>
-    <category term="hexo" />
+    <category term="学习" />
+    <category term="面试" />
+    <category term="前端" />
     <category term="node" />
     <category term="报错" />
-    <category term="面试" />
+    <category term="hexo" />
     <category term="web" />
     <category term="浏览器" />
     <category term="兼容性" />
@@ -23,8 +25,8 @@
 &lt;li&gt;针对 JavaScript 的兼容性，你只需要有&lt;strong&gt;新旧语法兼容&lt;/strong&gt;和&lt;strong&gt;新旧函数兼容&lt;/strong&gt;意识即可。&lt;/li&gt;
 &lt;li&gt;只需要有这两个意识就行，实现也已经不需要从头到尾的写，而是借助工具即可&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;css-兼容性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#css-兼容性&#34;&gt;#&lt;/a&gt; CSS 兼容性&lt;/h3&gt;
-&lt;h4 id=&#34;浏览器前缀&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#浏览器前缀&#34;&gt;#&lt;/a&gt; 浏览器前缀&lt;/h4&gt;
+&lt;h2 id=&#34;css-兼容性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#css-兼容性&#34;&gt;#&lt;/a&gt; CSS 兼容性&lt;/h2&gt;
+&lt;h3 id=&#34;浏览器前缀&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#浏览器前缀&#34;&gt;#&lt;/a&gt; 浏览器前缀&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;浏览器前缀是浏览器厂商为了实验性 CSS 属性而添加的标识符，它们通常用于 CSS 规则的前面。以下是一些常见的浏览器前缀：&lt;/li&gt;
 &lt;/ul&gt;
@@ -45,7 +47,7 @@
 &lt;li&gt;Autoprefixer：一个后处理工具，可以根据 Can I Use 的数据自动添加所需的浏览器前缀。&lt;/li&gt;
 &lt;li&gt;PostCSS：一个使用 JavaScript 的插件系统，可以处理 CSS 的转换，包括添加前缀。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h4 id=&#34;变量转换&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#变量转换&#34;&gt;#&lt;/a&gt; 变量转换&lt;/h4&gt;
+&lt;h3 id=&#34;变量转换&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#变量转换&#34;&gt;#&lt;/a&gt; 变量转换&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;CSS 变量的兼容性问题较少，因为它们已经成为 CSS 的一个标准部分。&lt;/li&gt;
 &lt;li&gt;但是，为了确保在不支持 CSS 变量的旧浏览器中也能正常显示，可以使用以下方法：&lt;/li&gt;
@@ -54,16 +56,16 @@
 &lt;li&gt;回退值：在 var () 函数中提供回退值。&lt;/li&gt;
 &lt;li&gt;PostCSS：使用 PostCSS 插件将 CSS 变量转换为静态值。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;javascript-的兼容性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#javascript-的兼容性&#34;&gt;#&lt;/a&gt; JavaScript 的兼容性&lt;/h3&gt;
+&lt;h2 id=&#34;javascript-的兼容性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#javascript-的兼容性&#34;&gt;#&lt;/a&gt; JavaScript 的兼容性&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;再来说说 JavaScript 的兼容性吧，针对新旧语法的兼容可以作转换，而针对新旧函数的兼容就需要加补丁。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;babel&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#babel&#34;&gt;#&lt;/a&gt; babel&lt;/h4&gt;
+&lt;h3 id=&#34;babel&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#babel&#34;&gt;#&lt;/a&gt; babel&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;其实在开发过程中，最常见的就是跟 JavaScript 打交道，也会真实感受到 JavaScript 存在新的语法，那么这些新的语法就需要转化，才能被浏览器认识。那么这时候就可以借助一个工具 babel。用于专门来降低 JavaScript 语法的。&lt;/li&gt;
 &lt;li&gt;babel 就是一个编译器，把一段源代码转化成另外一段新代码，新代码就能被浏览器识别。对了，既然 babel 是工具（postcss 也是一样），能单独使用，也能够配合使用。而我们在项目开发过程中，都会使用构建工具（比如说 webpack），但是又想使用 babel 工具，那么这时候就需要一个桥梁，而 webpack 中的桥梁就是 babel-loader，具体怎么操作你回去研究一下。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;polyfill&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#polyfill&#34;&gt;#&lt;/a&gt; polyfill&lt;/h4&gt;
+&lt;h3 id=&#34;polyfill&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#polyfill&#34;&gt;#&lt;/a&gt; polyfill&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;手动打补丁&lt;/p&gt;
@@ -82,7 +84,7 @@
 &lt;p&gt;那么这里也就需要兼容一下，因为新版本的浏览器是认识的，老版本的浏览器是不认识的，那么这里就需要为了兼容了老版浏览器，新部署一个 JS 文件（类似补丁），里面存放了各个函数（promise, fetch）体的实现代码。然后浏览器就能够正常的识别了。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;参考文章&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#参考文章&#34;&gt;#&lt;/a&gt; 参考文章&lt;/h3&gt;
+&lt;h2 id=&#34;参考文章&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#参考文章&#34;&gt;#&lt;/a&gt; 参考文章&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://juejin.cn/post/7237022892055281724&#34;&gt;掘金 - 面试官：说说你在工作中是怎么处理浏览器兼容性&lt;/a&gt;&lt;/p&gt;
 </content>
         <category term="web" />

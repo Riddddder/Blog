@@ -1,0 +1,304 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>初始设定 • Posts by &#34;前端&#34; tag</title>
+        <link>https://Riddddder.github.io</link>
+        <description></description>
+        <language>zh-CN</language>
+        <pubDate>Mon, 10 Jan 2022 12:51:59 +0800</pubDate>
+        <lastBuildDate>Mon, 10 Jan 2022 12:51:59 +0800</lastBuildDate>
+        <category>学习</category>
+        <category>面试</category>
+        <category>前端</category>
+        <category>node</category>
+        <category>报错</category>
+        <category>hexo</category>
+        <category>web</category>
+        <category>浏览器</category>
+        <category>兼容性</category>
+        <item>
+            <guid isPermalink="true">https://riddddder.github.io/2022/01/10/localStorage%E5%92%8CsessionStorage/</guid>
+            <title>前端笔记（四）：localStorage和sessionStorage</title>
+            <link>https://riddddder.github.io/2022/01/10/localStorage%E5%92%8CsessionStorage/</link>
+            <category>学习</category>
+            <category>面试</category>
+            <category>前端</category>
+            <pubDate>Mon, 10 Jan 2022 12:51:59 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;基本概念&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#基本概念&#34;&gt;#&lt;/a&gt; 基本概念&lt;/h2&gt;
+&lt;p&gt;localStorage 和 sessionStorage 都是 Web Storage API 的一部分，用于在客户端存储数据。它们都是键值对存储，可以存储字符串数据，也可以存储对象数据。&lt;/p&gt;
+&lt;h2 id=&#34;区别&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#区别&#34;&gt;#&lt;/a&gt; 区别&lt;/h2&gt;
+&lt;p&gt;localStorage 和 sessionStorage 的主要区别在于数据的生命周期。localStorage 的数据会一直存在，直到手动删除，而 sessionStorage 的数据在页面会话结束时会被清除。&lt;/p&gt;
+&lt;h3 id=&#34;作用域不同&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#作用域不同&#34;&gt;#&lt;/a&gt; 作用域不同&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;sessionStorage 的作用域限定在当前会话（当前浏览器标签页或窗口）。&lt;/li&gt;
+&lt;li&gt;localStorage 的作用域是永久的，数据在不同会话（遵循同源策略）之间共享。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;生命周期不同&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#生命周期不同&#34;&gt;#&lt;/a&gt; 生命周期不同&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;sessionStorage 的数据在会话结束时被清除，即当用户关闭浏览器标签页或窗口时，sessionStorage 中的数据会被删除。&lt;/li&gt;
+&lt;li&gt;localStorage 的数据是持久化的，除非被显式清除，否则会一直保存在客户端。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;存储大小不同&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#存储大小不同&#34;&gt;#&lt;/a&gt; 存储大小不同&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;sessionStorage 的存储容量通常比 localStorage 小。一般来说，sessionStorage 的容量限制在 5MB 左右。&lt;/li&gt;
+&lt;li&gt;localStorage 的容量限制通常在 5MB 到 10MB 之间，不同浏览器可能会有所不同。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;数据共享不同&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#数据共享不同&#34;&gt;#&lt;/a&gt; 数据共享不同&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;sessionStorage 的数据在同一个浏览器标签页或窗口中共享，但不会跨标签页或窗口共享。&lt;/li&gt;
+&lt;li&gt;localStorage 的数据在同一个域名下的所有标签页和窗口中共享。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;使用场景&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#使用场景&#34;&gt;#&lt;/a&gt; 使用场景&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;sessionStorage 适用于存储需要在同一会话中共享的数据，例如用户的登录状态、表单数据等。当用户关闭浏览器标签页或窗口时，这些数据会被自动清除。&lt;/li&gt;
+&lt;li&gt;localStorage 适用于存储需要在多个会话中共享的数据，例如用户的偏好设置、购物车数据等。这些数据会一直保存在客户端，直到被显式清除。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;使用方法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#使用方法&#34;&gt;#&lt;/a&gt; 使用方法&lt;/h2&gt;
+&lt;h3 id=&#34;localstorage&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#localstorage&#34;&gt;#&lt;/a&gt; localStorage&lt;/h3&gt;
+&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;// 存储数据&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;variable language_&#34;&gt;localStorage&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;setItem&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;#x27;key&amp;#x27;&lt;/span&gt;, &lt;span class=&#34;string&#34;&gt;&amp;#x27;value&amp;#x27;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;// 获取数据&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;var&lt;/span&gt; value = &lt;span class=&#34;variable language_&#34;&gt;localStorage&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;getItem&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;#x27;key&amp;#x27;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;// 删除数据&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;variable language_&#34;&gt;localStorage&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;removeItem&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;#x27;key&amp;#x27;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;// 清空所有数据&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;variable language_&#34;&gt;localStorage&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;clear&lt;/span&gt;();&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;sessionstorage&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#sessionstorage&#34;&gt;#&lt;/a&gt; sessionStorage&lt;/h3&gt;
+&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;// 存储数据&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;variable language_&#34;&gt;sessionStorage&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;setItem&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;#x27;key&amp;#x27;&lt;/span&gt;, &lt;span class=&#34;string&#34;&gt;&amp;#x27;value&amp;#x27;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;// 获取数据&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;var&lt;/span&gt; value = &lt;span class=&#34;variable language_&#34;&gt;sessionStorage&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;getItem&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;#x27;key&amp;#x27;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;// 删除数据&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;variable language_&#34;&gt;sessionStorage&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;removeItem&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;#x27;key&amp;#x27;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;// 清空所有数据&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;variable language_&#34;&gt;sessionStorage&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;clear&lt;/span&gt;();&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;注意事项&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#注意事项&#34;&gt;#&lt;/a&gt; 注意事项&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;localStorage 和 sessionStorage 的数据存储遵循同源策略，即只有在相同域名、相同协议和相同端口下的页面才能访问这些数据。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;localStorage 和 sessionStorage 的数据存储是同步的，即调用  &lt;code&gt;setItem&lt;/code&gt; 、 &lt;code&gt;getItem&lt;/code&gt; 、 &lt;code&gt;removeItem&lt;/code&gt;  和  &lt;code&gt;clear&lt;/code&gt;  方法会立即生效，不会阻塞页面的渲染。因此，在调用这些方法时，需要注意不要在关键路径上使用它们，以免影响页面的性能。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;localStorage 和 sessionStorage 的数据存储是字符串类型的，如果需要存储非字符串类型的数据，可以使用  &lt;code&gt;JSON.stringify&lt;/code&gt;  和  &lt;code&gt;JSON.parse&lt;/code&gt;  方法进行序列化和反序列化。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;localStorage 和 sessionStorage 的数据存储是持久化的，即数据不会在页面关闭后自动清除。如果需要清除数据，可以使用  &lt;code&gt;removeItem&lt;/code&gt;  或  &lt;code&gt;clear&lt;/code&gt;  方法。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;localStorage 和 sessionStorage 的数据存储大小有限制，一般为 5MB 左右，不同浏览器可能会有所不同。如果需要存储大量数据，可以考虑使用其他存储方式，如 IndexedDB。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;localStorage 和 sessionStorage 的数据存储是安全的，即数据不会被第三方脚本访问。但是，如果页面中存在 XSS 攻击，攻击者可以通过注入恶意脚本访问这些数据。因此，在使用 localStorage 和 sessionStorage 时，需要注意不要存储敏感数据，以免造成安全风险。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;localStorage 和 sessionStorage 的数据存储是可被浏览器清除的，如用户手动清除浏览器缓存、浏览器崩溃等。因此，在使用 localStorage 和 sessionStorage 时，需要注意数据的持久化和安全性。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://riddddder.github.io/2021/07/19/ES6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+            <title>前端笔记（二）:ES6学习笔记</title>
+            <link>https://riddddder.github.io/2021/07/19/ES6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+            <category>学习</category>
+            <category>面试</category>
+            <category>前端</category>
+            <pubDate>Mon, 19 Jul 2021 12:32:04 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;es6学习笔记&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#es6学习笔记&#34;&gt;#&lt;/a&gt; ES6 学习笔记&lt;/h2&gt;
+&lt;h3 id=&#34;let和const&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#let和const&#34;&gt;#&lt;/a&gt; let 和 const&lt;/h3&gt;
+&lt;h3 id=&#34;symbol&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#symbol&#34;&gt;#&lt;/a&gt; symbol&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Symbol 是 ES6 中引入的一种新的基本数据类型，用于表示一个独一无二的值，不能与其他数据类型进行运算。它是 JavaScript 中的第七种数据类型&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight js&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;const&lt;/span&gt; a = &lt;span class=&#34;title class_&#34;&gt;Symbol&lt;/span&gt;();&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(a);  &lt;span class=&#34;comment&#34;&gt;//Symbol()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;const&lt;/span&gt; a = &lt;span class=&#34;keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;title class_&#34;&gt;Symbol&lt;/span&gt;();&lt;span class=&#34;comment&#34;&gt;//报错，Symbol is not a constructor，因为Symbol是基本数据类型，而不是对象，不能 new 。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;class&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#class&#34;&gt;#&lt;/a&gt; class&lt;/h3&gt;
+&lt;h3 id=&#34;字符串新特性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#字符串新特性&#34;&gt;#&lt;/a&gt; 字符串新特性&lt;/h3&gt;
+&lt;h4 id=&#34;模板字符串&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#模板字符串&#34;&gt;#&lt;/a&gt; 模板字符串&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;使用反引号 `` 和 ${} 来引用变量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;字符串新方法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#字符串新方法&#34;&gt;#&lt;/a&gt; 字符串新方法&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;includes () 判断字符串是否包含参数字符串，返回 boolean 值。&lt;/li&gt;
+&lt;li&gt;startsWith () /endsWith ()，判断字符串是否以参数字符串开头或结尾。返回 boolean 值。这两个方法可以有第二个参数，一个数字，表示开始查找的位置&lt;/li&gt;
+&lt;li&gt;repeat () 方法按指定次数返回一个新的字符串。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight js&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;hello&amp;quot;&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;repeat&lt;/span&gt;(&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;)&lt;span class=&#34;comment&#34;&gt;//&amp;quot;hellohello&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;padStart ()/padEnd ()，用参数字符串按给定长度从前面或后面补全字符串，返回新字符串。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;数组新方法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#数组新方法&#34;&gt;#&lt;/a&gt; 数组新方法&lt;/h3&gt;
+&lt;p&gt;Array.from () 是内置对象 Array 的方法，实例数组不能调用&lt;br&gt;
+ includes () 参数：数值 -------- 返回值：true/false&lt;br&gt;
+map ()、filter () 参数：函数 -------- 返回值：数组&lt;br&gt;
+ forEach () 参数：函数 -------- 返回值：undefined&lt;br&gt;
+find () 参数：函数 -------- 返回值：数值&lt;br&gt;
+ some ()、every () 参数：函数 -------- 返回值：true/false&lt;/p&gt;
+&lt;h3 id=&#34;object新方法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#object新方法&#34;&gt;#&lt;/a&gt; object 新方法&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://Object.is&#34;&gt;Object.is&lt;/a&gt;()&lt;/li&gt;
+&lt;li&gt;Object.assign()&lt;/li&gt;
+&lt;li&gt;Object.keys()&lt;/li&gt;
+&lt;li&gt;Object.values()&lt;/li&gt;
+&lt;li&gt;Object.entries()&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;对象扩展符&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#对象扩展符&#34;&gt;#&lt;/a&gt; 对象扩展符&lt;/h3&gt;
+&lt;h4 id=&#34;拷贝&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#拷贝&#34;&gt;#&lt;/a&gt; 拷贝&lt;/h4&gt;
+&lt;figure class=&#34;highlight js&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; obj = &amp;#123;&lt;span class=&#34;attr&#34;&gt;name&lt;/span&gt;: &lt;span class=&#34;string&#34;&gt;&amp;quot;xiaoming&amp;quot;&lt;/span&gt;, &lt;span class=&#34;attr&#34;&gt;age&lt;/span&gt;: &lt;span class=&#34;number&#34;&gt;18&lt;/span&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; obj1 = &amp;#123;...obj&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(obj1 === obj);&lt;span class=&#34;comment&#34;&gt;//false&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;obj1.&lt;span class=&#34;property&#34;&gt;name&lt;/span&gt; = &lt;span class=&#34;string&#34;&gt;&amp;quot;xiaohong&amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(obj.&lt;span class=&#34;property&#34;&gt;name&lt;/span&gt;);&lt;span class=&#34;comment&#34;&gt;//xiaoming&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;合并&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#合并&#34;&gt;#&lt;/a&gt; 合并&lt;/h4&gt;
+&lt;figure class=&#34;highlight js&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; obj = &amp;#123;&lt;span class=&#34;attr&#34;&gt;name&lt;/span&gt;: &lt;span class=&#34;string&#34;&gt;&amp;quot;xiaoming&amp;quot;&lt;/span&gt;, &lt;span class=&#34;attr&#34;&gt;age&lt;/span&gt;: &lt;span class=&#34;number&#34;&gt;18&lt;/span&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; obj1 = &amp;#123;&lt;span class=&#34;attr&#34;&gt;sex&lt;/span&gt;: &lt;span class=&#34;string&#34;&gt;&amp;quot;male&amp;quot;&lt;/span&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; obj2 = &amp;#123;...obj, ...obj1&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(obj2);&lt;span class=&#34;comment&#34;&gt;//&amp;#123;name: &amp;quot;xiaoming&amp;quot;, age: 18, sex: &amp;quot;male&amp;quot;&amp;#125;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;箭头函数&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#箭头函数&#34;&gt;#&lt;/a&gt; 箭头函数&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;箭头函数实现了一种更加简洁的书写方式。箭头函数内部没有 arguments，也没有 prototype 属性，所以不能用 new 关键字调用箭头函数&lt;/li&gt;
+&lt;li&gt;箭头函数和普通函数最大的区别在于其内部 this 永远指向其父级对象的 this。(重点)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;解构赋值&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#解构赋值&#34;&gt;#&lt;/a&gt; 解构赋值&lt;/h3&gt;
+&lt;p&gt;- 解构赋值是对赋值运算符的扩展。它是一种针对数组或者对象进行模式匹配，然后对其中的变量进行赋值。&lt;br&gt;
+字符串、以及 ES6 新增的 Map 和 Set 都可以使用解构表达式&lt;/p&gt;
+&lt;figure class=&#34;highlight js&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; [a, b, c, d, e] = &lt;span class=&#34;string&#34;&gt;&amp;quot;Hello&amp;quot;&lt;/span&gt;;&lt;span class=&#34;comment&#34;&gt;// 字符串解构&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; &amp;#123; name, age, sex &amp;#125; = &amp;#123; &lt;span class=&#34;attr&#34;&gt;name&lt;/span&gt;: &lt;span class=&#34;string&#34;&gt;&amp;quot;xiaoming&amp;quot;&lt;/span&gt;, &lt;span class=&#34;attr&#34;&gt;age&lt;/span&gt;: &lt;span class=&#34;number&#34;&gt;18&lt;/span&gt;, &lt;span class=&#34;attr&#34;&gt;sex&lt;/span&gt;: &lt;span class=&#34;string&#34;&gt;&amp;quot;male&amp;quot;&lt;/span&gt; &amp;#125;;&lt;span class=&#34;comment&#34;&gt;// 对象解构&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; [a,b,c] = [&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;3&lt;/span&gt;]; &lt;span class=&#34;comment&#34;&gt;// 数组解构&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; [a,..&lt;span class=&#34;property&#34;&gt;b&lt;/span&gt;] = [&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;3&lt;/span&gt;];  &lt;span class=&#34;comment&#34;&gt;//...是剩余运算符，表示赋值运算符右边除第一个值外剩余的都赋值给b&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(a,b);&lt;span class=&#34;comment&#34;&gt;//1,[2,3]&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; [foo, [[bar], baz]] = [&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;, [[&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;], &lt;span class=&#34;number&#34;&gt;3&lt;/span&gt;]]; &lt;span class=&#34;comment&#34;&gt;// 嵌套数组解构&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;promise&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#promise&#34;&gt;#&lt;/a&gt; Promise&lt;/h3&gt;
+&lt;h4 id=&#34;asyncawait语法糖&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#asyncawait语法糖&#34;&gt;#&lt;/a&gt; async/await 语法糖&lt;/h4&gt;
+&lt;h3 id=&#34;模块化&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#模块化&#34;&gt;#&lt;/a&gt; 模块化&lt;/h3&gt;
+&lt;h3 id=&#34;新增对象&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#新增对象&#34;&gt;#&lt;/a&gt; 新增对象&lt;/h3&gt;
+&lt;h4 id=&#34;set&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#set&#34;&gt;#&lt;/a&gt; Set&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;可以理解为后端的 Set 集合对象 (ArrayList)&lt;/li&gt;
+&lt;li&gt;Set 对象和 Map 对象类似，但它存储不是键值对。类似数组，但它的每个元素都是唯一的。&lt;/li&gt;
+&lt;li&gt;WeakSet&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight js&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; set = &lt;span class=&#34;keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;title class_&#34;&gt;Set&lt;/span&gt;([&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;3&lt;/span&gt;]);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;set.&lt;span class=&#34;title function_&#34;&gt;add&lt;/span&gt;(&lt;span class=&#34;number&#34;&gt;4&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;set.&lt;span class=&#34;title function_&#34;&gt;delete&lt;/span&gt;(&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;set.&lt;span class=&#34;title function_&#34;&gt;has&lt;/span&gt;(&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;); &lt;span class=&#34;comment&#34;&gt;// true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;map&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#map&#34;&gt;#&lt;/a&gt; Map&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Map 对象用于保存键值对，任何值 JavaScript 支持的值都可以作为一个键（key）或者一个值（value）。与对象不同的是：&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;object 的键只能是字符串或 ES6 的 symbol 值，而 Map 可以是任何值。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Map 对象有一个 size 属性，存储了键值对的个数，而 object 对象没有类似属性。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;WeakMap&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight js&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; map = &lt;span class=&#34;keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;title class_&#34;&gt;Map&lt;/span&gt;();&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;map.&lt;span class=&#34;title function_&#34;&gt;set&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;, &lt;span class=&#34;string&#34;&gt;&amp;quot;xiaoming&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;map.&lt;span class=&#34;title function_&#34;&gt;set&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;age&amp;quot;&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;18&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;map.&lt;span class=&#34;title function_&#34;&gt;set&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;sex&amp;quot;&lt;/span&gt;, &lt;span class=&#34;string&#34;&gt;&amp;quot;male&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;map.&lt;span class=&#34;title function_&#34;&gt;get&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;); &lt;span class=&#34;comment&#34;&gt;// &amp;quot;xiaoming&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;map.&lt;span class=&#34;title function_&#34;&gt;has&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;); &lt;span class=&#34;comment&#34;&gt;// true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;map.&lt;span class=&#34;title function_&#34;&gt;delete&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;); &lt;span class=&#34;comment&#34;&gt;// true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;map.&lt;span class=&#34;title function_&#34;&gt;has&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;); &lt;span class=&#34;comment&#34;&gt;// false&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(map.&lt;span class=&#34;property&#34;&gt;size&lt;/span&gt;); &lt;span class=&#34;comment&#34;&gt;// 3&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;map.&lt;span class=&#34;title function_&#34;&gt;clear&lt;/span&gt;(); &lt;span class=&#34;comment&#34;&gt;// 清空map&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;forof&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#forof&#34;&gt;#&lt;/a&gt; for…of&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;for…of 循环是 ES6 引入的一种新的循环机制，用于遍历可迭代对象（如数组、字符串等）的元素。在字符串上使用 for…of 可以方便地遍历字符串中的每个字符。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight js&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;et str = &lt;span class=&#34;string&#34;&gt;&amp;quot;Hello&amp;quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;for&lt;/span&gt; (&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; char &lt;span class=&#34;keyword&#34;&gt;of&lt;/span&gt; str) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;variable language_&#34;&gt;console&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;log&lt;/span&gt;(char);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;forin&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#forin&#34;&gt;#&lt;/a&gt; for…in&lt;/h3&gt;
+&lt;p&gt;(阮一峰 ECMAScript 6 (ES6) 标准入门教程 第三版)[&lt;a href=&#34;https://www.bookstack.cn/read/es6-3rd/sidebar.md&#34;&gt;https://www.bookstack.cn/read/es6-3rd/sidebar.md&lt;/a&gt;]&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://riddddder.github.io/2021/07/10/Javascript%E9%9D%A2%E8%AF%95/</guid>
+            <title>前端笔记（一）：javascript基础</title>
+            <link>https://riddddder.github.io/2021/07/10/Javascript%E9%9D%A2%E8%AF%95/</link>
+            <category>学习</category>
+            <category>面试</category>
+            <category>前端</category>
+            <pubDate>Sat, 10 Jul 2021 17:51:56 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;javascript笔记&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#javascript笔记&#34;&gt;#&lt;/a&gt; javascript 笔记&lt;/h2&gt;
+&lt;h3 id=&#34;js的数据类型&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#js的数据类型&#34;&gt;#&lt;/a&gt; js 的数据类型&lt;/h3&gt;
+&lt;p&gt;基本数据类型：Number、String、Boolean、Null、Undefined、Object、（Symbol、bigInt）&lt;br&gt;
+引用数据类型：Array、Function、Object&lt;br&gt;
+Null 只有一个值，是 null。不存在的对象。&lt;br&gt;
+Undefined 只有一个值，是 undefined。没有初始化。undefined 是从 null 中派生出来的。&lt;br&gt;
+简单理解就是：undefined 是没有定义的，null 是定义了但是为空。&lt;/p&gt;
+&lt;p&gt;Symbol 类型的对象永远不相等，即便创建的时候传入相同的值。因此，可以用解决属性名冲突的问题（适用于多少编码），做为标记。&lt;/p&gt;
+&lt;h3 id=&#34;varletconst的区别&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#varletconst的区别&#34;&gt;#&lt;/a&gt; var，let，const 的区别&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;var 全局变量，能重复声明&lt;/li&gt;
+&lt;li&gt;let 局部变量，代码块内有效，不能重复声明&lt;/li&gt;
+&lt;li&gt;const 常量，一旦声明，常量的值就不能改变，就必须立即初始化，不能留到以后赋值&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;es6有哪些新特性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#es6有哪些新特性&#34;&gt;#&lt;/a&gt; es6 有哪些新特性&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;let const&lt;/li&gt;
+&lt;li&gt;模板字符串&lt;/li&gt;
+&lt;li&gt;扩展运算符&lt;/li&gt;
+&lt;li&gt;解构赋值&lt;/li&gt;
+&lt;li&gt;箭头函数&lt;/li&gt;
+&lt;li&gt;Promise、async/await&lt;/li&gt;
+&lt;li&gt;数组新方法：map、filter、reduce、some、every&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;检测数组类型的方法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#检测数组类型的方法&#34;&gt;#&lt;/a&gt; 检测数组类型的方法&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;instanceof of， 例：arr instanceof Array&lt;/li&gt;
+&lt;li&gt;constructor , 例：arr.constructor === Array&lt;/li&gt;
+&lt;li&gt;Array.isArray(arr)&lt;/li&gt;
+&lt;li&gt;call 方法，例：Object.prototype.toString.call (arr) === ‘[object Array]’&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;数组的方法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#数组的方法&#34;&gt;#&lt;/a&gt; 数组的方法&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;改变原数组：push、pop、shift、unshift、sort、splice、reverse&lt;/li&gt;
+&lt;li&gt;不改变原属组：concat、join、map、forEach、filter、slice&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;字符串方法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#字符串方法&#34;&gt;#&lt;/a&gt; 字符串方法&lt;/h3&gt;
+&lt;p&gt;1 charAt (x) 返回字符串中 x 字符的位置，下标从 0 开始&lt;br&gt;
+ 2 charCodeAt (x) 返回字符串中 x 位置处字符的 unicode 值&lt;br&gt;
+ 3 concat () 用于连接两个或多个字符串&lt;br&gt;
+ 4 fromCharcode () 将一组 Unicode 码转换为字符&lt;br&gt;
+ 5 indexOf (substr, [start]) 返回某个指定的字符串值在字符串中首次出现的位置。如果没有找到匹配的字符串则返回 -1。&lt;br&gt;
+6 lastIndexOf (substr, [start]) 返回指定文本在字符串中最后一次出现的索引，如果未找到，则返回 - 1。&lt;br&gt;
+7 match (regexp) 根据正则表达式在字符串中搜索匹配项。如果没有找到匹配项，则返回 null。&lt;br&gt;
+8 replace (regexp/substr, replacetext) 用于在字符串中用一些字符替换另一些字符，或替换一个与正则表达式匹配的子串&lt;br&gt;
+ 9 search (regexp) 检索字符串中指定的子字符串，或检索与正则表达式相匹配的子字符串，如果找到，返回与 regexp 相匹配的子串的起始位置，否则返回 -1。&lt;br&gt;
+10 slice (start, [end]) 裁取字符串的某个部分，返回一个新的字符串。包括字符串从 start 开始（包括 start）到 end 结束（不包括 end）为止的所有字符&lt;br&gt;
+ 11 split (delimiter, [limit]) split () 方法用于把一个字符串分割成字符串数组，返回一个字符串数组，返回的数组中的字串不包括 delimiter 自身。 可选的 “limit” 是一个整数，允许各位指定要返回的最大数组的元素个数。&lt;br&gt;
+12 substr (start, [length]) 在字符串中抽取从 start 下标开始的指定数目的字符。返回一个新的字符串，包含从 start（包括 start 所指的字符） 处开始的 length 个字符。如果没有指定 length，那么返回的字符串包含从 start 到该字符串的结尾的字符。&lt;br&gt;
+13 substring (start,stop) 用于提取字符串中介于两个指定下标之间的字符&lt;br&gt;
+ 14 toLowerCase () 把字符串转换为小写。&lt;br&gt;
+15 toUpperCase () 把字符串转换为大写。&lt;br&gt;
+16 includes () 检查字符串是否包含指定的字符串或字符。&lt;br&gt;
+17 endsWith () 检查字符串是否以指定的字符串或字符结束。&lt;br&gt;
+18 repeat () 将字符串复制指定次数。&lt;br&gt;
+19 valueOf () 返回一个 String 对象的原始值（primitive value），该值等同于 String.prototype.toString ()。&lt;br&gt;
+20 trim () 从一个字符串的两端删除空白字符。&lt;/p&gt;
+&lt;h3 id=&#34;匿名函数和箭头函数&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#匿名函数和箭头函数&#34;&gt;#&lt;/a&gt; 匿名函数和箭头函数&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;function 后并没有给函数命名，而是把整个函数直接赋值给变量 abs，调用时通过 abs (9) 来调用此函数。&lt;/li&gt;
+&lt;li&gt;箭头函数的定义用的就是一个箭头。箭头函数表面上相当于匿名函数，并且简化了函数定义。&lt;br&gt;
+当箭头函数只包含一个表达式时，它连 {…} 和 return 都省掉了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;水平垂直居中的方法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#水平垂直居中的方法&#34;&gt;#&lt;/a&gt; 水平垂直居中的方法&lt;/h3&gt;
+&lt;h4 id=&#34;定位法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#定位法&#34;&gt;#&lt;/a&gt; 定位法&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;定位，position: absolute; top: 0; left: 0; bottom: 0; right: 0; margin: auto;&lt;/li&gt;
+&lt;li&gt;定位，position: absolute; top: 50%; left: 50%; transform: translate (-50%, -50%);&lt;/li&gt;
+&lt;li&gt;定位，(已知子元素宽高) width:100px;height:100px;position: absolute; top: 50%; left: 50%; margin-left: -50px; margin-top: -50px;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;flex布局&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#flex布局&#34;&gt;#&lt;/a&gt; flex 布局&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;diplay: flex; justify-content: center; align-items: center;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;grid网格布局&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#grid网格布局&#34;&gt;#&lt;/a&gt; grid 网格布局&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;diplay: grid; align-items:center;justify-content: center;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;table表格布局&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#table表格布局&#34;&gt;#&lt;/a&gt; table 表格布局&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;设置父元素为 display:table-cell，子元素设置 display: inline-block。利用 vertical 和 text-align 可以让所有的行内块级元素水平垂直居中&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;继承的方式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#继承的方式&#34;&gt;#&lt;/a&gt; 继承的方式&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;原型继承：不能传参&lt;/li&gt;
+&lt;li&gt;组合继承： 调用了两次父类的构造函数，不共享父类引用属性&lt;/li&gt;
+&lt;li&gt;寄生组合继承：&lt;/li&gt;
+&lt;li&gt;ES6 的 extend：子类只要继承父类，可以不写 constructor ，一旦写了，则在 constructor 中的第一句话必须是 super&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;深拷贝和浅拷贝&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#深拷贝和浅拷贝&#34;&gt;#&lt;/a&gt; 深拷贝和浅拷贝&lt;/h3&gt;
+&lt;h4 id=&#34;深拷贝&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#深拷贝&#34;&gt;#&lt;/a&gt; 深拷贝&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;JSON.parse(JSON.stringify(obj))&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;递归拷贝&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight js&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;title function_&#34;&gt;deepCopy&lt;/span&gt;(&lt;span class=&#34;params&#34;&gt;obj&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;comment&#34;&gt;// 判断是否为null或者不是对象&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt; (obj &amp;amp;&amp;amp; &lt;span class=&#34;keyword&#34;&gt;typeof&lt;/span&gt; obj !== &lt;span class=&#34;string&#34;&gt;&amp;#x27;object&amp;#x27;&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; obj;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;comment&#34;&gt;// 判断是对象还是数组&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; copy = &lt;span class=&#34;title class_&#34;&gt;Array&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;isArray&lt;/span&gt;(obj) ? [] : &amp;#123;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;comment&#34;&gt;// 遍历&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;for&lt;/span&gt; (le&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  t key &lt;span class=&#34;keyword&#34;&gt;in&lt;/span&gt; obj) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt; (obj.&lt;span class=&#34;title function_&#34;&gt;hasOwnProperty&lt;/span&gt;(key)) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      &lt;span class=&#34;comment&#34;&gt;// 递归&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      copy[key] = &lt;span class=&#34;title function_&#34;&gt;deepCopy&lt;/span&gt;(obj[key]);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; copy;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;浅拷贝&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#浅拷贝&#34;&gt;#&lt;/a&gt; 浅拷贝&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;let obj1 = Object.assign({}, obj)&lt;/li&gt;
+&lt;li&gt;扩展运算符&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight js&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; obj1 = &amp;#123; ...obj &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;Array.prototype.slice()&lt;/li&gt;
+&lt;li&gt;Array.prototype.concat()&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

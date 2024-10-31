@@ -3,24 +3,30 @@
     <id>https://Riddddder.github.io</id>
     <title>初始设定 • Posts by &#34;报错&#34; tag</title>
     <link href="https://Riddddder.github.io" />
-    <updated>2024-10-24T03:51:00.000Z</updated>
-    <category term="hexo" />
+    <updated>2024-10-24T10:51:00.000Z</updated>
+    <category term="学习" />
+    <category term="面试" />
+    <category term="前端" />
     <category term="node" />
     <category term="报错" />
-    <category term="面试" />
+    <category term="hexo" />
     <category term="web" />
     <category term="浏览器" />
     <category term="兼容性" />
     <entry>
-        <id>https://riddddder.github.io/2024/10/24/node%E5%86%85%E5%AD%98%E9%97%AE%E9%A2%98/</id>
+        <id>https://riddddder.github.io/2024/10/24/Node%E5%86%85%E5%AD%98%E9%97%AE%E9%A2%98/</id>
         <title>（已解决）vue-element-plus-admin打包报错</title>
-        <link rel="alternate" href="https://riddddder.github.io/2024/10/24/node%E5%86%85%E5%AD%98%E9%97%AE%E9%A2%98/"/>
+        <link rel="alternate" href="https://riddddder.github.io/2024/10/24/Node%E5%86%85%E5%AD%98%E9%97%AE%E9%A2%98/"/>
         <content type="html">&lt;h2 id=&#34;问题描述&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#问题描述&#34;&gt;#&lt;/a&gt; 问题描述&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;在一次使用&lt;em&gt; vue-element-plus-admin&lt;/em&gt; 打包时，出现如下报错:&lt;/li&gt;
 &lt;/ul&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;FATAL ERROR: Ineffective mark-compacts near heap &lt;span class=&#34;built_in&#34;&gt;limit&lt;/span&gt; Allocation failed - JavaScript&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&#34;解决方法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#解决方法&#34;&gt;#&lt;/a&gt; 解决方法&lt;/h3&gt;
+&lt;h2 id=&#34;问题原因&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#问题原因&#34;&gt;#&lt;/a&gt; 问题原因&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;node 内存泄漏耗尽，JavaScript 堆内存不足。因为 Node 是基于 V8 引擎，在 Node 中通过 JavaScript 使用内存时只能使用部分内存。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;解决方法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#解决方法&#34;&gt;#&lt;/a&gt; 解决方法&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;安装依赖工具&lt;/li&gt;
 &lt;/ul&gt;
@@ -37,6 +43,6 @@
 </content>
         <category term="node" />
         <category term="报错" />
-        <updated>2024-10-24T03:51:00.000Z</updated>
+        <updated>2024-10-24T10:51:00.000Z</updated>
     </entry>
 </feed>

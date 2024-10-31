@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"riddddder.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="# ES6 学习笔记 # let 和 const # symbol  Symbol 是 ES6 中引入的一种新的基本数据类型，用于表示一个独一无二的值，不能与其他数据类型进行运算。它是 JavaScript 中的第七种数据类型  1234const a &#x3D; Symbol();console.log(a);  &#x2F;&#x2F;Symbol()const a &#x3D; new Symbol();&#x2F;&#x2F;报错，Symbol">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端笔记（二）:ES6学习笔记">
+<meta property="og:url" content="https://riddddder.github.io/2021/07/19/ES6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="初始设定">
+<meta property="og:description" content="# ES6 学习笔记 # let 和 const # symbol  Symbol 是 ES6 中引入的一种新的基本数据类型，用于表示一个独一无二的值，不能与其他数据类型进行运算。它是 JavaScript 中的第七种数据类型  1234const a &#x3D; Symbol();console.log(a);  &#x2F;&#x2F;Symbol()const a &#x3D; new Symbol();&#x2F;&#x2F;报错，Symbol">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-07-19T04:32:04.000Z">
+<meta property="article:modified_time" content="2024-10-31T06:56:40.844Z">
+<meta property="article:author" content="Ridder">
+<meta property="article:tag" content="学习">
+<meta property="article:tag" content="面试">
+<meta property="article:tag" content="前端">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://riddddder.github.io/2021/07/19/ES6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://riddddder.github.io/2021/07/19/ES6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/","path":"2021/07/19/ES6学习笔记/","title":"前端笔记（二）:ES6学习笔记"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>前端笔记（二）:ES6学习笔记 | 初始设定</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">初始设定</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#es6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0"><span class="nav-number">1.</span> <span class="nav-text"> ES6 学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#let%E5%92%8Cconst"><span class="nav-number">1.1.</span> <span class="nav-text"> let 和 const</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#symbol"><span class="nav-number">1.2.</span> <span class="nav-text"> symbol</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#class"><span class="nav-number">1.3.</span> <span class="nav-text"> class</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%96%B0%E7%89%B9%E6%80%A7"><span class="nav-number">1.4.</span> <span class="nav-text"> 字符串新特性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A8%A1%E6%9D%BF%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">1.4.1.</span> <span class="nav-text"> 模板字符串</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%96%B0%E6%96%B9%E6%B3%95"><span class="nav-number">1.4.2.</span> <span class="nav-text"> 字符串新方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E7%BB%84%E6%96%B0%E6%96%B9%E6%B3%95"><span class="nav-number">1.5.</span> <span class="nav-text"> 数组新方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#object%E6%96%B0%E6%96%B9%E6%B3%95"><span class="nav-number">1.6.</span> <span class="nav-text"> object 新方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E8%B1%A1%E6%89%A9%E5%B1%95%E7%AC%A6"><span class="nav-number">1.7.</span> <span class="nav-text"> 对象扩展符</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8B%B7%E8%B4%9D"><span class="nav-number">1.7.1.</span> <span class="nav-text"> 拷贝</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%90%88%E5%B9%B6"><span class="nav-number">1.7.2.</span> <span class="nav-text"> 合并</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0"><span class="nav-number">1.8.</span> <span class="nav-text"> 箭头函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC"><span class="nav-number">1.9.</span> <span class="nav-text"> 解构赋值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#promise"><span class="nav-number">1.10.</span> <span class="nav-text"> Promise</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#asyncawait%E8%AF%AD%E6%B3%95%E7%B3%96"><span class="nav-number">1.10.1.</span> <span class="nav-text"> async&#x2F;await 语法糖</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A8%A1%E5%9D%97%E5%8C%96"><span class="nav-number">1.11.</span> <span class="nav-text"> 模块化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B0%E5%A2%9E%E5%AF%B9%E8%B1%A1"><span class="nav-number">1.12.</span> <span class="nav-text"> 新增对象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#set"><span class="nav-number">1.12.1.</span> <span class="nav-text"> Set</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#map"><span class="nav-number">1.12.2.</span> <span class="nav-text"> Map</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#forof"><span class="nav-number">1.13.</span> <span class="nav-text"> for…of</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#forin"><span class="nav-number">1.14.</span> <span class="nav-text"> for…in</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Ridder</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://riddddder.github.io/2021/07/19/ES6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Ridder">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="初始设定">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="前端笔记（二）:ES6学习笔记 | 初始设定">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          前端笔记（二）:ES6学习笔记
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-07-19 12:32:04" itemprop="dateCreated datePublished" datetime="2021-07-19T12:32:04+08:00">2021-07-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="es6学习笔记"><a class="markdownIt-Anchor" href="#es6学习笔记">#</a> ES6 学习笔记</h2>
+<h3 id="let和const"><a class="markdownIt-Anchor" href="#let和const">#</a> let 和 const</h3>
+<h3 id="symbol"><a class="markdownIt-Anchor" href="#symbol">#</a> symbol</h3>
+<ul>
+<li>Symbol 是 ES6 中引入的一种新的基本数据类型，用于表示一个独一无二的值，不能与其他数据类型进行运算。它是 JavaScript 中的第七种数据类型</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> a = <span class="title class_">Symbol</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a);  <span class="comment">//Symbol()</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> a = <span class="keyword">new</span> <span class="title class_">Symbol</span>();<span class="comment">//报错，Symbol is not a constructor，因为Symbol是基本数据类型，而不是对象，不能 new 。</span></span><br></pre></td></tr></table></figure>
+<h3 id="class"><a class="markdownIt-Anchor" href="#class">#</a> class</h3>
+<h3 id="字符串新特性"><a class="markdownIt-Anchor" href="#字符串新特性">#</a> 字符串新特性</h3>
+<h4 id="模板字符串"><a class="markdownIt-Anchor" href="#模板字符串">#</a> 模板字符串</h4>
+<ul>
+<li>使用反引号 `` 和 ${} 来引用变量</li>
+</ul>
+<h4 id="字符串新方法"><a class="markdownIt-Anchor" href="#字符串新方法">#</a> 字符串新方法</h4>
+<ul>
+<li>includes () 判断字符串是否包含参数字符串，返回 boolean 值。</li>
+<li>startsWith () /endsWith ()，判断字符串是否以参数字符串开头或结尾。返回 boolean 值。这两个方法可以有第二个参数，一个数字，表示开始查找的位置</li>
+<li>repeat () 方法按指定次数返回一个新的字符串。</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;hello&quot;</span>.<span class="title function_">repeat</span>(<span class="number">2</span>)<span class="comment">//&quot;hellohello&quot;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>padStart ()/padEnd ()，用参数字符串按给定长度从前面或后面补全字符串，返回新字符串。</li>
+</ul>
+<h3 id="数组新方法"><a class="markdownIt-Anchor" href="#数组新方法">#</a> 数组新方法</h3>
+<p>Array.from () 是内置对象 Array 的方法，实例数组不能调用<br>
+ includes () 参数：数值 -------- 返回值：true/false<br>
+map ()、filter () 参数：函数 -------- 返回值：数组<br>
+ forEach () 参数：函数 -------- 返回值：undefined<br>
+find () 参数：函数 -------- 返回值：数值<br>
+ some ()、every () 参数：函数 -------- 返回值：true/false</p>
+<h3 id="object新方法"><a class="markdownIt-Anchor" href="#object新方法">#</a> object 新方法</h3>
+<ul>
+<li><a target="_blank" rel="noopener" href="http://Object.is">Object.is</a>()</li>
+<li>Object.assign()</li>
+<li>Object.keys()</li>
+<li>Object.values()</li>
+<li>Object.entries()</li>
+</ul>
+<h3 id="对象扩展符"><a class="markdownIt-Anchor" href="#对象扩展符">#</a> 对象扩展符</h3>
+<h4 id="拷贝"><a class="markdownIt-Anchor" href="#拷贝">#</a> 拷贝</h4>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;<span class="attr">name</span>: <span class="string">&quot;xiaoming&quot;</span>, <span class="attr">age</span>: <span class="number">18</span>&#125;;</span><br><span class="line"><span class="keyword">let</span> obj1 = &#123;...obj&#125;;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(obj1 === obj);<span class="comment">//false</span></span><br><span class="line">obj1.<span class="property">name</span> = <span class="string">&quot;xiaohong&quot;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(obj.<span class="property">name</span>);<span class="comment">//xiaoming</span></span><br></pre></td></tr></table></figure>
+<h4 id="合并"><a class="markdownIt-Anchor" href="#合并">#</a> 合并</h4>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;<span class="attr">name</span>: <span class="string">&quot;xiaoming&quot;</span>, <span class="attr">age</span>: <span class="number">18</span>&#125;;</span><br><span class="line"><span class="keyword">let</span> obj1 = &#123;<span class="attr">sex</span>: <span class="string">&quot;male&quot;</span>&#125;;</span><br><span class="line"><span class="keyword">let</span> obj2 = &#123;...obj, ...obj1&#125;;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(obj2);<span class="comment">//&#123;name: &quot;xiaoming&quot;, age: 18, sex: &quot;male&quot;&#125;</span></span><br></pre></td></tr></table></figure>
+<h3 id="箭头函数"><a class="markdownIt-Anchor" href="#箭头函数">#</a> 箭头函数</h3>
+<ul>
+<li>箭头函数实现了一种更加简洁的书写方式。箭头函数内部没有 arguments，也没有 prototype 属性，所以不能用 new 关键字调用箭头函数</li>
+<li>箭头函数和普通函数最大的区别在于其内部 this 永远指向其父级对象的 this。(重点)</li>
+</ul>
+<h3 id="解构赋值"><a class="markdownIt-Anchor" href="#解构赋值">#</a> 解构赋值</h3>
+<p>- 解构赋值是对赋值运算符的扩展。它是一种针对数组或者对象进行模式匹配，然后对其中的变量进行赋值。<br>
+字符串、以及 ES6 新增的 Map 和 Set 都可以使用解构表达式</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> [a, b, c, d, e] = <span class="string">&quot;Hello&quot;</span>;<span class="comment">// 字符串解构</span></span><br><span class="line"><span class="keyword">let</span> &#123; name, age, sex &#125; = &#123; <span class="attr">name</span>: <span class="string">&quot;xiaoming&quot;</span>, <span class="attr">age</span>: <span class="number">18</span>, <span class="attr">sex</span>: <span class="string">&quot;male&quot;</span> &#125;;<span class="comment">// 对象解构</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> [a,b,c] = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]; <span class="comment">// 数组解构</span></span><br><span class="line"><span class="keyword">let</span> [a,..<span class="property">b</span>] = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];  <span class="comment">//...是剩余运算符，表示赋值运算符右边除第一个值外剩余的都赋值给b</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a,b);<span class="comment">//1,[2,3]</span></span><br><span class="line"><span class="keyword">let</span> [foo, [[bar], baz]] = [<span class="number">1</span>, [[<span class="number">2</span>], <span class="number">3</span>]]; <span class="comment">// 嵌套数组解构</span></span><br></pre></td></tr></table></figure>
+<h3 id="promise"><a class="markdownIt-Anchor" href="#promise">#</a> Promise</h3>
+<h4 id="asyncawait语法糖"><a class="markdownIt-Anchor" href="#asyncawait语法糖">#</a> async/await 语法糖</h4>
+<h3 id="模块化"><a class="markdownIt-Anchor" href="#模块化">#</a> 模块化</h3>
+<h3 id="新增对象"><a class="markdownIt-Anchor" href="#新增对象">#</a> 新增对象</h3>
+<h4 id="set"><a class="markdownIt-Anchor" href="#set">#</a> Set</h4>
+<ul>
+<li>可以理解为后端的 Set 集合对象 (ArrayList)</li>
+<li>Set 对象和 Map 对象类似，但它存储不是键值对。类似数组，但它的每个元素都是唯一的。</li>
+<li>WeakSet</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> set = <span class="keyword">new</span> <span class="title class_">Set</span>([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]);</span><br><span class="line">set.<span class="title function_">add</span>(<span class="number">4</span>);</span><br><span class="line">set.<span class="title function_">delete</span>(<span class="number">1</span>);</span><br><span class="line">set.<span class="title function_">has</span>(<span class="number">2</span>); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<h4 id="map"><a class="markdownIt-Anchor" href="#map">#</a> Map</h4>
+<ul>
+<li>
+<p>Map 对象用于保存键值对，任何值 JavaScript 支持的值都可以作为一个键（key）或者一个值（value）。与对象不同的是：</p>
+</li>
+<li>
+<p>object 的键只能是字符串或 ES6 的 symbol 值，而 Map 可以是任何值。</p>
+</li>
+<li>
+<p>Map 对象有一个 size 属性，存储了键值对的个数，而 object 对象没有类似属性。</p>
+</li>
+<li>
+<p>WeakMap</p>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> map = <span class="keyword">new</span> <span class="title class_">Map</span>();</span><br><span class="line">map.<span class="title function_">set</span>(<span class="string">&quot;name&quot;</span>, <span class="string">&quot;xiaoming&quot;</span>);</span><br><span class="line">map.<span class="title function_">set</span>(<span class="string">&quot;age&quot;</span>, <span class="number">18</span>);</span><br><span class="line">map.<span class="title function_">set</span>(<span class="string">&quot;sex&quot;</span>, <span class="string">&quot;male&quot;</span>);</span><br><span class="line">map.<span class="title function_">get</span>(<span class="string">&quot;name&quot;</span>); <span class="comment">// &quot;xiaoming&quot;</span></span><br><span class="line">map.<span class="title function_">has</span>(<span class="string">&quot;name&quot;</span>); <span class="comment">// true</span></span><br><span class="line">map.<span class="title function_">delete</span>(<span class="string">&quot;name&quot;</span>); <span class="comment">// true</span></span><br><span class="line">map.<span class="title function_">has</span>(<span class="string">&quot;name&quot;</span>); <span class="comment">// false</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(map.<span class="property">size</span>); <span class="comment">// 3</span></span><br><span class="line">map.<span class="title function_">clear</span>(); <span class="comment">// 清空map</span></span><br></pre></td></tr></table></figure>
+<h3 id="forof"><a class="markdownIt-Anchor" href="#forof">#</a> for…of</h3>
+<ul>
+<li>for…of 循环是 ES6 引入的一种新的循环机制，用于遍历可迭代对象（如数组、字符串等）的元素。在字符串上使用 for…of 可以方便地遍历字符串中的每个字符。</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">et str = <span class="string">&quot;Hello&quot;</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> char <span class="keyword">of</span> str) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(char);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="forin"><a class="markdownIt-Anchor" href="#forin">#</a> for…in</h3>
+<p>(阮一峰 ECMAScript 6 (ES6) 标准入门教程 第三版)[<a target="_blank" rel="noopener" href="https://www.bookstack.cn/read/es6-3rd/sidebar.md">https://www.bookstack.cn/read/es6-3rd/sidebar.md</a>]</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag"># 学习</a>
+              <a href="/tags/%E9%9D%A2%E8%AF%95/" rel="tag"># 面试</a>
+              <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag"># 前端</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/07/10/Javascript%E9%9D%A2%E8%AF%95/" rel="prev" title="前端笔记（一）：javascript基础">
+                  <i class="fa fa-angle-left"></i> 前端笔记（一）：javascript基础
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/01/10/localStorage%E5%92%8CsessionStorage/" rel="next" title="前端笔记（四）：localStorage和sessionStorage">
+                  前端笔记（四）：localStorage和sessionStorage <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Ridder</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">11k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">10 分钟</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

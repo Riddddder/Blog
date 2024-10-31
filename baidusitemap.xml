@@ -1,19 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://Riddddder.github.io/2022/10/13/hello-hexo/</loc>
-    <lastmod>2024-10-29</lastmod>
+    <loc>https://Riddddder.github.io/2021/07/10/Javascript%E9%9D%A2%E8%AF%95/</loc>
+    <lastmod>2024-10-31</lastmod>
   </url>
   <url>
     <loc>https://Riddddder.github.io/2023/01/29/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E6%80%A7/</loc>
-    <lastmod>2024-10-29</lastmod>
+    <lastmod>2024-10-31</lastmod>
   </url>
   <url>
-    <loc>https://Riddddder.github.io/2024/01/10/web%E5%AD%A6%E4%B9%A01/</loc>
-    <lastmod>2024-10-29</lastmod>
+    <loc>https://Riddddder.github.io/2021/07/19/ES6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2024-10-31</lastmod>
   </url>
   <url>
-    <loc>https://Riddddder.github.io/2024/10/24/node%E5%86%85%E5%AD%98%E9%97%AE%E9%A2%98/</loc>
-    <lastmod>2024-10-29</lastmod>
+    <loc>https://Riddddder.github.io/2022/01/10/localStorage%E5%92%8CsessionStorage/</loc>
+    <lastmod>2024-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://Riddddder.github.io/2022/10/13/hello-hexo/</loc>
+    <lastmod>2024-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://Riddddder.github.io/2024/10/24/Node%E5%86%85%E5%AD%98%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2024-10-30</lastmod>
   </url>
 </urlset> 
