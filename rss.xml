@@ -128,77 +128,6 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://riddddder.github.io/2022/10/13/hello-hexo/</guid>
-            <title>Hello Hexo</title>
-            <link>https://riddddder.github.io/2022/10/13/hello-hexo/</link>
-            <category>hexo</category>
-            <pubDate>Thu, 13 Oct 2022 19:21:44 +0800</pubDate>
-            <description><![CDATA[ &lt;h2 id=&#34;hexo介绍&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#hexo介绍&#34;&gt;#&lt;/a&gt; hexo 介绍&lt;/h2&gt;
-&lt;p&gt;Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他标记语言）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。&lt;/p&gt;
-&lt;h2 id=&#34;安装前准备&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装前准备&#34;&gt;#&lt;/a&gt; 安装前准备&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Node.js 12.0 以上版本，&lt;a href=&#34;https://nodejs.cn&#34;&gt;下载&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;git &lt;a href=&#34;https://git-scm.com/download/win&#34;&gt;下载&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;如果工作需要装了 node 可以安装&lt;a href=&#34;https://nvm.uihtm.com/&#34;&gt; nvm&lt;/a&gt; 管理多版本 node。&lt;/p&gt;
-&lt;h2 id=&#34;安装&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装&#34;&gt;#&lt;/a&gt; 安装&lt;/h2&gt;
-&lt;p&gt;安装好 node 后，执行下列命令就可以完成 blog 文件夹初始化（blog 为任意空文件夹名称）&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm install -g hexo-cli&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;hexo init blog&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; blog&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;npm install&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;然后再执行&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;hexo s&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;就可以看到控制台输出 localhost:4000 就可以在本地浏览器访问啦&lt;/p&gt;
-&lt;h2 id=&#34;主题shoka&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#主题shoka&#34;&gt;#&lt;/a&gt; 主题 shoka&lt;/h2&gt;
-&lt;p&gt;在 blog 文件夹&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git &lt;span class=&#34;built_in&#34;&gt;clone&lt;/span&gt; https://github.com/amehime/hexo-theme-shoka.git ./themes/shoka&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;在_config.yml 中设置&lt;/p&gt;
-&lt;figure class=&#34;highlight yml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;theme:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;shoka&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&#34;主题next&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#主题next&#34;&gt;#&lt;/a&gt; 主题 next&lt;/h2&gt;
-&lt;p&gt;在 blog 文件夹&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git &lt;span class=&#34;built_in&#34;&gt;clone&lt;/span&gt; https://github.com/next-theme/hexo-theme-next ./themes/next&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;在_config.yml 中设置&lt;/p&gt;
-&lt;figure class=&#34;highlight yml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;theme:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;next&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&#34;插件hexo-admin&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#插件hexo-admin&#34;&gt;#&lt;/a&gt; 插件 hexo-admin&lt;/h2&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;variable&#34;&gt;$npm&lt;/span&gt; install hexo-admin -s&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;安装好后 locahost:4000/admin 访问&lt;/p&gt;
-&lt;h2 id=&#34;文章&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#文章&#34;&gt;#&lt;/a&gt; 文章&lt;/h2&gt;
-&lt;h3 id=&#34;新建草稿&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#新建草稿&#34;&gt;#&lt;/a&gt; 新建草稿&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;草稿是没发布是不会显示的&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;hexo new draft 草稿文件名&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&#34;新建文章&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#新建文章&#34;&gt;#&lt;/a&gt; 新建文章&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;-p, --path: 自定义新文章的路径&lt;/li&gt;
-&lt;li&gt;-r, --replace: 如果存在同名文章，将其替换&lt;/li&gt;
-&lt;li&gt;-s, --slug: 文章的 Slug，作为新文章的文件名和发布后的 URL&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;hexo new 文章标题&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&#34;发布&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#发布&#34;&gt;#&lt;/a&gt; 发布&lt;/h2&gt;
-&lt;h3 id=&#34;发布草稿&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#发布草稿&#34;&gt;#&lt;/a&gt; 发布草稿&lt;/h3&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;hexo publish 文章文件名&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&#34;清除文章缓存&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#清除文章缓存&#34;&gt;#&lt;/a&gt; 清除文章缓存&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;发布前需要清除存在的缓存 db.json 和 public 文件夹下的静态文件。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;hexo clean&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&#34;生成静态文件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#生成静态文件&#34;&gt;#&lt;/a&gt; 生成静态文件&lt;/h3&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;hexo g&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&#34;部署&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#部署&#34;&gt;#&lt;/a&gt; 部署&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;部署到 git 上，需要先&lt;strong&gt;配置 git&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;hexo d&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&#34;参考资料&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#参考资料&#34;&gt;#&lt;/a&gt; 参考资料&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;[hexo 官网] &lt;a href=&#34;https://hexo.io/zh-cn/docs/&#34;&gt;https://hexo.io/zh-cn/docs/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;[front-matter] &lt;a href=&#34;https://hexo.io/zh-cn/docs/front-matter.html&#34;&gt;https://hexo.io/zh-cn/docs/front-matter.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;[shoka-github] &lt;a href=&#34;https://github.com/amehime/hexo-theme-shoka?tab=readme-ov-file&#34;&gt;https://github.com/amehime/hexo-theme-shoka?tab=readme-ov-file&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;[shoka 文档] &lt;a href=&#34;https://shoka.lostyu.me/computer-science/note/theme-shoka-doc/&#34;&gt;https://shoka.lostyu.me/computer-science/note/theme-shoka-doc/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;[next 官网] &lt;a href=&#34;https://theme-next.iissnan.com/&#34;&gt;https://theme-next.iissnan.com/&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
- ]]></description>
-        </item>
-        <item>
             <guid isPermalink="true">https://riddddder.github.io/2022/01/10/localStorage%E5%92%8CsessionStorage/</guid>
             <title>前端笔记（四）：localStorage和sessionStorage</title>
             <link>https://riddddder.github.io/2022/01/10/localStorage%E5%92%8CsessionStorage/</link>
@@ -480,6 +409,105 @@ Undefined 只有一个值，是 undefined。没有初始化。undefined 是从 n
 &lt;li&gt;Array.prototype.slice()&lt;/li&gt;
 &lt;li&gt;Array.prototype.concat()&lt;/li&gt;
 &lt;/ul&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://riddddder.github.io/2021/06/30/hexo%E4%B8%BB%E9%A2%98-NexT%E4%B8%BB%E9%A2%98%E9%A3%9F%E7%94%A8/</guid>
+            <title>hexo主题-NexT主题食用</title>
+            <link>https://riddddder.github.io/2021/06/30/hexo%E4%B8%BB%E9%A2%98-NexT%E4%B8%BB%E9%A2%98%E9%A3%9F%E7%94%A8/</link>
+            <category>hexo</category>
+            <pubDate>Wed, 30 Jun 2021 19:00:03 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;NexT 主题是一个非常简洁的主题，非常适合新手使用。下面我将介绍如何安装和使用 NexT 主题：&lt;/p&gt;
+&lt;h2 id=&#34;安装主题&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装主题&#34;&gt;#&lt;/a&gt; 安装主题&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;这一步直接在&lt;em&gt;博客项目&lt;/em&gt;文件中执行，安装好的主题会在 &lt;code&gt;./themes/next&lt;/code&gt;  中&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git &lt;span class=&#34;built_in&#34;&gt;clone&lt;/span&gt; https://github.com/next-theme/hexo-theme-next ./themes/next&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;在_config.yml 中设置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight yml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;theme:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;next&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;next的配置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#next的配置&#34;&gt;#&lt;/a&gt; NexT 的配置&lt;/h2&gt;
+&lt;p&gt;打开 &lt;code&gt;./themes/next/_config.yml&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;搜索 &lt;code&gt;menu&lt;/code&gt;  可配置菜单，将需要的菜单注释去掉，并添加菜单项，如：&lt;/p&gt;
+&lt;figure class=&#34;highlight yml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;menu:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;attr&#34;&gt;home:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;||&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;fa&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;fa-home&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;attr&#34;&gt;tags:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;/tags/&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;||&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;fa&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;fa-tags&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;attr&#34;&gt;categories:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;/categories/&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;||&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;fa&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;fa-th&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;attr&#34;&gt;archives:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;/archives/&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;||&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;fa&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;fa-archive&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;comment&#34;&gt;# schedule: /schedule/ || fa fa-calendar&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;comment&#34;&gt;# sitemap: /sitemap.xml || fa fa-sitemap&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;attr&#34;&gt;about:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;/about/&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;||&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;fa&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;fa-user&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;comment&#34;&gt;# commonweal: /404/ || fa fa-heartbeat&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;去掉之后，在浏览器依旧是看不到内容的，需要创建对应页面。&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;hexo new page &lt;span class=&#34;string&#34;&gt;&amp;quot;tags&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;hexo new page &lt;span class=&#34;string&#34;&gt;&amp;quot;categories&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;hexo new page &lt;span class=&#34;string&#34;&gt;&amp;quot;about&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;并且需要在创建好的页面中添加 &lt;code&gt;type&lt;/code&gt;  字段，如：&lt;/p&gt;
+&lt;figure class=&#34;highlight yml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;title:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;tags&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;type:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;quot;tags&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight yml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;title:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;categories&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;type:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;quot;categories&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;关于页面可以写点文字介绍自己。&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://riddddder.github.io/2021/06/29/hello-hexo/</guid>
+            <title>Hello Hexo</title>
+            <link>https://riddddder.github.io/2021/06/29/hello-hexo/</link>
+            <category>hexo</category>
+            <pubDate>Tue, 29 Jun 2021 22:21:44 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;hexo介绍&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#hexo介绍&#34;&gt;#&lt;/a&gt; hexo 介绍&lt;/h2&gt;
+&lt;p&gt;Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他标记语言）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。&lt;/p&gt;
+&lt;h2 id=&#34;安装前准备&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装前准备&#34;&gt;#&lt;/a&gt; 安装前准备&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Node.js 12.0 以上版本，&lt;a href=&#34;https://nodejs.cn&#34;&gt;下载&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;git &lt;a href=&#34;https://git-scm.com/download/win&#34;&gt;下载&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果工作需要装了 node 可以安装&lt;a href=&#34;https://nvm.uihtm.com/&#34;&gt; nvm&lt;/a&gt; 管理多版本 node。&lt;/p&gt;
+&lt;h2 id=&#34;安装&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装&#34;&gt;#&lt;/a&gt; 安装&lt;/h2&gt;
+&lt;p&gt;安装好 node 后，执行下列命令就可以完成 blog 文件夹初始化（blog 为任意空文件夹名称）&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm install -g hexo-cli&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;hexo init blog&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; blog&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;npm install&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;然后再执行&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;hexo s&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;就可以看到控制台输出 localhost:4000 就可以在本地浏览器访问啦&lt;/p&gt;
+&lt;h2 id=&#34;主题shoka&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#主题shoka&#34;&gt;#&lt;/a&gt; 主题 shoka&lt;/h2&gt;
+&lt;p&gt;在 blog 文件夹&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git &lt;span class=&#34;built_in&#34;&gt;clone&lt;/span&gt; https://github.com/amehime/hexo-theme-shoka.git ./themes/shoka&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;在_config.yml 中设置&lt;/p&gt;
+&lt;figure class=&#34;highlight yml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;theme:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;shoka&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;主题next&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#主题next&#34;&gt;#&lt;/a&gt; 主题 next&lt;/h2&gt;
+&lt;p&gt;在 blog 文件夹&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git &lt;span class=&#34;built_in&#34;&gt;clone&lt;/span&gt; https://github.com/next-theme/hexo-theme-next ./themes/next&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;在_config.yml 中设置&lt;/p&gt;
+&lt;figure class=&#34;highlight yml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;theme:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;next&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;插件hexo-admin&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#插件hexo-admin&#34;&gt;#&lt;/a&gt; 插件 hexo-admin&lt;/h2&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;variable&#34;&gt;$npm&lt;/span&gt; install hexo-admin -s&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;安装好后 locahost:4000/admin 访问&lt;/p&gt;
+&lt;h2 id=&#34;文章&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#文章&#34;&gt;#&lt;/a&gt; 文章&lt;/h2&gt;
+&lt;h3 id=&#34;新建草稿&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#新建草稿&#34;&gt;#&lt;/a&gt; 新建草稿&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;草稿是没发布是不会显示的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;hexo new draft 草稿文件名&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;新建文章&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#新建文章&#34;&gt;#&lt;/a&gt; 新建文章&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;-p, --path: 自定义新文章的路径&lt;/li&gt;
+&lt;li&gt;-r, --replace: 如果存在同名文章，将其替换&lt;/li&gt;
+&lt;li&gt;-s, --slug: 文章的 Slug，作为新文章的文件名和发布后的 URL&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;hexo new 文章标题&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;发布&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#发布&#34;&gt;#&lt;/a&gt; 发布&lt;/h2&gt;
+&lt;h3 id=&#34;发布草稿&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#发布草稿&#34;&gt;#&lt;/a&gt; 发布草稿&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;hexo publish 文章文件名&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;清除文章缓存&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#清除文章缓存&#34;&gt;#&lt;/a&gt; 清除文章缓存&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;发布前需要清除存在的缓存 db.json 和 public 文件夹下的静态文件。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;hexo clean&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;生成静态文件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#生成静态文件&#34;&gt;#&lt;/a&gt; 生成静态文件&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;hexo g&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;部署&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#部署&#34;&gt;#&lt;/a&gt; 部署&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;部署到 git 上，需要先&lt;strong&gt;配置 git&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;hexo d&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;参考资料&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#参考资料&#34;&gt;#&lt;/a&gt; 参考资料&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;[hexo 官网] &lt;a href=&#34;https://hexo.io/zh-cn/docs/&#34;&gt;https://hexo.io/zh-cn/docs/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[front-matter] &lt;a href=&#34;https://hexo.io/zh-cn/docs/front-matter.html&#34;&gt;https://hexo.io/zh-cn/docs/front-matter.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[shoka-github] &lt;a href=&#34;https://github.com/amehime/hexo-theme-shoka?tab=readme-ov-file&#34;&gt;https://github.com/amehime/hexo-theme-shoka?tab=readme-ov-file&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[shoka 文档] &lt;a href=&#34;https://shoka.lostyu.me/computer-science/note/theme-shoka-doc/&#34;&gt;https://shoka.lostyu.me/computer-science/note/theme-shoka-doc/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[next 官网] &lt;a href=&#34;https://theme-next.iissnan.com/&#34;&gt;https://theme-next.iissnan.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
  ]]></description>
         </item>
     </channel>

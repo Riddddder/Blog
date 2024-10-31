@@ -5,8 +5,8 @@
         <link>https://Riddddder.github.io</link>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Thu, 13 Oct 2022 19:21:44 +0800</pubDate>
-        <lastBuildDate>Thu, 13 Oct 2022 19:21:44 +0800</lastBuildDate>
+        <pubDate>Wed, 30 Jun 2021 19:00:03 +0800</pubDate>
+        <lastBuildDate>Wed, 30 Jun 2021 19:00:03 +0800</lastBuildDate>
         <category>学习</category>
         <category>面试</category>
         <category>前端</category>
@@ -17,11 +17,39 @@
         <category>浏览器</category>
         <category>兼容性</category>
         <item>
-            <guid isPermalink="true">https://riddddder.github.io/2022/10/13/hello-hexo/</guid>
-            <title>Hello Hexo</title>
-            <link>https://riddddder.github.io/2022/10/13/hello-hexo/</link>
+            <guid isPermalink="true">https://riddddder.github.io/2021/06/30/hexo%E4%B8%BB%E9%A2%98-NexT%E4%B8%BB%E9%A2%98%E9%A3%9F%E7%94%A8/</guid>
+            <title>hexo主题-NexT主题食用</title>
+            <link>https://riddddder.github.io/2021/06/30/hexo%E4%B8%BB%E9%A2%98-NexT%E4%B8%BB%E9%A2%98%E9%A3%9F%E7%94%A8/</link>
             <category>hexo</category>
-            <pubDate>Thu, 13 Oct 2022 19:21:44 +0800</pubDate>
+            <pubDate>Wed, 30 Jun 2021 19:00:03 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;NexT 主题是一个非常简洁的主题，非常适合新手使用。下面我将介绍如何安装和使用 NexT 主题：&lt;/p&gt;
+&lt;h2 id=&#34;安装主题&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装主题&#34;&gt;#&lt;/a&gt; 安装主题&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;这一步直接在&lt;em&gt;博客项目&lt;/em&gt;文件中执行，安装好的主题会在 &lt;code&gt;./themes/next&lt;/code&gt;  中&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git &lt;span class=&#34;built_in&#34;&gt;clone&lt;/span&gt; https://github.com/next-theme/hexo-theme-next ./themes/next&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;在_config.yml 中设置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight yml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;theme:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;next&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;next的配置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#next的配置&#34;&gt;#&lt;/a&gt; NexT 的配置&lt;/h2&gt;
+&lt;p&gt;打开 &lt;code&gt;./themes/next/_config.yml&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;搜索 &lt;code&gt;menu&lt;/code&gt;  可配置菜单，将需要的菜单注释去掉，并添加菜单项，如：&lt;/p&gt;
+&lt;figure class=&#34;highlight yml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;menu:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;attr&#34;&gt;home:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;||&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;fa&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;fa-home&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;attr&#34;&gt;tags:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;/tags/&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;||&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;fa&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;fa-tags&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;attr&#34;&gt;categories:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;/categories/&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;||&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;fa&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;fa-th&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;attr&#34;&gt;archives:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;/archives/&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;||&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;fa&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;fa-archive&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;comment&#34;&gt;# schedule: /schedule/ || fa fa-calendar&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;comment&#34;&gt;# sitemap: /sitemap.xml || fa fa-sitemap&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;attr&#34;&gt;about:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;/about/&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;||&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;fa&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;fa-user&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;comment&#34;&gt;# commonweal: /404/ || fa fa-heartbeat&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;去掉之后，在浏览器依旧是看不到内容的，需要创建对应页面。&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;hexo new page &lt;span class=&#34;string&#34;&gt;&amp;quot;tags&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;hexo new page &lt;span class=&#34;string&#34;&gt;&amp;quot;categories&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;hexo new page &lt;span class=&#34;string&#34;&gt;&amp;quot;about&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;并且需要在创建好的页面中添加 &lt;code&gt;type&lt;/code&gt;  字段，如：&lt;/p&gt;
+&lt;figure class=&#34;highlight yml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;title:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;tags&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;type:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;quot;tags&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight yml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;title:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;categories&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;type:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;quot;categories&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;关于页面可以写点文字介绍自己。&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://riddddder.github.io/2021/06/29/hello-hexo/</guid>
+            <title>Hello Hexo</title>
+            <link>https://riddddder.github.io/2021/06/29/hello-hexo/</link>
+            <category>hexo</category>
+            <pubDate>Tue, 29 Jun 2021 22:21:44 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;hexo介绍&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#hexo介绍&#34;&gt;#&lt;/a&gt; hexo 介绍&lt;/h2&gt;
 &lt;p&gt;Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他标记语言）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。&lt;/p&gt;
 &lt;h2 id=&#34;安装前准备&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装前准备&#34;&gt;#&lt;/a&gt; 安装前准备&lt;/h2&gt;
