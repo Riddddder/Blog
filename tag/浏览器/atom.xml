@@ -4,11 +4,11 @@
     <title>初始设定 • Posts by &#34;浏览器&#34; tag</title>
     <link href="https://Riddddder.github.io" />
     <updated>2023-01-29T02:54:42.000Z</updated>
+    <category term="node" />
+    <category term="报错" />
     <category term="学习" />
     <category term="面试" />
     <category term="前端" />
-    <category term="node" />
-    <category term="报错" />
     <category term="hexo" />
     <category term="web" />
     <category term="浏览器" />
@@ -17,7 +17,8 @@
         <id>https://riddddder.github.io/2023/01/29/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E6%80%A7/</id>
         <title>怎么处理浏览器兼容性</title>
         <link rel="alternate" href="https://riddddder.github.io/2023/01/29/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E6%80%A7/"/>
-        <content type="html">&lt;figure class=&#34;highlight text&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;面试官：说说你在工作中是怎么处理浏览器兼容性&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+        <content type="html">&lt;h2 id=&#34;浏览器兼容性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#浏览器兼容性&#34;&gt;#&lt;/a&gt; 浏览器兼容性&lt;/h2&gt;
+&lt;figure class=&#34;highlight text&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;面试官：说说你在工作中是怎么处理浏览器兼容性&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;ul&gt;
 &lt;li&gt;这个问题，是面试官想知道你的学习广度，你的知识体系是否全面。&lt;/li&gt;
 &lt;li&gt;其实针对前端三部分（HTML、CSS、JavaScript），考虑浏览器兼容性只有 CSS 和 JavaScript；因为针对 HTML，在开发中就常用的几个标签，浏览器从头到脚都认识，还需要兼容吗？&lt;/li&gt;

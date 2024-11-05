@@ -7,11 +7,11 @@
         <language>zh-CN</language>
         <pubDate>Sun, 29 Jan 2023 10:54:42 +0800</pubDate>
         <lastBuildDate>Sun, 29 Jan 2023 10:54:42 +0800</lastBuildDate>
+        <category>node</category>
+        <category>报错</category>
         <category>学习</category>
         <category>面试</category>
         <category>前端</category>
-        <category>node</category>
-        <category>报错</category>
         <category>hexo</category>
         <category>web</category>
         <category>浏览器</category>
@@ -24,7 +24,8 @@
             <category>浏览器</category>
             <category>兼容性</category>
             <pubDate>Sun, 29 Jan 2023 10:54:42 +0800</pubDate>
-            <description><![CDATA[ &lt;figure class=&#34;highlight text&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;面试官：说说你在工作中是怎么处理浏览器兼容性&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+            <description><![CDATA[ &lt;h2 id=&#34;浏览器兼容性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#浏览器兼容性&#34;&gt;#&lt;/a&gt; 浏览器兼容性&lt;/h2&gt;
+&lt;figure class=&#34;highlight text&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;面试官：说说你在工作中是怎么处理浏览器兼容性&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;ul&gt;
 &lt;li&gt;这个问题，是面试官想知道你的学习广度，你的知识体系是否全面。&lt;/li&gt;
 &lt;li&gt;其实针对前端三部分（HTML、CSS、JavaScript），考虑浏览器兼容性只有 CSS 和 JavaScript；因为针对 HTML，在开发中就常用的几个标签，浏览器从头到脚都认识，还需要兼容吗？&lt;/li&gt;
