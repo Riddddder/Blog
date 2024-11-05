@@ -4,19 +4,19 @@
     <title>初始设定 • Posts by &#34;报错&#34; tag</title>
     <link href="https://Riddddder.github.io" />
     <updated>2024-10-24T10:51:00.000Z</updated>
-    <category term="node" />
-    <category term="报错" />
+    <category term="hexo" />
     <category term="学习" />
     <category term="面试" />
     <category term="前端" />
-    <category term="hexo" />
+    <category term="node" />
+    <category term="报错" />
     <category term="web" />
     <category term="浏览器" />
     <category term="兼容性" />
     <entry>
-        <id>https://riddddder.github.io/2024/10/24/Node%E5%86%85%E5%AD%98%E9%97%AE%E9%A2%98/</id>
+        <id>https://riddddder.github.io/2024/10/24/vue-element-plus-admin%E6%89%93%E5%8C%85%E6%8A%A5%E9%94%99/</id>
         <title>（已解决）vue-element-plus-admin打包报错</title>
-        <link rel="alternate" href="https://riddddder.github.io/2024/10/24/Node%E5%86%85%E5%AD%98%E9%97%AE%E9%A2%98/"/>
+        <link rel="alternate" href="https://riddddder.github.io/2024/10/24/vue-element-plus-admin%E6%89%93%E5%8C%85%E6%8A%A5%E9%94%99/"/>
         <content type="html">&lt;h2 id=&#34;问题描述&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#问题描述&#34;&gt;#&lt;/a&gt; 问题描述&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;在一次使用&lt;em&gt; vue-element-plus-admin&lt;/em&gt; 打包时，出现如下报错:&lt;/li&gt;
