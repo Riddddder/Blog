@@ -16,6 +16,7 @@
         <category>web</category>
         <category>浏览器</category>
         <category>兼容性</category>
+        <category>小程序</category>
         <item>
             <guid isPermalink="true">https://riddddder.github.io/2021/08/10/localStorage%E5%92%8CsessionStorage/</guid>
             <title>前端笔记（四）：localStorage和sessionStorage</title>
@@ -86,7 +87,7 @@
         </item>
         <item>
             <guid isPermalink="true">https://riddddder.github.io/2021/07/19/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0-ES6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
-            <title>前端笔记（二）：ES6学习笔记</title>
+            <title>前端笔记：ES6学习笔记</title>
             <link>https://riddddder.github.io/2021/07/19/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0-ES6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
             <category>学习</category>
             <category>面试</category>
@@ -182,7 +183,7 @@ find () 参数：函数 -------- 返回值：数值&lt;br&gt;
         </item>
         <item>
             <guid isPermalink="true">https://riddddder.github.io/2021/07/10/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0-Javascript%E9%9D%A2%E8%AF%95/</guid>
-            <title>前端笔记（一）：javascript基础</title>
+            <title>前端笔记：javascript基础</title>
             <link>https://riddddder.github.io/2021/07/10/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0-Javascript%E9%9D%A2%E8%AF%95/</link>
             <category>学习</category>
             <category>面试</category>

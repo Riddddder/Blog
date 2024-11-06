@@ -3,7 +3,7 @@
     <id>https://Riddddder.github.io</id>
     <title>初始设定 • Posts by &#34;面试&#34; tag</title>
     <link href="https://Riddddder.github.io" />
-    <updated>2021-08-10T04:51:59.000Z</updated>
+    <updated>2024-11-01T06:40:22.000Z</updated>
     <category term="hexo" />
     <category term="学习" />
     <category term="面试" />
@@ -13,6 +13,61 @@
     <category term="web" />
     <category term="浏览器" />
     <category term="兼容性" />
+    <category term="小程序" />
+    <entry>
+        <id>https://riddddder.github.io/2024/11/01/%E5%89%8D%E7%AB%AF%E7%9A%84%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</id>
+        <title>前端的性能优化</title>
+        <link rel="alternate" href="https://riddddder.github.io/2024/11/01/%E5%89%8D%E7%AB%AF%E7%9A%84%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+        <content type="html">&lt;h2 id=&#34;前端性能指标&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#前端性能指标&#34;&gt;#&lt;/a&gt; 前端性能指标&lt;/h2&gt;
+&lt;p&gt;load（Onload Event），它代表页面中依赖的所有资源加载完的事件。&lt;br&gt;
+DCL（DOMContentLoaded），DOM 解析完毕。&lt;br&gt;
+FP（First Paint），表示渲染出第一个像素点。FP 一般在 HTML 解析完成或者解析一部分时候触发。&lt;br&gt;
+FCP（First Contentful Paint），表示渲染出第一个内容，这里的 “内容” 可以是文本、图片、canvas。&lt;br&gt;
+FMP（First Meaningful Paint），首次渲染有意义的内容的时间，“有意义” 没有一个标准的定义，FMP 的计算方法也很复杂（建议不使用，或者结合产品经理讨论使用）。&lt;br&gt;
+LCP（largest contentful Paint），最大内容渲染时间。&lt;/p&gt;
+&lt;h2 id=&#34;体验优化&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#体验优化&#34;&gt;#&lt;/a&gt; 体验优化&lt;/h2&gt;
+&lt;p&gt;从用户角度而言，优化能够让页面加载得更快、对用户的操作响应得更及时，能够给用户提供更为友好的体验。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;首屏渲染优化，请求少、加载体积小、善用缓存&lt;/li&gt;
+&lt;li&gt;动画优化，避免某些动画造成页面的卡顿&lt;/li&gt;
+&lt;li&gt;优化用户的操作感官，提升视觉反馈，比如 hover 小手，让用户一眼就知道是否可操作&lt;/li&gt;
+&lt;li&gt;长列表复用 dom，优化滚动效果及页面卡顿现象，减少页面一次性渲染的数量&lt;/li&gt;
+&lt;li&gt;骨架屏的使用&lt;/li&gt;
+&lt;li&gt;组件的预加载，懒加载&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;提升页面性能&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#提升页面性能&#34;&gt;#&lt;/a&gt; 提升页面性能&lt;/h2&gt;
+&lt;p&gt;减少 http 请求 和 冗余数据&lt;br&gt;
+组件，路由懒加载&lt;br&gt;
+配置 Nginx 优化&lt;br&gt;
+优化 Webpack 打包机制&lt;br&gt;
+使用 CDN&lt;br&gt;
+ 预渲染&lt;br&gt;
+ SSR&lt;br&gt;
+ 图片转 base64&lt;br&gt;
+ 后台分布式部署，负载均衡&lt;/p&gt;
+&lt;h2 id=&#34;首页加载优化减少白屏时间&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#首页加载优化减少白屏时间&#34;&gt;#&lt;/a&gt; 首页加载优化（减少白屏时间）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;cdn 分发：通过在多台服务器部署相同的副本，当用户访问时，服务器根据用户跟哪台服务器地理距离小或者哪台服务器此时的压力小，来决定哪台服务器去响应这个请求。&lt;br&gt;
+后台在业务层的缓存：数据库查询缓存是可以设置缓存的，这个对于高频率的请求很有用。值得注意的是，接口也是可以设置缓存的，比如获取一定时间内不会变的资源，设置缓存会很有用。&lt;/li&gt;
+&lt;li&gt;静态文件缓存方案：这个最常看到。现在流行的方式是文件 hash + 强缓存 的一个方案。比如 hash + cache control：max-age=1 年。&lt;/li&gt;
+&lt;li&gt;前端的资源动态加载：&lt;br&gt;
+a. 路由动态加载，最常用的做法，以页面为单位，进行动态加载。&lt;br&gt;
+b. 组件动态加载（offScreen Component），对于不在当前视窗的组件，先不加载。&lt;br&gt;
+c. 图片懒加载 (offScreen Image)，同上。值得庆幸的是，越来越多的浏览器支持原生的懒加载，通过给 img 标签加上 loading=“lazy” 来开启懒加载模式。&lt;/li&gt;
+&lt;li&gt;利用好 async 和 defer 这两个属性：如果是独立功能的 js 文件，可以加入 async 属性。如果是优先级低且没有依赖的 js，我们可以加入 defer 属性。&lt;/li&gt;
+&lt;li&gt;渲染的优先级：浏览器有一套资源的加载优先级策略，也可以通过 js 来自己控制请求的顺序和渲染的顺序。一般我们不需要这么细粒度的控制，而且控制的代码也很不好写。&lt;/li&gt;
+&lt;li&gt;前端做一些接口缓存：前端也可以做接口缓存，缓存的位置有两个，一个是内存，即保存给变量，另一个是 localStorage。比如用户的签到日历（展示用户是否签到），我们可以缓存这样的接口到 localStorage ，有效期是当天。或者有个列表页，我们总是缓存上次的列表内容到本地，下次加载时，我们先从本地读取缓存，并同时发起请求到服务器获取最新列表。&lt;/li&gt;
+&lt;li&gt;页面使用骨架屏：意思是在首屏加载完成之前，通过渲染一些简单元素进行占位。骨架屏虽然不能提高首屏加载速度，但可以减少用户在首屏等待的急躁情绪。这点很有效，在很多成熟的网站都有大量应用。&lt;/li&gt;
+&lt;li&gt;使用 SSR 渲染：服务器性能一般都很好，那么可以先在服务器先把 vdom 计算完成后，再输出给前端，这样可以节约的时间为：计算量 / (服务器计算速度 - 客户端计算速度) 。第二个是服务器可以把首屏的 ajax 请求在服务端阶段就完成，这样可以省去和客户端通过 tcp 传输的时间。&lt;/li&gt;
+&lt;li&gt;引入 http2.0：http2.0 对比 http1.1，最主要的提升是传输性能，特别是在接口小而多的时候。&lt;/li&gt;
+&lt;li&gt;选择先进的图片格式：使用 JPEG 2000，JPEG XR，and WebP 的图片格式来代替现有的 jpeg 和 png ，当页面图片较多时，这点作用非常明显。把部分大容量的图片从 BaseLine JPEG 切换成 Progressive JPEG （理解这两者的差别）也能缩小体积。&lt;/li&gt;
+&lt;li&gt;利用好 http 压缩：使用 http 压缩的效果非常明显。&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="面试" />
+        <category term="前端" />
+        <updated>2024-11-01T06:40:22.000Z</updated>
+    </entry>
     <entry>
         <id>https://riddddder.github.io/2021/08/10/localStorage%E5%92%8CsessionStorage/</id>
         <title>前端笔记（四）：localStorage和sessionStorage</title>
@@ -83,7 +138,7 @@
     </entry>
     <entry>
         <id>https://riddddder.github.io/2021/07/19/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0-ES6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
-        <title>前端笔记（二）：ES6学习笔记</title>
+        <title>前端笔记：ES6学习笔记</title>
         <link rel="alternate" href="https://riddddder.github.io/2021/07/19/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0-ES6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
         <content type="html">&lt;h2 id=&#34;es6学习笔记&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#es6学习笔记&#34;&gt;#&lt;/a&gt; ES6 学习笔记&lt;/h2&gt;
 &lt;h3 id=&#34;let和const&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#let和const&#34;&gt;#&lt;/a&gt; let 和 const&lt;/h3&gt;
@@ -179,7 +234,7 @@ find () 参数：函数 -------- 返回值：数值&lt;br&gt;
     </entry>
     <entry>
         <id>https://riddddder.github.io/2021/07/10/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0-Javascript%E9%9D%A2%E8%AF%95/</id>
-        <title>前端笔记（一）：javascript基础</title>
+        <title>前端笔记：javascript基础</title>
         <link rel="alternate" href="https://riddddder.github.io/2021/07/10/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0-Javascript%E9%9D%A2%E8%AF%95/"/>
         <content type="html">&lt;h2 id=&#34;javascript笔记&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#javascript笔记&#34;&gt;#&lt;/a&gt; javascript 笔记&lt;/h2&gt;
 &lt;h3 id=&#34;js的数据类型&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#js的数据类型&#34;&gt;#&lt;/a&gt; js 的数据类型&lt;/h3&gt;
