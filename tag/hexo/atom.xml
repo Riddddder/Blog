@@ -3,17 +3,42 @@
     <id>https://Riddddder.github.io</id>
     <title>初始设定 • Posts by &#34;hexo&#34; tag</title>
     <link href="https://Riddddder.github.io" />
-    <updated>2021-06-30T11:00:03.000Z</updated>
+    <updated>2022-12-31T16:00:00.000Z</updated>
+    <category term="node" />
+    <category term="报错" />
     <category term="hexo" />
     <category term="学习" />
     <category term="面试" />
     <category term="前端" />
-    <category term="node" />
-    <category term="报错" />
+    <category term="小程序" />
     <category term="web" />
     <category term="浏览器" />
     <category term="兼容性" />
-    <category term="小程序" />
+    <entry>
+        <id>https://riddddder.github.io/2023/01/01/hexo%E4%B8%BB%E9%A2%98-shako%E4%B8%BB%E9%A2%98%E9%A3%9F%E7%94%A8/</id>
+        <title>hexo主题-shako主题食用</title>
+        <link rel="alternate" href="https://riddddder.github.io/2023/01/01/hexo%E4%B8%BB%E9%A2%98-shako%E4%B8%BB%E9%A2%98%E9%A3%9F%E7%94%A8/"/>
+        <content type="html">&lt;p&gt;shako 主题比较唯美，很可爱，适合萌妹。&lt;br&gt;
+缺点资源太多，部署在 github 上加载有点慢。&lt;/p&gt;
+&lt;h2 id=&#34;安装主题&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装主题&#34;&gt;#&lt;/a&gt; 安装主题&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;这一步直接在&lt;em&gt;博客项目&lt;/em&gt;文件中执行，安装好的主题会在 &lt;code&gt;./themes/shako&lt;/code&gt;  中&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git &lt;span class=&#34;built_in&#34;&gt;clone&lt;/span&gt; https://github.com/amehime/hexo-theme-shoka.git ./themes/shoka&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;在_config.yml 中设置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight yml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;theme:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;shoka&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;shoka的配置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#shoka的配置&#34;&gt;#&lt;/a&gt; shoka 的配置&lt;/h2&gt;
+&lt;p&gt;主题主页：&lt;a href=&#34;https://shoka.lostyu.me/&#34;&gt;https://shoka.lostyu.me/&lt;/a&gt;&lt;br&gt;
+ 文档说明：&lt;a href=&#34;https://shoka.lostyu.me/computer-science/note/theme-shoka-doc/&#34;&gt;https://shoka.lostyu.me/computer-science/note/theme-shoka-doc/&lt;/a&gt;&lt;br&gt;
+ 基本配置: &lt;a href=&#34;https://shoka.lostyu.me/computer-science/note/theme-shoka-doc/config/&#34;&gt;https://shoka.lostyu.me/computer-science/note/theme-shoka-doc/config/&lt;/a&gt;&lt;br&gt;
+ 页面配置: &lt;a href=&#34;https://shoka.lostyu.me/computer-science/note/theme-shoka-doc/display/&#34;&gt;https://shoka.lostyu.me/computer-science/note/theme-shoka-doc/display/&lt;/a&gt;&lt;br&gt;
+ 依赖插件: &lt;a href=&#34;https://shoka.lostyu.me/computer-science/note/theme-shoka-doc/dependents/&#34;&gt;https://shoka.lostyu.me/computer-science/note/theme-shoka-doc/dependents/&lt;/a&gt;&lt;/p&gt;
+</content>
+        <category term="hexo" />
+        <updated>2022-12-31T16:00:00.000Z</updated>
+    </entry>
     <entry>
         <id>https://riddddder.github.io/2021/06/30/hexo%E4%B8%BB%E9%A2%98-NexT%E4%B8%BB%E9%A2%98%E9%A3%9F%E7%94%A8/</id>
         <title>hexo主题-NexT主题食用</title>
@@ -35,9 +60,12 @@
 &lt;p&gt;去掉之后，在浏览器依旧是看不到内容的，需要创建对应页面。&lt;/p&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;hexo new page &lt;span class=&#34;string&#34;&gt;&amp;quot;tags&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;hexo new page &lt;span class=&#34;string&#34;&gt;&amp;quot;categories&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;hexo new page &lt;span class=&#34;string&#34;&gt;&amp;quot;about&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;并且需要在创建好的页面中添加 &lt;code&gt;type&lt;/code&gt;  字段，如：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/tags/index.md&lt;/code&gt;&lt;/p&gt;
 &lt;figure class=&#34;highlight yml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;title:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;tags&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;type:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;quot;tags&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;code&gt;/categories/index.md&lt;/code&gt;&lt;/p&gt;
 &lt;figure class=&#34;highlight yml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;title:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;categories&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;type:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;quot;categories&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;关于页面可以写点文字介绍自己。&lt;/p&gt;
+&lt;p&gt;在 &lt;code&gt;/about/index.md&lt;/code&gt;  可编辑关于页面内容。&lt;/p&gt;
+&lt;figure class=&#34;highlight markdown&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;---&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;title: about&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;section&#34;&gt;type: &amp;quot;about&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;section&#34;&gt;---&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;language-xml&#34;&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;attr&#34;&gt;align&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&amp;quot;center&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;关于我&lt;span class=&#34;language-xml&#34;&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;/&lt;span class=&#34;name&#34;&gt;p&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 </content>
         <category term="hexo" />
         <updated>2021-06-30T11:00:03.000Z</updated>

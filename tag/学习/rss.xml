@@ -7,19 +7,19 @@
         <language>zh-CN</language>
         <pubDate>Tue, 10 Aug 2021 12:51:59 +0800</pubDate>
         <lastBuildDate>Tue, 10 Aug 2021 12:51:59 +0800</lastBuildDate>
+        <category>node</category>
+        <category>报错</category>
         <category>hexo</category>
         <category>学习</category>
         <category>面试</category>
         <category>前端</category>
-        <category>node</category>
-        <category>报错</category>
+        <category>小程序</category>
         <category>web</category>
         <category>浏览器</category>
         <category>兼容性</category>
-        <category>小程序</category>
         <item>
             <guid isPermalink="true">https://riddddder.github.io/2021/08/10/localStorage%E5%92%8CsessionStorage/</guid>
-            <title>前端笔记（四）：localStorage和sessionStorage</title>
+            <title>localStorage和sessionStorage</title>
             <link>https://riddddder.github.io/2021/08/10/localStorage%E5%92%8CsessionStorage/</link>
             <category>学习</category>
             <category>面试</category>

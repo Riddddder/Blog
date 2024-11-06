@@ -3,21 +3,21 @@
     <id>https://Riddddder.github.io</id>
     <title>初始设定 • Posts by &#34;笔记&#34; category</title>
     <link href="https://Riddddder.github.io" />
-    <updated>2023-11-04T08:16:29.000Z</updated>
+    <updated>2021-11-04T08:16:29.000Z</updated>
+    <category term="node" />
+    <category term="报错" />
     <category term="hexo" />
     <category term="学习" />
     <category term="面试" />
     <category term="前端" />
-    <category term="node" />
-    <category term="报错" />
+    <category term="小程序" />
     <category term="web" />
     <category term="浏览器" />
     <category term="兼容性" />
-    <category term="小程序" />
     <entry>
-        <id>https://riddddder.github.io/2023/11/04/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0-%E8%8A%82%E6%B5%81%E5%92%8C%E9%98%B2%E6%8A%96/</id>
+        <id>https://riddddder.github.io/2021/11/04/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0-%E8%8A%82%E6%B5%81%E5%92%8C%E9%98%B2%E6%8A%96/</id>
         <title>前端笔记：节流和防抖</title>
-        <link rel="alternate" href="https://riddddder.github.io/2023/11/04/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0-%E8%8A%82%E6%B5%81%E5%92%8C%E9%98%B2%E6%8A%96/"/>
+        <link rel="alternate" href="https://riddddder.github.io/2021/11/04/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0-%E8%8A%82%E6%B5%81%E5%92%8C%E9%98%B2%E6%8A%96/"/>
         <content type="html">&lt;h2 id=&#34;区别&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#区别&#34;&gt;#&lt;/a&gt; 区别&lt;/h2&gt;
 &lt;p&gt;节流: n 秒内只运行一次，若在 n 秒内重复触发，只有一次生效&lt;br&gt;
 防抖: n 秒后在执行该事件，若在 n 秒内被重复触发，则重新计时&lt;/p&gt;
@@ -37,11 +37,11 @@
 &lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;title function_&#34;&gt;debounce&lt;/span&gt;(&lt;span class=&#34;params&#34;&gt;func, wait, immediate&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; timeout;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;function&lt;/span&gt; (&lt;span class=&#34;params&#34;&gt;&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; context = &lt;span class=&#34;variable language_&#34;&gt;this&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; args = &lt;span class=&#34;variable language_&#34;&gt;arguments&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt; (timeout) &lt;span class=&#34;built_in&#34;&gt;clearTimeout&lt;/span&gt;(timeout); &lt;span class=&#34;comment&#34;&gt;// timeout 不为null&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt; (immediate) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            &lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; callNow = !timeout; &lt;span class=&#34;comment&#34;&gt;// 第一次会立即执行，以后只有事件执行后才会再次触发&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            timeout = &lt;span class=&#34;built_in&#34;&gt;setTimeout&lt;/span&gt;(&lt;span class=&#34;keyword&#34;&gt;function&lt;/span&gt; (&lt;span class=&#34;params&#34;&gt;&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                timeout = &lt;span class=&#34;literal&#34;&gt;null&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            &amp;#125;, wait)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            &lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt; (callNow) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                func.&lt;span class=&#34;title function_&#34;&gt;apply&lt;/span&gt;(context, args)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;keyword&#34;&gt;else&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            timeout = &lt;span class=&#34;built_in&#34;&gt;setTimeout&lt;/span&gt;(&lt;span class=&#34;keyword&#34;&gt;function&lt;/span&gt; (&lt;span class=&#34;params&#34;&gt;&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                func.&lt;span class=&#34;title function_&#34;&gt;apply&lt;/span&gt;(context, args)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            &amp;#125;, wait);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 </content>
         <category term="前端" />
-        <updated>2023-11-04T08:16:29.000Z</updated>
+        <updated>2021-11-04T08:16:29.000Z</updated>
     </entry>
     <entry>
         <id>https://riddddder.github.io/2021/08/10/localStorage%E5%92%8CsessionStorage/</id>
-        <title>前端笔记（四）：localStorage和sessionStorage</title>
+        <title>localStorage和sessionStorage</title>
         <link rel="alternate" href="https://riddddder.github.io/2021/08/10/localStorage%E5%92%8CsessionStorage/"/>
         <content type="html">&lt;h2 id=&#34;基本概念&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#基本概念&#34;&gt;#&lt;/a&gt; 基本概念&lt;/h2&gt;
 &lt;p&gt;localStorage 和 sessionStorage 都是 Web Storage API 的一部分，用于在客户端存储数据。它们都是键值对存储，可以存储字符串数据，也可以存储对象数据。&lt;/p&gt;

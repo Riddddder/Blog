@@ -119,7 +119,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-count">13</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -470,7 +470,7 @@ c. 图片懒加载 (offScreen Image)，同上。值得庆幸的是，越来越�
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://riddddder.github.io/2023/11/04/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0-%E8%8A%82%E6%B5%81%E5%92%8C%E9%98%B2%E6%8A%96/">
+    <link itemprop="mainEntityOfPage" href="https://riddddder.github.io/2024/03/30/hexo%E4%B8%BB%E9%A2%98-Acorn%E4%B8%BB%E9%A2%98%E9%A3%9F%E7%94%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -488,7 +488,7 @@ c. 图片懒加载 (offScreen Image)，同上。值得庆幸的是，越来越�
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/11/04/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0-%E8%8A%82%E6%B5%81%E5%92%8C%E9%98%B2%E6%8A%96/" class="post-title-link" itemprop="url">前端笔记：节流和防抖</a>
+          <a href="/2024/03/30/hexo%E4%B8%BB%E9%A2%98-Acorn%E4%B8%BB%E9%A2%98%E9%A3%9F%E7%94%A8/" class="post-title-link" itemprop="url">hexo主题-Acorn主题食用</a>
         </h2>
 
         <div class="post-meta-container">
@@ -499,16 +499,7 @@ c. 图片懒加载 (offScreen Image)，同上。值得庆幸的是，越来越�
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2023-11-04 16:16:29" itemprop="dateCreated datePublished" datetime="2023-11-04T16:16:29+08:00">2023-11-04</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a>
-        </span>
+      <time title="创建时间：2024-03-30 22:07:23" itemprop="dateCreated datePublished" datetime="2024-03-30T22:07:23+08:00">2024-03-30</time>
     </span>
 
   
@@ -518,7 +509,7 @@ c. 图片懒加载 (offScreen Image)，同上。值得庆幸的是，越来越�
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.6k</span>
+      <span>52</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -536,23 +527,10 @@ c. 图片懒加载 (offScreen Image)，同上。值得庆幸的是，越来越�
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="区别"><a class="markdownIt-Anchor" href="#区别">#</a> 区别</h2>
-<p>节流: n 秒内只运行一次，若在 n 秒内重复触发，只有一次生效<br>
-防抖: n 秒后在执行该事件，若在 n 秒内被重复触发，则重新计时</p>
-<h2 id="应用场景"><a class="markdownIt-Anchor" href="#应用场景">#</a> 应用场景</h2>
-<p>节流：滚动条监听、搜索框输入<br>
-防抖：输入框搜索、窗口大小 resize</p>
-<h2 id="实现"><a class="markdownIt-Anchor" href="#实现">#</a> 实现</h2>
-<p>节流:</p>
-<ul>
-<li>一定时间内的无论点击多少次，都只会执行第一次，其余的直接 return</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">throttled1</span>(<span class="params">fn, delay = <span class="number">500</span></span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> oldtime = <span class="title class_">Date</span>.<span class="title function_">now</span>()</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params">...args</span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> newtime = <span class="title class_">Date</span>.<span class="title function_">now</span>()</span><br><span class="line">        <span class="keyword">if</span> (newtime - oldtime &gt;= delay) &#123;</span><br><span class="line">            fn.<span class="title function_">apply</span>(<span class="literal">null</span>, args)</span><br><span class="line">            oldtime = <span class="title class_">Date</span>.<span class="title function_">now</span>()</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">throttled2</span>(<span class="params">fn, delay = <span class="number">500</span></span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> timer = <span class="literal">null</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params">...args</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (!timer) &#123;</span><br><span class="line">            timer = <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">                fn.<span class="title function_">apply</span>(<span class="variable language_">this</span>, args)</span><br><span class="line">                timer = <span class="literal">null</span></span><br><span class="line">            &#125;, delay);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">throttled</span>(<span class="params">fn, delay</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> timer = <span class="literal">null</span></span><br><span class="line">    <span class="keyword">let</span> starttime = <span class="title class_">Date</span>.<span class="title function_">now</span>()</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> curTime = <span class="title class_">Date</span>.<span class="title function_">now</span>() <span class="comment">// 当前时间</span></span><br><span class="line">        <span class="keyword">let</span> remaining = delay - (curTime - starttime)  <span class="comment">// 从上一次到现在，还剩下多少多余时间</span></span><br><span class="line">        <span class="keyword">let</span> context = <span class="variable language_">this</span></span><br><span class="line">        <span class="keyword">let</span> args = <span class="variable language_">arguments</span></span><br><span class="line">        <span class="built_in">clearTimeout</span>(timer)</span><br><span class="line">        <span class="keyword">if</span> (remaining &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">            fn.<span class="title function_">apply</span>(context, args)</span><br><span class="line">            starttime = <span class="title class_">Date</span>.<span class="title function_">now</span>()</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            timer = <span class="built_in">setTimeout</span>(fn, remaining);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>防抖:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">debounce</span>(<span class="params">func, wait</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> timeout;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> context = <span class="variable language_">this</span>; <span class="comment">// 保存this指向</span></span><br><span class="line">        <span class="keyword">let</span> args = <span class="variable language_">arguments</span>; <span class="comment">// 拿到event对象</span></span><br><span class="line">        <span class="built_in">clearTimeout</span>(timeout)</span><br><span class="line">        timeout = <span class="built_in">setTimeout</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">            func.<span class="title function_">apply</span>(context, args)</span><br><span class="line">        &#125;, wait);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">debounce</span>(<span class="params">func, wait, immediate</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> timeout;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> context = <span class="variable language_">this</span>;</span><br><span class="line">        <span class="keyword">let</span> args = <span class="variable language_">arguments</span>;</span><br><span class="line">        <span class="keyword">if</span> (timeout) <span class="built_in">clearTimeout</span>(timeout); <span class="comment">// timeout 不为null</span></span><br><span class="line">        <span class="keyword">if</span> (immediate) &#123;</span><br><span class="line">            <span class="keyword">let</span> callNow = !timeout; <span class="comment">// 第一次会立即执行，以后只有事件执行后才会再次触发</span></span><br><span class="line">            timeout = <span class="built_in">setTimeout</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">                timeout = <span class="literal">null</span>;</span><br><span class="line">            &#125;, wait)</span><br><span class="line">            <span class="keyword">if</span> (callNow) &#123;</span><br><span class="line">                func.<span class="title function_">apply</span>(context, args)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            timeout = <span class="built_in">setTimeout</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">                func.<span class="title function_">apply</span>(context, args)</span><br><span class="line">            &#125;, wait);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <p>这是一个偏向官网页面的主题，适合用于搭建官网。</p>
+<h2 id="参考资料"><a class="markdownIt-Anchor" href="#参考资料">#</a> 参考资料</h2>
+<p><a target="_blank" rel="noopener" href="https://acorn.imaging.xin/">Acorn 官网</a><br>
+<a target="_blank" rel="noopener" href="https://waxadesign.com/playground/web/hexo-new-theme-based-on-acorn/"> Hexo 新主题：基于 Acorn 定制</a></p>
 
       
     </div>
@@ -877,6 +855,215 @@ c. 图片懒加载 (offScreen Image)，同上。值得庆幸的是，越来越�
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://riddddder.github.io/2023/01/01/hexo%E4%B8%BB%E9%A2%98-shako%E4%B8%BB%E9%A2%98%E9%A3%9F%E7%94%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Ridder">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="初始设定">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 初始设定">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/01/01/hexo%E4%B8%BB%E9%A2%98-shako%E4%B8%BB%E9%A2%98%E9%A3%9F%E7%94%A8/" class="post-title-link" itemprop="url">hexo主题-shako主题食用</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-01-01 00:00:00" itemprop="dateCreated datePublished" datetime="2023-01-01T00:00:00+08:00">2023-01-01</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>517</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>shako 主题比较唯美，很可爱，适合萌妹。<br>
+缺点资源太多，部署在 github 上加载有点慢。</p>
+<h2 id="安装主题"><a class="markdownIt-Anchor" href="#安装主题">#</a> 安装主题</h2>
+<ul>
+<li>这一步直接在<em>博客项目</em>文件中执行，安装好的主题会在 <code>./themes/shako</code>  中</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/amehime/hexo-theme-shoka.git ./themes/shoka</span><br></pre></td></tr></table></figure>
+<ul>
+<li>在_config.yml 中设置</li>
+</ul>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">shoka</span></span><br></pre></td></tr></table></figure>
+<h2 id="shoka的配置"><a class="markdownIt-Anchor" href="#shoka的配置">#</a> shoka 的配置</h2>
+<p>主题主页：<a target="_blank" rel="noopener" href="https://shoka.lostyu.me/">https://shoka.lostyu.me/</a><br>
+ 文档说明：<a target="_blank" rel="noopener" href="https://shoka.lostyu.me/computer-science/note/theme-shoka-doc/">https://shoka.lostyu.me/computer-science/note/theme-shoka-doc/</a><br>
+ 基本配置: <a target="_blank" rel="noopener" href="https://shoka.lostyu.me/computer-science/note/theme-shoka-doc/config/">https://shoka.lostyu.me/computer-science/note/theme-shoka-doc/config/</a><br>
+ 页面配置: <a target="_blank" rel="noopener" href="https://shoka.lostyu.me/computer-science/note/theme-shoka-doc/display/">https://shoka.lostyu.me/computer-science/note/theme-shoka-doc/display/</a><br>
+ 依赖插件: <a target="_blank" rel="noopener" href="https://shoka.lostyu.me/computer-science/note/theme-shoka-doc/dependents/">https://shoka.lostyu.me/computer-science/note/theme-shoka-doc/dependents/</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://riddddder.github.io/2021/11/04/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0-%E8%8A%82%E6%B5%81%E5%92%8C%E9%98%B2%E6%8A%96/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Ridder">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="初始设定">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 初始设定">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/11/04/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0-%E8%8A%82%E6%B5%81%E5%92%8C%E9%98%B2%E6%8A%96/" class="post-title-link" itemprop="url">前端笔记：节流和防抖</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-11-04 16:16:29" itemprop="dateCreated datePublished" datetime="2021-11-04T16:16:29+08:00">2021-11-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="区别"><a class="markdownIt-Anchor" href="#区别">#</a> 区别</h2>
+<p>节流: n 秒内只运行一次，若在 n 秒内重复触发，只有一次生效<br>
+防抖: n 秒后在执行该事件，若在 n 秒内被重复触发，则重新计时</p>
+<h2 id="应用场景"><a class="markdownIt-Anchor" href="#应用场景">#</a> 应用场景</h2>
+<p>节流：滚动条监听、搜索框输入<br>
+防抖：输入框搜索、窗口大小 resize</p>
+<h2 id="实现"><a class="markdownIt-Anchor" href="#实现">#</a> 实现</h2>
+<p>节流:</p>
+<ul>
+<li>一定时间内的无论点击多少次，都只会执行第一次，其余的直接 return</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">throttled1</span>(<span class="params">fn, delay = <span class="number">500</span></span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> oldtime = <span class="title class_">Date</span>.<span class="title function_">now</span>()</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params">...args</span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> newtime = <span class="title class_">Date</span>.<span class="title function_">now</span>()</span><br><span class="line">        <span class="keyword">if</span> (newtime - oldtime &gt;= delay) &#123;</span><br><span class="line">            fn.<span class="title function_">apply</span>(<span class="literal">null</span>, args)</span><br><span class="line">            oldtime = <span class="title class_">Date</span>.<span class="title function_">now</span>()</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">throttled2</span>(<span class="params">fn, delay = <span class="number">500</span></span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> timer = <span class="literal">null</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params">...args</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (!timer) &#123;</span><br><span class="line">            timer = <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">                fn.<span class="title function_">apply</span>(<span class="variable language_">this</span>, args)</span><br><span class="line">                timer = <span class="literal">null</span></span><br><span class="line">            &#125;, delay);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">throttled</span>(<span class="params">fn, delay</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> timer = <span class="literal">null</span></span><br><span class="line">    <span class="keyword">let</span> starttime = <span class="title class_">Date</span>.<span class="title function_">now</span>()</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> curTime = <span class="title class_">Date</span>.<span class="title function_">now</span>() <span class="comment">// 当前时间</span></span><br><span class="line">        <span class="keyword">let</span> remaining = delay - (curTime - starttime)  <span class="comment">// 从上一次到现在，还剩下多少多余时间</span></span><br><span class="line">        <span class="keyword">let</span> context = <span class="variable language_">this</span></span><br><span class="line">        <span class="keyword">let</span> args = <span class="variable language_">arguments</span></span><br><span class="line">        <span class="built_in">clearTimeout</span>(timer)</span><br><span class="line">        <span class="keyword">if</span> (remaining &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">            fn.<span class="title function_">apply</span>(context, args)</span><br><span class="line">            starttime = <span class="title class_">Date</span>.<span class="title function_">now</span>()</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            timer = <span class="built_in">setTimeout</span>(fn, remaining);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>防抖:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">debounce</span>(<span class="params">func, wait</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> timeout;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> context = <span class="variable language_">this</span>; <span class="comment">// 保存this指向</span></span><br><span class="line">        <span class="keyword">let</span> args = <span class="variable language_">arguments</span>; <span class="comment">// 拿到event对象</span></span><br><span class="line">        <span class="built_in">clearTimeout</span>(timeout)</span><br><span class="line">        timeout = <span class="built_in">setTimeout</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">            func.<span class="title function_">apply</span>(context, args)</span><br><span class="line">        &#125;, wait);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">debounce</span>(<span class="params">func, wait, immediate</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> timeout;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> context = <span class="variable language_">this</span>;</span><br><span class="line">        <span class="keyword">let</span> args = <span class="variable language_">arguments</span>;</span><br><span class="line">        <span class="keyword">if</span> (timeout) <span class="built_in">clearTimeout</span>(timeout); <span class="comment">// timeout 不为null</span></span><br><span class="line">        <span class="keyword">if</span> (immediate) &#123;</span><br><span class="line">            <span class="keyword">let</span> callNow = !timeout; <span class="comment">// 第一次会立即执行，以后只有事件执行后才会再次触发</span></span><br><span class="line">            timeout = <span class="built_in">setTimeout</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">                timeout = <span class="literal">null</span>;</span><br><span class="line">            &#125;, wait)</span><br><span class="line">            <span class="keyword">if</span> (callNow) &#123;</span><br><span class="line">                func.<span class="title function_">apply</span>(context, args)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            timeout = <span class="built_in">setTimeout</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">                func.<span class="title function_">apply</span>(context, args)</span><br><span class="line">            &#125;, wait);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://riddddder.github.io/2021/08/10/localStorage%E5%92%8CsessionStorage/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -895,7 +1082,7 @@ c. 图片懒加载 (offScreen Image)，同上。值得庆幸的是，越来越�
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/08/10/localStorage%E5%92%8CsessionStorage/" class="post-title-link" itemprop="url">前端笔记（四）：localStorage和sessionStorage</a>
+          <a href="/2021/08/10/localStorage%E5%92%8CsessionStorage/" class="post-title-link" itemprop="url">localStorage和sessionStorage</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1197,311 +1384,6 @@ find () 参数：函数 -------- 返回值：数值<br>
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://riddddder.github.io/2021/07/10/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0-Javascript%E9%9D%A2%E8%AF%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Ridder">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="初始设定">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 初始设定">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/07/10/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0-Javascript%E9%9D%A2%E8%AF%95/" class="post-title-link" itemprop="url">前端笔记：javascript基础</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-07-10 17:51:56" itemprop="dateCreated datePublished" datetime="2021-07-10T17:51:56+08:00">2021-07-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>3k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>3 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="javascript笔记"><a class="markdownIt-Anchor" href="#javascript笔记">#</a> javascript 笔记</h2>
-<h3 id="js的数据类型"><a class="markdownIt-Anchor" href="#js的数据类型">#</a> js 的数据类型</h3>
-<p>基本数据类型：Number、String、Boolean、Null、Undefined、Object、（Symbol、bigInt）<br>
-引用数据类型：Array、Function、Object<br>
-Null 只有一个值，是 null。不存在的对象。<br>
-Undefined 只有一个值，是 undefined。没有初始化。undefined 是从 null 中派生出来的。<br>
-简单理解就是：undefined 是没有定义的，null 是定义了但是为空。</p>
-<p>Symbol 类型的对象永远不相等，即便创建的时候传入相同的值。因此，可以用解决属性名冲突的问题（适用于多少编码），做为标记。</p>
-<h3 id="varletconst的区别"><a class="markdownIt-Anchor" href="#varletconst的区别">#</a> var，let，const 的区别</h3>
-<ul>
-<li>var 全局变量，能重复声明</li>
-<li>let 局部变量，代码块内有效，不能重复声明</li>
-<li>const 常量，一旦声明，常量的值就不能改变，就必须立即初始化，不能留到以后赋值</li>
-</ul>
-<h3 id="es6有哪些新特性"><a class="markdownIt-Anchor" href="#es6有哪些新特性">#</a> es6 有哪些新特性</h3>
-<ul>
-<li>let const</li>
-<li>模板字符串</li>
-<li>扩展运算符</li>
-<li>解构赋值</li>
-<li>箭头函数</li>
-<li>Promise、async/await</li>
-<li>数组新方法：map、filter、reduce、some、every</li>
-</ul>
-<h3 id="检测数组类型的方法"><a class="markdownIt-Anchor" href="#检测数组类型的方法">#</a> 检测数组类型的方法</h3>
-<ul>
-<li>instanceof of， 例：arr instanceof Array</li>
-<li>constructor , 例：arr.constructor === Array</li>
-<li>Array.isArray(arr)</li>
-<li>call 方法，例：Object.prototype.toString.call (arr) === ‘[object Array]’</li>
-</ul>
-<h3 id="数组的方法"><a class="markdownIt-Anchor" href="#数组的方法">#</a> 数组的方法</h3>
-<ul>
-<li>改变原数组：push、pop、shift、unshift、sort、splice、reverse</li>
-<li>不改变原属组：concat、join、map、forEach、filter、slice</li>
-</ul>
-<h3 id="字符串方法"><a class="markdownIt-Anchor" href="#字符串方法">#</a> 字符串方法</h3>
-<p>1 charAt (x) 返回字符串中 x 字符的位置，下标从 0 开始<br>
- 2 charCodeAt (x) 返回字符串中 x 位置处字符的 unicode 值<br>
- 3 concat () 用于连接两个或多个字符串<br>
- 4 fromCharcode () 将一组 Unicode 码转换为字符<br>
- 5 indexOf (substr, [start]) 返回某个指定的字符串值在字符串中首次出现的位置。如果没有找到匹配的字符串则返回 -1。<br>
-6 lastIndexOf (substr, [start]) 返回指定文本在字符串中最后一次出现的索引，如果未找到，则返回 - 1。<br>
-7 match (regexp) 根据正则表达式在字符串中搜索匹配项。如果没有找到匹配项，则返回 null。<br>
-8 replace (regexp/substr, replacetext) 用于在字符串中用一些字符替换另一些字符，或替换一个与正则表达式匹配的子串<br>
- 9 search (regexp) 检索字符串中指定的子字符串，或检索与正则表达式相匹配的子字符串，如果找到，返回与 regexp 相匹配的子串的起始位置，否则返回 -1。<br>
-10 slice (start, [end]) 裁取字符串的某个部分，返回一个新的字符串。包括字符串从 start 开始（包括 start）到 end 结束（不包括 end）为止的所有字符<br>
- 11 split (delimiter, [limit]) split () 方法用于把一个字符串分割成字符串数组，返回一个字符串数组，返回的数组中的字串不包括 delimiter 自身。 可选的 “limit” 是一个整数，允许各位指定要返回的最大数组的元素个数。<br>
-12 substr (start, [length]) 在字符串中抽取从 start 下标开始的指定数目的字符。返回一个新的字符串，包含从 start（包括 start 所指的字符） 处开始的 length 个字符。如果没有指定 length，那么返回的字符串包含从 start 到该字符串的结尾的字符。<br>
-13 substring (start,stop) 用于提取字符串中介于两个指定下标之间的字符<br>
- 14 toLowerCase () 把字符串转换为小写。<br>
-15 toUpperCase () 把字符串转换为大写。<br>
-16 includes () 检查字符串是否包含指定的字符串或字符。<br>
-17 endsWith () 检查字符串是否以指定的字符串或字符结束。<br>
-18 repeat () 将字符串复制指定次数。<br>
-19 valueOf () 返回一个 String 对象的原始值（primitive value），该值等同于 String.prototype.toString ()。<br>
-20 trim () 从一个字符串的两端删除空白字符。</p>
-<h3 id="匿名函数和箭头函数"><a class="markdownIt-Anchor" href="#匿名函数和箭头函数">#</a> 匿名函数和箭头函数</h3>
-<ul>
-<li>function 后并没有给函数命名，而是把整个函数直接赋值给变量 abs，调用时通过 abs (9) 来调用此函数。</li>
-<li>箭头函数的定义用的就是一个箭头。箭头函数表面上相当于匿名函数，并且简化了函数定义。<br>
-当箭头函数只包含一个表达式时，它连 {…} 和 return 都省掉了。</li>
-</ul>
-<h3 id="水平垂直居中的方法"><a class="markdownIt-Anchor" href="#水平垂直居中的方法">#</a> 水平垂直居中的方法</h3>
-<h4 id="定位法"><a class="markdownIt-Anchor" href="#定位法">#</a> 定位法</h4>
-<ul>
-<li>定位，position: absolute; top: 0; left: 0; bottom: 0; right: 0; margin: auto;</li>
-<li>定位，position: absolute; top: 50%; left: 50%; transform: translate (-50%, -50%);</li>
-<li>定位，(已知子元素宽高) width:100px;height:100px;position: absolute; top: 50%; left: 50%; margin-left: -50px; margin-top: -50px;</li>
-</ul>
-<h4 id="flex布局"><a class="markdownIt-Anchor" href="#flex布局">#</a> flex 布局</h4>
-<ul>
-<li>diplay: flex; justify-content: center; align-items: center;</li>
-</ul>
-<h4 id="grid网格布局"><a class="markdownIt-Anchor" href="#grid网格布局">#</a> grid 网格布局</h4>
-<ul>
-<li>diplay: grid; align-items:center;justify-content: center;</li>
-</ul>
-<h4 id="table表格布局"><a class="markdownIt-Anchor" href="#table表格布局">#</a> table 表格布局</h4>
-<ul>
-<li>设置父元素为 display:table-cell，子元素设置 display: inline-block。利用 vertical 和 text-align 可以让所有的行内块级元素水平垂直居中</li>
-</ul>
-<h3 id="继承的方式"><a class="markdownIt-Anchor" href="#继承的方式">#</a> 继承的方式</h3>
-<ul>
-<li>原型继承：不能传参</li>
-<li>组合继承： 调用了两次父类的构造函数，不共享父类引用属性</li>
-<li>寄生组合继承：</li>
-<li>ES6 的 extend：子类只要继承父类，可以不写 constructor ，一旦写了，则在 constructor 中的第一句话必须是 super</li>
-</ul>
-<h3 id="深拷贝和浅拷贝"><a class="markdownIt-Anchor" href="#深拷贝和浅拷贝">#</a> 深拷贝和浅拷贝</h3>
-<h4 id="深拷贝"><a class="markdownIt-Anchor" href="#深拷贝">#</a> 深拷贝</h4>
-<ul>
-<li>
-<p>JSON.parse(JSON.stringify(obj))</p>
-</li>
-<li>
-<p>递归拷贝</p>
-</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">deepCopy</span>(<span class="params">obj</span>) &#123;</span><br><span class="line">  <span class="comment">// 判断是否为null或者不是对象</span></span><br><span class="line">  <span class="keyword">if</span> (obj &amp;&amp; <span class="keyword">typeof</span> obj !== <span class="string">&#x27;object&#x27;</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> obj;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 判断是对象还是数组</span></span><br><span class="line">  <span class="keyword">let</span> copy = <span class="title class_">Array</span>.<span class="title function_">isArray</span>(obj) ? [] : &#123;&#125;;</span><br><span class="line">  <span class="comment">// 遍历</span></span><br><span class="line">  <span class="keyword">for</span> (le</span><br><span class="line">  t key <span class="keyword">in</span> obj) &#123;</span><br><span class="line">    <span class="keyword">if</span> (obj.<span class="title function_">hasOwnProperty</span>(key)) &#123;</span><br><span class="line">      <span class="comment">// 递归</span></span><br><span class="line">      copy[key] = <span class="title function_">deepCopy</span>(obj[key]);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> copy;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="浅拷贝"><a class="markdownIt-Anchor" href="#浅拷贝">#</a> 浅拷贝</h4>
-<ul>
-<li>let obj1 = Object.assign({}, obj)</li>
-<li>扩展运算符</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj1 = &#123; ...obj &#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>Array.prototype.slice()</li>
-<li>Array.prototype.concat()</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://riddddder.github.io/2021/06/30/hexo%E4%B8%BB%E9%A2%98-NexT%E4%B8%BB%E9%A2%98%E9%A3%9F%E7%94%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Ridder">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="初始设定">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 初始设定">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/06/30/hexo%E4%B8%BB%E9%A2%98-NexT%E4%B8%BB%E9%A2%98%E9%A3%9F%E7%94%A8/" class="post-title-link" itemprop="url">hexo主题-NexT主题食用</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-06-30 19:00:03" itemprop="dateCreated datePublished" datetime="2021-06-30T19:00:03+08:00">2021-06-30</time>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>729</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>NexT 主题是一个非常简洁的主题，非常适合新手使用。下面我将介绍如何安装和使用 NexT 主题：</p>
-<h2 id="安装主题"><a class="markdownIt-Anchor" href="#安装主题">#</a> 安装主题</h2>
-<ul>
-<li>这一步直接在<em>博客项目</em>文件中执行，安装好的主题会在 <code>./themes/next</code>  中</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/next-theme/hexo-theme-next ./themes/next</span><br></pre></td></tr></table></figure>
-<ul>
-<li>在_config.yml 中设置</li>
-</ul>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">next</span></span><br></pre></td></tr></table></figure>
-<h2 id="next的配置"><a class="markdownIt-Anchor" href="#next的配置">#</a> NexT 的配置</h2>
-<p>打开 <code>./themes/next/_config.yml</code></p>
-<p>搜索 <code>menu</code>  可配置菜单，将需要的菜单注释去掉，并添加菜单项，如：</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-tags</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-th</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-archive</span></span><br><span class="line">  <span class="comment"># schedule: /schedule/ || fa fa-calendar</span></span><br><span class="line">  <span class="comment"># sitemap: /sitemap.xml || fa fa-sitemap</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-user</span></span><br><span class="line">  <span class="comment"># commonweal: /404/ || fa fa-heartbeat</span></span><br></pre></td></tr></table></figure>
-<p>去掉之后，在浏览器依旧是看不到内容的，需要创建对应页面。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo new page <span class="string">&quot;tags&quot;</span></span><br><span class="line">hexo new page <span class="string">&quot;categories&quot;</span></span><br><span class="line">hexo new page <span class="string">&quot;about&quot;</span></span><br></pre></td></tr></table></figure>
-<p>并且需要在创建好的页面中添加 <code>type</code>  字段，如：</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">tags</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">&quot;tags&quot;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">categories</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">&quot;categories&quot;</span></span><br></pre></td></tr></table></figure>
-<p>关于页面可以写点文字介绍自己。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
@@ -1525,7 +1407,7 @@ Undefined 只有一个值，是 undefined。没有初始化。undefined 是从 n
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">17k</span>
+    <span title="站点总字数">18k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">

@@ -7,16 +7,16 @@
         <language>zh-CN</language>
         <pubDate>Fri, 01 Nov 2024 14:40:22 +0800</pubDate>
         <lastBuildDate>Fri, 01 Nov 2024 14:40:22 +0800</lastBuildDate>
+        <category>node</category>
+        <category>报错</category>
         <category>hexo</category>
         <category>学习</category>
         <category>面试</category>
         <category>前端</category>
-        <category>node</category>
-        <category>报错</category>
+        <category>小程序</category>
         <category>web</category>
         <category>浏览器</category>
         <category>兼容性</category>
-        <category>小程序</category>
         <item>
             <guid isPermalink="true">https://riddddder.github.io/2024/11/01/%E5%89%8D%E7%AB%AF%E7%9A%84%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</guid>
             <title>前端的性能优化</title>
@@ -73,7 +73,7 @@ c. 图片懒加载 (offScreen Image)，同上。值得庆幸的是，越来越�
         </item>
         <item>
             <guid isPermalink="true">https://riddddder.github.io/2021/08/10/localStorage%E5%92%8CsessionStorage/</guid>
-            <title>前端笔记（四）：localStorage和sessionStorage</title>
+            <title>localStorage和sessionStorage</title>
             <link>https://riddddder.github.io/2021/08/10/localStorage%E5%92%8CsessionStorage/</link>
             <category>学习</category>
             <category>面试</category>
