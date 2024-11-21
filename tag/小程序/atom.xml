@@ -4,23 +4,25 @@
     <title>初始设定 • Posts by &#34;小程序&#34; tag</title>
     <link href="https://Riddddder.github.io" />
     <updated>2024-08-26T11:59:24.000Z</updated>
+    <category term="前端" />
+    <category term="JavaScript" />
+    <category term="ES6" />
     <category term="node" />
     <category term="报错" />
-    <category term="hexo" />
     <category term="学习" />
     <category term="面试" />
-    <category term="前端" />
     <category term="小程序" />
     <category term="web" />
     <category term="浏览器" />
     <category term="兼容性" />
+    <category term="hexo" />
     <entry>
         <id>https://riddddder.github.io/2024/08/26/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E8%B7%AF%E7%94%B1%E6%94%B9%E9%80%A0/</id>
         <title>小程序的路由改造</title>
         <link rel="alternate" href="https://riddddder.github.io/2024/08/26/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E8%B7%AF%E7%94%B1%E6%94%B9%E9%80%A0/"/>
-        <content type="html">&lt;p&gt;众所周知，在小程序中跳转页面的方法除了 navigateTo，还有 redirectTo，reLaunch，switchTab。&lt;/p&gt;
-&lt;p&gt;但是这些方法都有一些限制，比如 redirectTo 和 reLaunch 不能打开 tabBar 页面，navigateTo 和 switchTab 不能打开非 tabBar 页面。&lt;/p&gt;
-&lt;p&gt;为了解决这个问题，我们需要对小程序的路由进行改造，使其能够满足我们的需求。&lt;/p&gt;
+        <content type="html">&lt;!-- 众所周知，在小程序中跳转页面的方法除了navigateTo，还有redirectTo，reLaunch，switchTab。 --&gt;
+&lt;!-- 但是这些方法都有一些限制，比如redirectTo和reLaunch不能打开tabBar页面，navigateTo和switchTab不能打开非tabBar页面。 --&gt;
+&lt;!-- 为了解决这个问题，我们需要对小程序的路由进行改造，使其能够满足我们的需求。 --&gt;
 &lt;p&gt;首先，我们需要创建一个全局的路由对象，用于存储所有的页面路径和对应的页面组件。&lt;/p&gt;
 &lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;// router.js&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;const&lt;/span&gt; router = &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;attr&#34;&gt;pages&lt;/span&gt;: [],&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;title function_&#34;&gt;addPage&lt;/span&gt;(&lt;span class=&#34;params&#34;&gt;page&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;variable language_&#34;&gt;this&lt;/span&gt;.&lt;span class=&#34;property&#34;&gt;pages&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;push&lt;/span&gt;(page);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;title function_&#34;&gt;getPage&lt;/span&gt;(&lt;span class=&#34;params&#34;&gt;path&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;variable language_&#34;&gt;this&lt;/span&gt;.&lt;span class=&#34;property&#34;&gt;pages&lt;/span&gt;.&lt;span class=&#34;title function_&#34;&gt;find&lt;/span&gt;(&lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;params&#34;&gt;page&lt;/span&gt; =&amp;gt;&lt;/span&gt; page.&lt;span class=&#34;property&#34;&gt;path&lt;/span&gt; === path);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;default&lt;/span&gt; router;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;然后，我们需要在每个页面组件中注册自己的路径和对应的页面组件。&lt;/p&gt;

@@ -7,23 +7,25 @@
         <language>zh-CN</language>
         <pubDate>Tue, 10 Aug 2021 12:51:59 +0800</pubDate>
         <lastBuildDate>Tue, 10 Aug 2021 12:51:59 +0800</lastBuildDate>
+        <category>前端</category>
+        <category>JavaScript</category>
+        <category>ES6</category>
         <category>node</category>
         <category>报错</category>
-        <category>hexo</category>
         <category>学习</category>
         <category>面试</category>
-        <category>前端</category>
         <category>小程序</category>
         <category>web</category>
         <category>浏览器</category>
         <category>兼容性</category>
+        <category>hexo</category>
         <item>
             <guid isPermalink="true">https://riddddder.github.io/2021/08/10/localStorage%E5%92%8CsessionStorage/</guid>
             <title>localStorage和sessionStorage</title>
             <link>https://riddddder.github.io/2021/08/10/localStorage%E5%92%8CsessionStorage/</link>
+            <category>前端</category>
             <category>学习</category>
             <category>面试</category>
-            <category>前端</category>
             <pubDate>Tue, 10 Aug 2021 12:51:59 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;基本概念&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#基本概念&#34;&gt;#&lt;/a&gt; 基本概念&lt;/h2&gt;
 &lt;p&gt;localStorage 和 sessionStorage 都是 Web Storage API 的一部分，用于在客户端存储数据。它们都是键值对存储，可以存储字符串数据，也可以存储对象数据。&lt;/p&gt;
@@ -86,14 +88,14 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://riddddder.github.io/2021/07/19/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0-ES6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
-            <title>前端笔记：ES6学习笔记</title>
-            <link>https://riddddder.github.io/2021/07/19/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0-ES6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+            <guid isPermalink="true">https://riddddder.github.io/2021/07/19/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0-ES6/</guid>
+            <title>前端笔记：ES6</title>
+            <link>https://riddddder.github.io/2021/07/19/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0-ES6/</link>
+            <category>前端</category>
             <category>学习</category>
             <category>面试</category>
-            <category>前端</category>
             <pubDate>Mon, 19 Jul 2021 12:32:04 +0800</pubDate>
-            <description><![CDATA[ &lt;h2 id=&#34;es6学习笔记&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#es6学习笔记&#34;&gt;#&lt;/a&gt; ES6 学习笔记&lt;/h2&gt;
+            <description><![CDATA[ &lt;h2 id=&#34;es基础知识&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#es基础知识&#34;&gt;#&lt;/a&gt; ES 基础知识&lt;/h2&gt;
 &lt;h3 id=&#34;let和const&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#let和const&#34;&gt;#&lt;/a&gt; let 和 const&lt;/h3&gt;
 &lt;h3 id=&#34;symbol&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#symbol&#34;&gt;#&lt;/a&gt; symbol&lt;/h3&gt;
 &lt;ul&gt;
@@ -182,12 +184,12 @@ find () 参数：函数 -------- 返回值：数值&lt;br&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://riddddder.github.io/2021/07/10/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0-Javascript%E9%9D%A2%E8%AF%95/</guid>
+            <guid isPermalink="true">https://riddddder.github.io/2021/07/10/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0-Javascript%E9%9D%A2%E8%AF%95/</guid>
             <title>前端笔记：javascript基础</title>
-            <link>https://riddddder.github.io/2021/07/10/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0-Javascript%E9%9D%A2%E8%AF%95/</link>
+            <link>https://riddddder.github.io/2021/07/10/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0-Javascript%E9%9D%A2%E8%AF%95/</link>
+            <category>前端</category>
             <category>学习</category>
             <category>面试</category>
-            <category>前端</category>
             <pubDate>Sat, 10 Jul 2021 17:51:56 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;javascript笔记&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#javascript笔记&#34;&gt;#&lt;/a&gt; javascript 笔记&lt;/h2&gt;
 &lt;h3 id=&#34;js的数据类型&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#js的数据类型&#34;&gt;#&lt;/a&gt; js 的数据类型&lt;/h3&gt;

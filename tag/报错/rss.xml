@@ -7,16 +7,18 @@
         <language>zh-CN</language>
         <pubDate>Thu, 24 Oct 2024 18:51:00 +0800</pubDate>
         <lastBuildDate>Thu, 24 Oct 2024 18:51:00 +0800</lastBuildDate>
+        <category>前端</category>
+        <category>JavaScript</category>
+        <category>ES6</category>
         <category>node</category>
         <category>报错</category>
-        <category>hexo</category>
         <category>学习</category>
         <category>面试</category>
-        <category>前端</category>
         <category>小程序</category>
         <category>web</category>
         <category>浏览器</category>
         <category>兼容性</category>
+        <category>hexo</category>
         <item>
             <guid isPermalink="true">https://riddddder.github.io/2024/10/24/Node%E5%86%85%E5%AD%98%E9%97%AE%E9%A2%98/</guid>
             <title>（已解决）vue-element-plus-admin打包报错</title>

@@ -19,15 +19,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"riddddder.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="众所周知，在小程序中跳转页面的方法除了 navigateTo，还有 redirectTo，reLaunch，switchTab。 但是这些方法都有一些限制，比如 redirectTo 和 reLaunch 不能打开 tabBar 页面，navigateTo 和 switchTab 不能打开非 tabBar 页面。 为了解决这个问题，我们需要对小程序的路由进行改造，使其能够满足我们的需求。 首先，我">
+    <meta name="description" content="众所周知，在小程序中跳转页面的方法除了navigateTo，还有redirectTo，reLaunch，switchTab。但是这些方法都有一些限制，比如redirectTo和reLaunch不能打开tabBar页面，navigateTo和switchTab不能打开非tabBar页面。为了解决这个问题，我们需要对小程序的路由进行改造，使其能够满足我们的需求。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="小程序的路由改造">
 <meta property="og:url" content="https://riddddder.github.io/2024/08/26/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E8%B7%AF%E7%94%B1%E6%94%B9%E9%80%A0/index.html">
 <meta property="og:site_name" content="初始设定">
-<meta property="og:description" content="众所周知，在小程序中跳转页面的方法除了 navigateTo，还有 redirectTo，reLaunch，switchTab。 但是这些方法都有一些限制，比如 redirectTo 和 reLaunch 不能打开 tabBar 页面，navigateTo 和 switchTab 不能打开非 tabBar 页面。 为了解决这个问题，我们需要对小程序的路由进行改造，使其能够满足我们的需求。 首先，我">
+<meta property="og:description" content="众所周知，在小程序中跳转页面的方法除了navigateTo，还有redirectTo，reLaunch，switchTab。但是这些方法都有一些限制，比如redirectTo和reLaunch不能打开tabBar页面，navigateTo和switchTab不能打开非tabBar页面。为了解决这个问题，我们需要对小程序的路由进行改造，使其能够满足我们的需求。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-08-26T11:59:24.000Z">
-<meta property="article:modified_time" content="2024-11-06T17:50:25.694Z">
+<meta property="article:modified_time" content="2024-11-21T01:08:51.004Z">
 <meta property="article:author" content="Ridder">
 <meta property="article:tag" content="小程序">
 <meta name="twitter:card" content="summary">
@@ -124,7 +124,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">15</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -135,7 +135,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">12</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -176,7 +176,7 @@
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
       <meta itemprop="name" content="小程序的路由改造 | 初始设定">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="众所周知，在小程序中跳转页面的方法除了navigateTo，还有redirectTo，reLaunch，switchTab。但是这些方法都有一些限制，比如redirectTo和reLaunch不能打开tabBar页面，navigateTo和switchTab不能打开非tabBar页面。为了解决这个问题，我们需要对小程序的路由进行改造，使其能够满足我们的需求。">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -201,7 +201,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.6k</span>
+      <span>1.4k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -212,15 +212,16 @@
     </span>
 </div>
 
+            <div class="post-description">众所周知，在小程序中跳转页面的方法除了navigateTo，还有redirectTo，reLaunch，switchTab。但是这些方法都有一些限制，比如redirectTo和reLaunch不能打开tabBar页面，navigateTo和switchTab不能打开非tabBar页面。为了解决这个问题，我们需要对小程序的路由进行改造，使其能够满足我们的需求。</div>
         </div>
       </header>
 
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>众所周知，在小程序中跳转页面的方法除了 navigateTo，还有 redirectTo，reLaunch，switchTab。</p>
-<p>但是这些方法都有一些限制，比如 redirectTo 和 reLaunch 不能打开 tabBar 页面，navigateTo 和 switchTab 不能打开非 tabBar 页面。</p>
-<p>为了解决这个问题，我们需要对小程序的路由进行改造，使其能够满足我们的需求。</p>
+    <div class="post-body" itemprop="articleBody"><!-- 众所周知，在小程序中跳转页面的方法除了navigateTo，还有redirectTo，reLaunch，switchTab。 -->
+<!-- 但是这些方法都有一些限制，比如redirectTo和reLaunch不能打开tabBar页面，navigateTo和switchTab不能打开非tabBar页面。 -->
+<!-- 为了解决这个问题，我们需要对小程序的路由进行改造，使其能够满足我们的需求。 -->
 <p>首先，我们需要创建一个全局的路由对象，用于存储所有的页面路径和对应的页面组件。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// router.js</span></span><br><span class="line"><span class="keyword">const</span> router = &#123;</span><br><span class="line">  <span class="attr">pages</span>: [],</span><br><span class="line">  <span class="title function_">addPage</span>(<span class="params">page</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">pages</span>.<span class="title function_">push</span>(page);</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="title function_">getPage</span>(<span class="params">path</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">pages</span>.<span class="title function_">find</span>(<span class="function"><span class="params">page</span> =&gt;</span> page.<span class="property">path</span> === path);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> router;</span><br></pre></td></tr></table></figure>
 <p>然后，我们需要在每个页面组件中注册自己的路径和对应的页面组件。</p>
@@ -246,8 +247,8 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2024/03/30/hexo%E4%B8%BB%E9%A2%98-Acorn%E4%B8%BB%E9%A2%98%E9%A3%9F%E7%94%A8/" rel="prev" title="hexo主题-Acorn主题食用">
-                  <i class="fa fa-angle-left"></i> hexo主题-Acorn主题食用
+                <a href="/2024/01/01/hexo/hexo%E4%B8%BB%E9%A2%98-%E8%87%AA%E5%88%B6%E4%B8%BB%E9%A2%98%E6%8C%87%E5%8C%97/" rel="prev" title="hexo主题-自制主题指北">
+                  <i class="fa fa-angle-left"></i> hexo主题-自制主题指北
                 </a>
             </div>
             <div class="post-nav-item">
@@ -284,16 +285,16 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">18k</span>
+    <span title="站点总字数">22k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">16 分钟</span>
+    <span title="站点阅读时长">20 分钟</span>
   </span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  <div class="powered-by">تطبيق الموقع <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
   </div>
 
     </div>

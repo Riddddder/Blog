@@ -4,16 +4,18 @@
     <title>初始设定 • Posts by &#34;学习&#34; tag</title>
     <link href="https://Riddddder.github.io" />
     <updated>2021-08-10T04:51:59.000Z</updated>
+    <category term="前端" />
+    <category term="JavaScript" />
+    <category term="ES6" />
     <category term="node" />
     <category term="报错" />
-    <category term="hexo" />
     <category term="学习" />
     <category term="面试" />
-    <category term="前端" />
     <category term="小程序" />
     <category term="web" />
     <category term="浏览器" />
     <category term="兼容性" />
+    <category term="hexo" />
     <entry>
         <id>https://riddddder.github.io/2021/08/10/localStorage%E5%92%8CsessionStorage/</id>
         <title>localStorage和sessionStorage</title>
@@ -77,16 +79,16 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 </content>
+        <category term="前端" />
         <category term="学习" />
         <category term="面试" />
-        <category term="前端" />
         <updated>2021-08-10T04:51:59.000Z</updated>
     </entry>
     <entry>
-        <id>https://riddddder.github.io/2021/07/19/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0-ES6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
-        <title>前端笔记：ES6学习笔记</title>
-        <link rel="alternate" href="https://riddddder.github.io/2021/07/19/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0-ES6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-        <content type="html">&lt;h2 id=&#34;es6学习笔记&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#es6学习笔记&#34;&gt;#&lt;/a&gt; ES6 学习笔记&lt;/h2&gt;
+        <id>https://riddddder.github.io/2021/07/19/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0-ES6/</id>
+        <title>前端笔记：ES6</title>
+        <link rel="alternate" href="https://riddddder.github.io/2021/07/19/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0-ES6/"/>
+        <content type="html">&lt;h2 id=&#34;es基础知识&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#es基础知识&#34;&gt;#&lt;/a&gt; ES 基础知识&lt;/h2&gt;
 &lt;h3 id=&#34;let和const&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#let和const&#34;&gt;#&lt;/a&gt; let 和 const&lt;/h3&gt;
 &lt;h3 id=&#34;symbol&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#symbol&#34;&gt;#&lt;/a&gt; symbol&lt;/h3&gt;
 &lt;ul&gt;
@@ -173,15 +175,15 @@ find () 参数：函数 -------- 返回值：数值&lt;br&gt;
 &lt;h3 id=&#34;forin&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#forin&#34;&gt;#&lt;/a&gt; for…in&lt;/h3&gt;
 &lt;p&gt;(阮一峰 ECMAScript 6 (ES6) 标准入门教程 第三版)[&lt;a href=&#34;https://www.bookstack.cn/read/es6-3rd/sidebar.md&#34;&gt;https://www.bookstack.cn/read/es6-3rd/sidebar.md&lt;/a&gt;]&lt;/p&gt;
 </content>
+        <category term="前端" />
         <category term="学习" />
         <category term="面试" />
-        <category term="前端" />
         <updated>2021-07-19T04:32:04.000Z</updated>
     </entry>
     <entry>
-        <id>https://riddddder.github.io/2021/07/10/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0-Javascript%E9%9D%A2%E8%AF%95/</id>
+        <id>https://riddddder.github.io/2021/07/10/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0-Javascript%E9%9D%A2%E8%AF%95/</id>
         <title>前端笔记：javascript基础</title>
-        <link rel="alternate" href="https://riddddder.github.io/2021/07/10/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0-Javascript%E9%9D%A2%E8%AF%95/"/>
+        <link rel="alternate" href="https://riddddder.github.io/2021/07/10/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0-Javascript%E9%9D%A2%E8%AF%95/"/>
         <content type="html">&lt;h2 id=&#34;javascript笔记&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#javascript笔记&#34;&gt;#&lt;/a&gt; javascript 笔记&lt;/h2&gt;
 &lt;h3 id=&#34;js的数据类型&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#js的数据类型&#34;&gt;#&lt;/a&gt; js 的数据类型&lt;/h3&gt;
 &lt;p&gt;基本数据类型：Number、String、Boolean、Null、Undefined、Object、（Symbol、bigInt）&lt;br&gt;
@@ -293,9 +295,9 @@ Undefined 只有一个值，是 undefined。没有初始化。undefined 是从 n
 &lt;li&gt;Array.prototype.concat()&lt;/li&gt;
 &lt;/ul&gt;
 </content>
+        <category term="前端" />
         <category term="学习" />
         <category term="面试" />
-        <category term="前端" />
         <updated>2021-07-10T09:51:56.000Z</updated>
     </entry>
 </feed>

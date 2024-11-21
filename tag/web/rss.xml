@@ -7,16 +7,18 @@
         <language>zh-CN</language>
         <pubDate>Sun, 29 Jan 2023 10:54:42 +0800</pubDate>
         <lastBuildDate>Sun, 29 Jan 2023 10:54:42 +0800</lastBuildDate>
+        <category>前端</category>
+        <category>JavaScript</category>
+        <category>ES6</category>
         <category>node</category>
         <category>报错</category>
-        <category>hexo</category>
         <category>学习</category>
         <category>面试</category>
-        <category>前端</category>
         <category>小程序</category>
         <category>web</category>
         <category>浏览器</category>
         <category>兼容性</category>
+        <category>hexo</category>
         <item>
             <guid isPermalink="true">https://riddddder.github.io/2023/01/29/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E6%80%A7/</guid>
             <title>怎么处理浏览器兼容性</title>

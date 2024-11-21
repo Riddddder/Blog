@@ -5,22 +5,34 @@
         <link>https://Riddddder.github.io</link>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Sun, 01 Jan 2023 00:00:00 +0800</pubDate>
-        <lastBuildDate>Sun, 01 Jan 2023 00:00:00 +0800</lastBuildDate>
+        <pubDate>Mon, 01 Jan 2024 09:01:48 +0800</pubDate>
+        <lastBuildDate>Mon, 01 Jan 2024 09:01:48 +0800</lastBuildDate>
+        <category>前端</category>
+        <category>JavaScript</category>
+        <category>ES6</category>
         <category>node</category>
         <category>报错</category>
-        <category>hexo</category>
         <category>学习</category>
         <category>面试</category>
-        <category>前端</category>
         <category>小程序</category>
         <category>web</category>
         <category>浏览器</category>
         <category>兼容性</category>
+        <category>hexo</category>
         <item>
-            <guid isPermalink="true">https://riddddder.github.io/2023/01/01/hexo%E4%B8%BB%E9%A2%98-shako%E4%B8%BB%E9%A2%98%E9%A3%9F%E7%94%A8/</guid>
+            <guid isPermalink="true">https://riddddder.github.io/2024/01/01/hexo/hexo%E4%B8%BB%E9%A2%98-%E8%87%AA%E5%88%B6%E4%B8%BB%E9%A2%98%E6%8C%87%E5%8C%97/</guid>
+            <title>hexo主题-自制主题指北</title>
+            <link>https://riddddder.github.io/2024/01/01/hexo/hexo%E4%B8%BB%E9%A2%98-%E8%87%AA%E5%88%B6%E4%B8%BB%E9%A2%98%E6%8C%87%E5%8C%97/</link>
+            <category>hexo</category>
+            <pubDate>Mon, 01 Jan 2024 09:01:48 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;参考资料&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#参考资料&#34;&gt;#&lt;/a&gt; 参考资料&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.cnblogs.com/yyhh/p/11058985.html&#34;&gt;Hexo 主题开发&lt;/a&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://riddddder.github.io/2023/01/01/hexo/hexo%E4%B8%BB%E9%A2%98-shako%E4%B8%BB%E9%A2%98%E9%A3%9F%E7%94%A8/</guid>
             <title>hexo主题-shako主题食用</title>
-            <link>https://riddddder.github.io/2023/01/01/hexo%E4%B8%BB%E9%A2%98-shako%E4%B8%BB%E9%A2%98%E9%A3%9F%E7%94%A8/</link>
+            <link>https://riddddder.github.io/2023/01/01/hexo/hexo%E4%B8%BB%E9%A2%98-shako%E4%B8%BB%E9%A2%98%E9%A3%9F%E7%94%A8/</link>
             <category>hexo</category>
             <pubDate>Sun, 01 Jan 2023 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;shako 主题比较唯美，很可爱，适合萌妹。&lt;br&gt;
@@ -43,9 +55,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://riddddder.github.io/2021/06/30/hexo%E4%B8%BB%E9%A2%98-NexT%E4%B8%BB%E9%A2%98%E9%A3%9F%E7%94%A8/</guid>
+            <guid isPermalink="true">https://riddddder.github.io/2021/06/30/hexo/hexo%E4%B8%BB%E9%A2%98-NexT%E4%B8%BB%E9%A2%98%E9%A3%9F%E7%94%A8/</guid>
             <title>hexo主题-NexT主题食用</title>
-            <link>https://riddddder.github.io/2021/06/30/hexo%E4%B8%BB%E9%A2%98-NexT%E4%B8%BB%E9%A2%98%E9%A3%9F%E7%94%A8/</link>
+            <link>https://riddddder.github.io/2021/06/30/hexo/hexo%E4%B8%BB%E9%A2%98-NexT%E4%B8%BB%E9%A2%98%E9%A3%9F%E7%94%A8/</link>
             <category>hexo</category>
             <pubDate>Wed, 30 Jun 2021 19:00:03 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;NexT 主题是一个非常简洁的主题，非常适合新手使用。下面我将介绍如何安装和使用 NexT 主题：&lt;/p&gt;
@@ -74,9 +86,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://riddddder.github.io/2021/06/29/hello-hexo/</guid>
+            <guid isPermalink="true">https://riddddder.github.io/2021/06/29/history/hello-hexo/</guid>
             <title>Hello Hexo</title>
-            <link>https://riddddder.github.io/2021/06/29/hello-hexo/</link>
+            <link>https://riddddder.github.io/2021/06/29/history/hello-hexo/</link>
             <category>hexo</category>
             <pubDate>Tue, 29 Jun 2021 22:21:44 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;hexo介绍&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#hexo介绍&#34;&gt;#&lt;/a&gt; hexo 介绍&lt;/h2&gt;
