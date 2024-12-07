@@ -19,27 +19,27 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"riddddder.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="# 问题描述 在 Vue 项目中，静态资源在动态访问的情况下，会存在找不到资源的问题，这是因为 Vue 在打包时，会将静态资源打包到 dist 目录下。 而在动态访问静态资源时，vite 打包无法正确解析路径，导致找不到资源。 如，我们需要根据用户性别显示用户默认头像，此时需要动态访问静态资源，代码如下： 1&lt;img :src&#x3D;&quot;path&quot;&#x2F;&gt; 12const ge">
+    <meta name="description" content="发布订阅模式是什么">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vue静态资源的动态访问">
-<meta property="og:url" content="https://riddddder.github.io/2024/12/07/Vue%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E7%9A%84%E5%8A%A8%E6%80%81%E8%AE%BF%E9%97%AE/index.html">
+<meta property="og:title" content="Vue发布订阅模式">
+<meta property="og:url" content="https://riddddder.github.io/2024/12/02/Vue/Vue%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85%E6%A8%A1%E5%BC%8F/index.html">
 <meta property="og:site_name" content="初始设定">
-<meta property="og:description" content="# 问题描述 在 Vue 项目中，静态资源在动态访问的情况下，会存在找不到资源的问题，这是因为 Vue 在打包时，会将静态资源打包到 dist 目录下。 而在动态访问静态资源时，vite 打包无法正确解析路径，导致找不到资源。 如，我们需要根据用户性别显示用户默认头像，此时需要动态访问静态资源，代码如下： 1&lt;img :src&#x3D;&quot;path&quot;&#x2F;&gt; 12const ge">
+<meta property="og:description" content="发布订阅模式是什么">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-12-07T05:32:49.000Z">
-<meta property="article:modified_time" content="2024-12-07T09:42:30.210Z">
+<meta property="article:published_time" content="2024-12-02T10:39:48.000Z">
+<meta property="article:modified_time" content="2024-12-07T09:53:17.916Z">
 <meta property="article:author" content="Ridder">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://riddddder.github.io/2024/12/07/Vue%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E7%9A%84%E5%8A%A8%E6%80%81%E8%AE%BF%E9%97%AE/">
+<link rel="canonical" href="https://riddddder.github.io/2024/12/02/Vue/Vue%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85%E6%A8%A1%E5%BC%8F/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://riddddder.github.io/2024/12/07/Vue%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E7%9A%84%E5%8A%A8%E6%80%81%E8%AE%BF%E9%97%AE/","path":"2024/12/07/Vue静态资源的动态访问/","title":"Vue静态资源的动态访问"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://riddddder.github.io/2024/12/02/Vue/Vue%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85%E6%A8%A1%E5%BC%8F/","path":"2024/12/02/Vue/Vue发布订阅模式/","title":"Vue发布订阅模式"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Vue静态资源的动态访问 | 初始设定</title>
+<title>Vue发布订阅模式 | 初始设定</title>
   
 
 
@@ -111,7 +111,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text"> 问题描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="nav-number">2.</span> <span class="nav-text"> 解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8import%E6%88%96%E8%80%85require%E7%9B%B4%E6%8E%A5%E5%BC%95%E5%85%A5%E8%B5%84%E6%BA%90"><span class="nav-number">2.1.</span> <span class="nav-text"> 使用 import 或者 require 直接引入资源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8import%E5%8A%A8%E6%80%81%E5%AF%BC%E5%85%A5"><span class="nav-number">2.2.</span> <span class="nav-text"> 使用 import 动态导入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#url%E6%9E%84%E9%80%A0%E5%99%A8"><span class="nav-number">2.3.</span> <span class="nav-text"> URL 构造器</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.</span> <span class="nav-text"> 发布订阅模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vue%E4%BA%8B%E4%BB%B6%E4%B8%AD%E5%BF%83%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.</span> <span class="nav-text"> Vue 事件中心实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96"><span class="nav-number">3.</span> <span class="nav-text"> 代码优化</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -124,7 +124,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-count">18</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -162,7 +162,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://riddddder.github.io/2024/12/07/Vue%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E7%9A%84%E5%8A%A8%E6%80%81%E8%AE%BF%E9%97%AE/">
+    <link itemprop="mainEntityOfPage" href="https://riddddder.github.io/2024/12/02/Vue/Vue%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85%E6%A8%A1%E5%BC%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -175,12 +175,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Vue静态资源的动态访问 | 初始设定">
-      <meta itemprop="description" content="">
+      <meta itemprop="name" content="Vue发布订阅模式 | 初始设定">
+      <meta itemprop="description" content="发布订阅模式是什么">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Vue静态资源的动态访问
+          Vue发布订阅模式
         </h1>
 
         <div class="post-meta-container">
@@ -191,7 +191,7 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2024-12-07 13:32:49" itemprop="dateCreated datePublished" datetime="2024-12-07T13:32:49+08:00">2024-12-07</time>
+      <time title="创建时间：2024-12-02 18:39:48" itemprop="dateCreated datePublished" datetime="2024-12-02T18:39:48+08:00">2024-12-02</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -210,7 +210,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>940</span>
+      <span>958</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -221,34 +221,37 @@
     </span>
 </div>
 
+            <div class="post-description">发布订阅模式是什么</div>
         </div>
       </header>
 
     
     
     
-    <div class="post-body" itemprop="articleBody"><h2 id="问题描述"><a class="markdownIt-Anchor" href="#问题描述">#</a> 问题描述</h2>
-<p>在 Vue 项目中，静态资源在动态访问的情况下，会存在找不到资源的问题，这是因为 Vue 在打包时，会将静态资源打包到 dist 目录下。<br>
-而在动态访问静态资源时，vite 打包无法正确解析路径，导致找不到资源。</p>
-<p>如，我们需要根据用户性别显示用户默认头像，此时需要动态访问静态资源，代码如下：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">:src</span>=<span class="string">&quot;path&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> gender = detail.<span class="property">value</span>.<span class="property">gender</span></span><br><span class="line">path.<span class="property">value</span> = <span class="string">`@/assets/<span class="subst">$&#123;gender&#125;</span>.png`</span></span><br></pre></td></tr></table></figure>
-<p>这时，会出现找不到资源的问题。</p>
-<h2 id="解决方案"><a class="markdownIt-Anchor" href="#解决方案">#</a> 解决方案</h2>
-<h3 id="使用import或者require直接引入资源"><a class="markdownIt-Anchor" href="#使用import或者require直接引入资源">#</a> 使用 import 或者 require 直接引入资源</h3>
-<p>在 Vue 组件中，可以直接使用 import 或者 require 来引入静态资源，例如：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> boy <span class="keyword">from</span> <span class="string">&#x27;@/assets/1.png&#x27;</span></span><br><span class="line"><span class="keyword">import</span> girl <span class="keyword">from</span> <span class="string">&#x27;@/assets/2.png&#x27;</span></span><br></pre></td></tr></table></figure>
-<p>或者</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> boy = <span class="built_in">require</span>(<span class="string">&#x27;@/assets/1.png&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> girl = <span class="built_in">require</span>(<span class="string">&#x27;@/assets/2.png&#x27;</span>)</span><br><span class="line"></span><br><span class="line">path.<span class="property">value</span> = gender === <span class="number">1</span> ? boy : girl</span><br></pre></td></tr></table></figure>
-<p>这种方案可以正确解析路径，但是需要手动引入资源，当需要引入资源比较多时，还会增加代码量，比较麻烦。</p>
-<h3 id="使用import动态导入"><a class="markdownIt-Anchor" href="#使用import动态导入">#</a> 使用 import 动态导入</h3>
-<p>在 Vue 组件中，可以使用 import 动态导入来引入静态资源，例如：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span>(<span class="string">`@/assets/<span class="subst">$&#123;gender&#125;</span>.png`</span>).<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">    path.<span class="property">value</span> = res.<span class="property">default</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p>这种方案可以动态导入资源，但是会将 <code>/assetsx</code>  下的所有资源打包，并生成很多 js 资源，导致增加请求次数。</p>
-<h3 id="url构造器"><a class="markdownIt-Anchor" href="#url构造器">#</a> URL 构造器</h3>
-<p>在 Vue 组件中，可以使用 URL 构造器来构造静态资源的 URL，例如：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> url = <span class="keyword">new</span> <span class="title function_">URL</span>(<span class="string">&#x27;@/assets/logo.png&#x27;</span>, <span class="keyword">import</span>.<span class="property">meta</span>.<span class="property">url</span>).<span class="property">href</span></span><br><span class="line">path.<span class="property">value</span> = url</span><br></pre></td></tr></table></figure>
-<p>这种方案较为完美，可以正确解析路径，并且不会增加请求次数。</p>
+    <div class="post-body" itemprop="articleBody"><h2 id="发布订阅模式"><a class="markdownIt-Anchor" href="#发布订阅模式">#</a> 发布订阅模式</h2>
+<ul>
+<li>
+<p>发布订阅模式是一种消息范式，消息的发送者（发布者）不会直接将消息发送给接收者（订阅者），而是通过一个第三方组件（通常称为事件总线或消息代理）来传递消息。</p>
+</li>
+<li>
+<p>发布订阅模式的主要优点是解耦了消息的发送者和接收者，使得它们可以独立地变化和扩展。发布订阅模式广泛应用于事件驱动编程、异步编程和消息队列等领域。</p>
+</li>
+</ul>
+<h2 id="vue事件中心实现"><a class="markdownIt-Anchor" href="#vue事件中心实现">#</a> Vue 事件中心实现</h2>
+<ul>
+<li>eventEmitter.ts</li>
+</ul>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> eventName = [<span class="string">&#x27;EVENT_NAME&#x27;</span>, <span class="string">&#x27;EVENT_NAME1&#x27;</span>, <span class="string">&#x27;EVENT_NAME2&#x27;</span>, ...] <span class="comment">// </span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">EventEmitter</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="attr">listeners</span>:<span class="title class_">Record</span>&lt;<span class="built_in">string</span>, <span class="title class_">Set</span>&lt;<span class="title class_">Function</span>&gt;&gt; = &#123;</span><br><span class="line">        <span class="string">&#x27;EVENT_NAME&#x27;</span>:<span class="keyword">new</span> <span class="title class_">Set</span>(),</span><br><span class="line">        <span class="string">&#x27;EVENT_NAME1&#x27;</span>:<span class="keyword">new</span> <span class="title class_">Set</span>(),</span><br><span class="line">        <span class="string">&#x27;EVENT_NAME2&#x27;</span>:<span class="keyword">new</span> <span class="title class_">Set</span>(),</span><br><span class="line">        ...</span><br><span class="line">    &#125; <span class="comment">// 定义事件监听器</span></span><br><span class="line"></span><br><span class="line">    <span class="title function_">on</span>(<span class="params">eventName: <span class="built_in">string</span>, listener: <span class="built_in">Function</span></span>) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">listeners</span>[eventName].<span class="title function_">add</span>(listener)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="title function_">emit</span>(<span class="params">eventName: <span class="built_in">string</span>, ...args: <span class="built_in">any</span>[]</span>) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">listeners</span>[eventName].<span class="title function_">forEach</span>(<span class="function">(<span class="params">listener</span>) =&gt;</span> <span class="title function_">listener</span>(...args))</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> <span class="title class_">EventEmitter</span>()</span><br></pre></td></tr></table></figure>
+<ul>
+<li>事件发送</li>
+</ul>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> emitter <span class="keyword">from</span> <span class="string">&#x27;./eventEmitter&#x27;</span></span><br><span class="line">emitter.<span class="title function_">emit</span>(<span class="string">&#x27;EVENT_NAME&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>事件监听处理</li>
+</ul>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> emitter <span class="keyword">from</span> <span class="string">&#x27;./eventEmitter&#x27;</span></span><br><span class="line">emitter.<span class="title function_">on</span>(<span class="string">&quot;EVENT_NAME&quot;</span>, <span class="keyword">function</span>(<span class="params"></span>) &#123;...&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="代码优化"><a class="markdownIt-Anchor" href="#代码优化">#</a> 代码优化</h2>
+<p>事件优先级、事件中断</p>
 
     </div>
 
@@ -262,13 +265,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2024/12/02/Vue%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85%E6%A8%A1%E5%BC%8F/" rel="prev" title="Vue发布订阅模式">
-                  <i class="fa fa-angle-left"></i> Vue发布订阅模式
+                <a href="/2024/11/08/JS%E6%A0%87%E7%AD%BE%E5%8C%96%E6%A8%A1%E6%9D%BF/" rel="prev" title="JS标签化模板">
+                  <i class="fa fa-angle-left"></i> JS标签化模板
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2024/12/07/flex%E5%92%8Cmargin/" rel="next" title="flex和margin">
-                  flex和margin <i class="fa fa-angle-right"></i>
+                <a href="/2024/12/07/Vue/Vue%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E7%9A%84%E5%8A%A8%E6%80%81%E8%AE%BF%E9%97%AE/" rel="next" title="Vue静态资源的动态访问">
+                  Vue静态资源的动态访问 <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>

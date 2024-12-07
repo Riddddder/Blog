@@ -19,15 +19,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"riddddder.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="常见的页面中，有一种页面就是很多个元素并排排列，然后每个元素之间有一定的间距，一行多个，占满一行换行。 这种情况下，我们可以会使用 flex 布局。 12345678.container &#123;  display: flex;  flex-wrap: wrap;  jucstify-content: space-between;  .item &#123;    width: 50px;">
+    <meta name="description" content="flex是常见的布局方式，这里介绍flex和margin搭配使用的一些技巧。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="flex和margin">
 <meta property="og:url" content="https://riddddder.github.io/2024/12/07/flex%E5%92%8Cmargin/index.html">
 <meta property="og:site_name" content="初始设定">
-<meta property="og:description" content="常见的页面中，有一种页面就是很多个元素并排排列，然后每个元素之间有一定的间距，一行多个，占满一行换行。 这种情况下，我们可以会使用 flex 布局。 12345678.container &#123;  display: flex;  flex-wrap: wrap;  jucstify-content: space-between;  .item &#123;    width: 50px;">
+<meta property="og:description" content="flex是常见的布局方式，这里介绍flex和margin搭配使用的一些技巧。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-12-07T12:17:57.000Z">
-<meta property="article:modified_time" content="2024-12-07T09:42:29.759Z">
+<meta property="article:modified_time" content="2024-12-07T10:07:27.434Z">
 <meta property="article:author" content="Ridder">
 <meta name="twitter:card" content="summary">
 
@@ -98,7 +98,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -111,6 +111,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8A%E4%B8%8B%E5%B7%A6%E5%8F%B3%E5%B1%85%E4%B8%AD"><span class="nav-number">1.</span> <span class="nav-text"> 上下左右居中</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#flex%E5%AD%90%E5%85%83%E7%B4%A0%E5%B7%A6%E5%8F%B3%E9%97%B4%E8%B7%9D%E8%87%AA%E9%80%82%E5%BA%94"><span class="nav-number">2.</span> <span class="nav-text"> flex 子元素左右间距自适应</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9D%87%E5%8C%80%E9%97%B4%E8%B7%9D%E8%87%AA%E5%8A%A8%E6%8D%A2%E8%A1%8C%E5%B8%83%E5%B1%80"><span class="nav-number">3.</span> <span class="nav-text"> 均匀间距自动换行布局</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -123,7 +124,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-count">18</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -175,7 +176,7 @@
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
       <meta itemprop="name" content="flex和margin | 初始设定">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="flex是常见的布局方式，这里介绍flex和margin搭配使用的一些技巧。">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -209,7 +210,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>437</span>
+      <span>1k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -220,18 +221,38 @@
     </span>
 </div>
 
+            <div class="post-description">flex是常见的布局方式，这里介绍flex和margin搭配使用的一些技巧。</div>
         </div>
       </header>
 
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>常见的页面中，有一种页面就是很多个元素并排排列，然后每个元素之间有一定的间距，一行多个，占满一行换行。</p>
-<p>这种情况下，我们可以会使用 flex 布局。</p>
+    <div class="post-body" itemprop="articleBody"><h2 id="上下左右居中"><a class="markdownIt-Anchor" href="#上下左右居中">#</a> 上下左右居中</h2>
+<p>在 flex 中，实现 flex 子元素上下左右居中，通常会这样做：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">justify-content</span>: center;</span><br><span class="line">  <span class="attribute">align-items</span>: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>搭配 margin 使用，可以更简洁：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="selector-class">.item</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: auto;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这个使用，跟 <code>position</code>  实现类似，但是更简洁。</p>
+<h2 id="flex子元素左右间距自适应"><a class="markdownIt-Anchor" href="#flex子元素左右间距自适应">#</a> flex 子元素左右间距自适应</h2>
+<p>在多个 flex 子元素中，如果想让某个元素自适应，占满剩余空间，可以使用 <code>flex: 1</code> ：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="selector-class">.item2</span> &#123;</span><br><span class="line">    <span class="attribute">flex</span>: <span class="number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>但是自适应的元素，左右间距都会自动填充，如果想让子元素占满剩余空间并仅左侧或者右侧边距占满，可以使用 <code>margin</code> ：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="selector-class">.item2</span> &#123;</span><br><span class="line">    <span class="attribute">margin-left</span>: auto;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="均匀间距自动换行布局"><a class="markdownIt-Anchor" href="#均匀间距自动换行布局">#</a> 均匀间距自动换行布局</h2>
+<ul>
+<li>
+<p>常见的页面中，有一种页面是很多个元素一行行排列，然后每个元素之间有一定的间距，一行多个，占满一行自动换行。</p>
+</li>
+<li>
+<p>这种情况下，我们可以会使用 flex 布局，代码如下：</p>
+</li>
+</ul>
 <figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">flex-wrap</span>: wrap;</span><br><span class="line">  jucstify-<span class="attribute">content</span>: space-between;</span><br><span class="line">  <span class="selector-class">.item</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>使用 <code>space-between</code> ，每个元素之间会有间距，但是当最后一行不满一行的个数时，间距会有问题。</p>
-<p>这时候，我们可以使用 <code>margin</code>  来处理。</p>
+<p>使用 <code>space-between</code> ，可以实现每行元素之间间距均匀分布，但是当最后一行不满一行的个数时，间距会有问题。</p>
+<p>这时候，我们可以使用 <code>margin</code>  来处理，代码如下：</p>
 <figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">flex-wrap</span>: wrap;</span><br><span class="line">  <span class="selector-class">.item</span> &#123;</span><br><span class="line">    <span class="attr">--n</span>: <span class="number">3</span>;</span><br><span class="line">    <span class="attr">--gap</span>: <span class="built_in">calc</span>(<span class="number">100%</span> - <span class="number">50px</span> * <span class="built_in">var</span>(--n)) / <span class="built_in">var</span>(--n) / <span class="number">2</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">10px</span> <span class="built_in">var</span>(--gap);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>其中 <code>--n</code>  代表每一行有多少个元素， <code>--gap</code>  代表间距的大小，使用 <code>calc</code>  计算间距的大小，然后使用 <code>margin</code>  来设置间距。</p>
 <p>这样，最后一行的元素就不会有间距问题了。</p>
 
     </div>
@@ -246,7 +267,7 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2024/12/07/Vue%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E7%9A%84%E5%8A%A8%E6%80%81%E8%AE%BF%E9%97%AE/" rel="prev" title="Vue静态资源的动态访问">
+                <a href="/2024/12/07/Vue/Vue%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E7%9A%84%E5%8A%A8%E6%80%81%E8%AE%BF%E9%97%AE/" rel="prev" title="Vue静态资源的动态访问">
                   <i class="fa fa-angle-left"></i> Vue静态资源的动态访问
                 </a>
             </div>
